@@ -1,8 +1,8 @@
 <template>
    <v-card class="mx-auto border-0 playground__dragdrop-group" outlined>
       <div class="$1">
-         <p class="grey--text text--darken-4"> Tính 50:5 = </p>
-         <div class="display-1 text-center"> 50 : 5 = <span class="blue--text">{{ resume }}</span> </div>
+         <show-question :text="question" :resume="input" />
+         <slot name="fab" />
       </div>
       <div class="$2">
          <app-keyboard v-model="input" />
@@ -10,12 +10,11 @@
    </v-card>
 </template>
 <script>
-   import draggable from "vuedraggable"
    import appKeyboard from "./Keyboard"
    export default {
-      components: { draggable, appKeyboard },
+      components: { appKeyboard },
       props: {
-         resume: String
+         question: String
       },
       data: () => ({
          input: ""

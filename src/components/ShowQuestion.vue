@@ -1,11 +1,17 @@
 <template>
-   <div class="">
-      <p class="grey--text text--darken-4"> Tính 50:5 = </p>
-      <div class="display-1 text-center"> 50 : 5 = <span class="blue--text">{{ resume }}</span> </div>
-   </div>
+   <div v-html="html"></div>
 </template>
 <script>
+   import pug from "pug"
    export default {
-
+      props: {
+         text: String,
+         resume: [Number, String, Array, Object]
+      },
+      computed: {
+         html() {
+            return !!(this.resume + "") ? pug.render(this.text).replace('%text', this.resume) : pug.render(this.text)
+         }
+      }
    }
 </script>

@@ -1,7 +1,7 @@
 <template>
    <v-card class="mx-auto border-0 playground__dragdrop-group" outlined>
       <div class="$1">
-         <p class="grey--text text--darken-4"> {{ question }} </p>
+         <show-question :text="question" />
          <div class="mx-auto px-8">
             <draggable v-model="items" :options="{ group: 'people' }">
                <template v-for="item in items">
@@ -11,6 +11,7 @@
                </template>
             </draggable>
          </div>
+         <slot name="fab" />
       </div>
    </v-card>
 </template>

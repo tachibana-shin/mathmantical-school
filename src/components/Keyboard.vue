@@ -1,12 +1,5 @@
 <template>
    <v-container fluid>
-      <v-row class="d-none">
-         <v-col cols="12">
-            <p class="text-center display-1">
-               {{ input }}
-            </p>
-         </v-col>
-      </v-row>
       <v-row v-for="i in 3" :key="i">
          <v-col v-for="j in 3" :key="j">
             <v-btn icon block class="display-1" color="black" @click="input += `${i * j}`"> {{ i * j }} </v-btn>

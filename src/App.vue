@@ -37,6 +37,16 @@
    .border-0 {
       border: 0 !important;
    }
+   .p-relative {
+      position: relative;
+   }
+</style>
+<style lang="scss" scoped>
+   #app {
+      & >>> .v-application--wrap {
+         min-height: calc(100vh - 56px);
+      }
+   }
 </style>
 <script>
    export default {

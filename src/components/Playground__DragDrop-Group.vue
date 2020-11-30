@@ -12,6 +12,7 @@
                </v-btn>
             </div>
          </draggable>
+         <slot name="fab"/>
       </div>
       <div class="$2 bg-grey rounded px-3 py-2 text-center">
          <div class="text-center mb-2">

@@ -1,38 +1,40 @@
 <template>
-   <v-card outlined class="border-0 fullHeight">
+   <v-card outlined class="border-0 h-100 p-relative">
       <v-app-bar app flat fixed color="blue" dark>
          <v-btn icon @click="$router.back()">
             <v-icon>mdi-arrow-left</v-icon>
          </v-btn>
          <v-toolbar-title> Số liền trước, liền sau </v-toolbar-title>
       </v-app-bar>
-      <div>
-         <div class="tool">
-            <div class="w-100" />
-            <div class="process blue py-1">
-               2/4
+      <div class="d-flex flex-column h-100">
+         <div>
+            <div class="tool">
+               <div class="w-100" />
+               <div class="process blue py-1">
+                  2/4
+               </div>
+               <v-btn icon class="blue--text mr-1">
+                  <v-icon> mdi-lightbulb-outline</v-icon>
+               </v-btn>
             </div>
-            <v-btn icon class="blue--text mr-1">
-               <v-icon> mdi-lightbulb-outline</v-icon>
-            </v-btn>
          </div>
+         <v-container fluid class="h-100">
+            <v-row class="h-100">
+               <v-col class="h-100">
+                  <!--<playground__input v-model="answer" :resume="answer" class="h-100" />-->
+                  <!--<playground__dragdrop-group class="h-100" :items-prop="items" v-model="answer" :question="question" />-->
+                  <!--<playground__dragdrop-sort v-model="answer" :items-prop="items" :question="question"/>-->
+                  <playground__select :data="questions[0]">
+                     <v-btn class="mx-2 fixed-center" fab dark color="blue" absolute bottom to="/playground" @click="snackbar = true" slot="fab">
+                        <v-icon dark>
+                           mdi-arrow-right
+                        </v-icon>
+                     </v-btn>
+                  </playground__select>
+               </v-col>
+            </v-row>
+         </v-container>
       </div>
-      <v-container fluid class="h-100">
-         <v-row class="h-100">
-            <v-col class="h-100">
-               <!--<playground__input v-model="answer" :resume="answer" class="h-100" />-->
-               <!--<playground__dragdrop-group class="h-100" :items-prop="items" v-model="answer" :question="question" />-->
-               <!--<playground__dragdrop-sort v-model="answer" :items-prop="items" :question="question"/>-->
-               <playground__select question="30 + 20 = ">
-                  <v-btn class="mx-2 fixed-center" fab dark color="blue" absolute bottom to="/playground" @click="snackbar = true" slot="fab">
-                     <v-icon dark>
-                        mdi-arrow-right
-                     </v-icon>
-                  </v-btn>
-               </playground__select>
-            </v-col>
-         </v-row>
-      </v-container>
       <v-snackbar v-model="snackbar" multi-line class="snackbar" absolute>
          Bạn làm sai rồi
          <template v-slot:action="{ attrs }">
@@ -58,22 +60,22 @@
       },
       data: () => ({
          snackbar: false,
-         question: "Màu sắc",
-         items: [
-            { id: 0, color: "red" },
-            { id: 1, color: "green" },
-            { id: 2, color: "blue" }
-         ],
-         answer: []
+
+         questions: [
+            {
+               type: "select",
+               question: `
+p.grey--text.text--darken-4 Tính 50 : 5 =
+   div.display-1.text-center 50 : 5 =
+      span.blue--text %text`,
+               items: [10, 5, 50, 20]
+            }
+
+         ]
       })
    }
 </script>
 <style lang="scss" scoped>
-   .fullHeight {
-      height: calc(100% - 56px);
-      position: relative;
-   }
-
    .tool {
       top: 0;
       left: 0;
