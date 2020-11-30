@@ -56,7 +56,7 @@
                      </v-list>
                   </v-card-text>
                </v-card>
-               <v-btn class="mx-2" fab dark color="primary" fixed bottom right to="/playground">
+               <v-btn class="mx-2" fab dark color="blue" fixed bottom right to="/lesson/1/playground">
                   <v-icon dark>
                      mdi-play
                   </v-icon>

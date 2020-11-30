@@ -37,7 +37,7 @@
                <v-container fluid>
                   <v-row>
                      <v-col cols="6" v-for="i in 10" :key="i">
-                        <v-card to="/lesson" hover>
+                        <v-card :to="`/lesson/${i}`" hover>
                            <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="200px" />
                            <v-card-text> Số liền trước, liền sau ..1, 10... </v-card-text>
                         </v-card>

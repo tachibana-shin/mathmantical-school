@@ -1,18 +1,33 @@
 <template>
    <v-card class="mx-auto border-0 playground__dragdrop-group" outlined>
-      <div class="$1">
-      </div>
-      <div class="$2 bg-grey">
-         <div>
-            <p class="grey text--darken-4"> Tìm số liền sau: 9 </p>
-            <small class="grey text--darken-3"> Kéo vào đây </small>
-         </div>
+      <div class="$1 pt-2">
          <draggable v-model="items" :options="{ group: 'people' }">
-            <transition-group name="move-transition">
-               <div v-for="item in items" :key="items.id">
-                  {{ items.title }}
-               </div>
-            </transition-group>
+            <div class="d-inline mr-1" v-for="item in items">
+               <v-btn fab :color="item.color" :key="item.id" :icon="!!item.icon">
+                  <v-icon v-if="!!item.icon"> {{ item.icon }} </v-icon>
+                  <v-img v-else-if="!!item.image" :src="item.image" />
+                  <template v-else>
+                     {{ item.text }}
+                  </template>
+               </v-btn>
+            </div>
+         </draggable>
+      </div>
+      <div class="$2 bg-grey rounded px-3 py-2 text-center">
+         <div class="text-center mb-2">
+            <div class="grey-text text--darken-4"> {{ question }} </div>
+            <small class="grey--text text--darken-3"> Kéo vào đây </small>
+         </div>
+         <draggable v-model="items2" :options="{ group: 'people' }">
+            <div class="d-inline mr-1" v-for="item in items2">
+               <v-btn fab :color="item.color" :key="item.id" :icon="!!item.icon">
+                  <v-icon v-if="!!item.icon"> {{ item.icon }} </v-icon>
+                  <v-img v-else-if="!!item.image" :src="item.image" />
+                  <template v-else>
+                     {{ item.text }}
+                  </template>
+               </v-btn>
+            </div>
          </draggable>
       </div>
    </v-card>
@@ -21,42 +36,21 @@
    import draggable from "vuedraggable"
    export default {
       components: { draggable },
-      data: () => ({
-         items: [
-            {
-               id: 1,
-               avatar: "https://s3.amazonaws.com/vuetify-docs/images/lists/1.jpg",
-               title: "Brunch this life?",
-               subtitle: "Subtitle 1"
-        },
-            {
-               id: 2,
-               avatar: "https://s3.amazonaws.com/vuetify-docs/images/lists/2.jpg",
-               title: "Winter Lunch",
-               subtitle: "Subtitle 2"
-        },
-            {
-               id: 3,
-               avatar: "https://s3.amazonaws.com/vuetify-docs/images/lists/3.jpg",
-               title: "Oui oui",
-               subtitle: "Subtitle 3"
-        }
-      ],
-         items2: [
-            {
-               id: 4,
-               avatar: "https://s3.amazonaws.com/vuetify-docs/images/lists/4.jpg",
-               title: "Brunch this weekend?",
-               subtitle: "Subtitle 4"
-        },
-            {
-               id: 5,
-               avatar: "https://s3.amazonaws.com/vuetify-docs/images/lists/5.jpg",
-               title: 'Summer BBQ <span class="grey--text text--lighten-1">4</span>',
-               subtitle: "Subtitle 5"
-        }
-      ]
-      })
+      props: {
+         itemsProp: Array,
+         question: String
+      },
+      data() {
+         return {
+            items: this.itemsProp,
+            items2: []
+         }
+      },
+      watch: {
+         items2(newVal) {
+            this.$emit("value", newVal)
+         }
+      }
    }
 </script>
 <style lang="scss" scoped>
@@ -77,11 +71,13 @@
          width: 100%;
          background-color: #E0E0E0;
       }
-      & >>> .move-transition-item  {
-  transition: all 1s;
-}
-& >>> .move-transition-active {
-  position: absolute;
-}
+
+      &>>>.move-transition-item {
+         transition: all 1s;
+      }
+
+      &>>>.move-transition-active {
+         position: absolute;
+      }
    }
 </style>
