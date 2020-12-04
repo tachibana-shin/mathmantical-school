@@ -7,10 +7,10 @@ import store from "@/plugins/store"
 import vuetify from "@/plugins/vuetify"
 
 new Vue({
-   el: "#app",
-   router,
-   store,
-   vuetify,
-   components: { App },
-   template: "<App/>"
+  el: "#app",
+  router,
+  store,
+  vuetify,
+  components: { App },
+  template: "<App/>"
 })
