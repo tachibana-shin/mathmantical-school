@@ -3,9 +3,9 @@
     <div class="$1 pt-2">
       <draggable-transition v-model="items" class="h-100">
         <div class="d-inline-block mr-1" v-for="item in items" :key="item.id">
-          <v-btn fab :color="item.color" :key="item.id" :icon="!!item.icon">
+          <v-btn fab :color="item.color" :key="item.id" :icon="!!item.icon || !!item.image">
             <v-icon v-if="!!item.icon"> {{ item.icon }} </v-icon>
-            <v-img v-else-if="!!item.image" :src="item.image" />
+            <v-img v-else-if="!!item.image" :src="item.image"  width="1.2em"/>
             <template v-else>
               {{ item.text }}
             </template>
@@ -16,14 +16,14 @@
     </div>
     <div class="$2 bg-grey rounded px-3 py-2 text-center d-flex flex-column">
       <div class="text-center mb-2">
-        <show-question :text="data.question" />
+        <p class="grey--text text--darken-4"> {{ data.question }} </p>
         <small class="grey--text text--darken-3"> Kéo vào đây </small>
       </div>
       <draggable-transition v-model="items2" group="people" class="h-100" class-trans-group="h-100">
         <div class="d-inline-block mr-1" v-for="item in items2" :key="item.id">
-          <v-btn fab :color="item.color" :key="item.id" :icon="!!item.icon">
+          <v-btn fab :color="item.color" :key="item.id" :icon="!!item.icon || !!item.image">
             <v-icon v-if="!!item.icon"> {{ item.icon }} </v-icon>
-            <v-img v-else-if="!!item.image" :src="item.image" />
+            <v-img v-else-if="!!item.image" :src="item.image" width="1.2em"/>
             <template v-else>
               {{ item.text }}
             </template>

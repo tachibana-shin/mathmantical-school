@@ -6,7 +6,7 @@
       </v-btn>
       <v-toolbar-title> Số liền trước, liền sau </v-toolbar-title>
     </v-app-bar>
-    <transition-group name="scale" mode="in-out">
+    <transition-group name="scale" mode="in-out" v-if="questions">
       <div class="d-flex flex-column h-100" v-if="questionIndex < questions.length" key="1">
         <div>
           <div class="tool">
@@ -19,17 +19,19 @@
             </v-btn>
             <v-dialog v-model="dialog" max-width="290" scrollable>
               <v-card>
-                <v-card-title class="display-1">
+                <v-card-title class="text-h4">
                   Gợi ý
                 </v-card-title>
                 <v-divider />
                 <v-card-text>
-                  <show-question :text="question.tips" />
+                  <show-question :text="question.tips || `
+                    p.grey--text.text--darken-4 Không có gợi ý cho câu này
+                  `" />
                 </v-card-text>
                 <v-card-actions>
                   <v-spacer></v-spacer>
                   <v-btn color="green darken-1" text @click="dialog = false">
-                    Disagree
+                    Đóng
                   </v-btn>
                 </v-card-actions>
               </v-card>
@@ -40,31 +42,30 @@
           <v-row class="h-100">
             <v-col class="h-10 playground__play--group">
               <transition name="slide-fade" mode="out-in">
-                <component :data="question" :is="`playground__${question.type}`" class="h-100" v-model="answer" />
+                <component :data="question" :is="`playground__${question.type}`" class="h-100" v-model="answers[questionIndex]" :key="questionIndex" />
               </transition>
             </v-col>
           </v-row>
         </v-container>
-        <div class="text-right mb-2 mx-3">
+        <div class="text-right mb-2 mx-3 p-relative z-index-9999">
           <v-btn color="blue" class="text-uppercase" block large :dark="!notAnswer" :disabled="notAnswer" @click="questionIndex++"> {{ questionIndex == questions.length - 1 ? "Hoàn thành" : "Câu tiếp theo" }} </v-btn>
         </div>
       </div>
       <div class="h-100 text-center p-relative" v-else key="2">
         <div class="p-absolute top-center left-center">
-          <h3 class="blue--text text-h3"> 10 điểm </h3>
-          <p class="text-h6 mt-3 font-weight-regular grey--text text--darken-3"> Bạn làm tốt lắm </p>
-          <v-btn color="blue" class="text-uppercase" dark> Trở về </v-btn>
+          <h3 class="blue--text text-h3"> {{ result }} điểm </h3>
+          <p class="text-h6 mt-3 font-weight-regular grey--text text--darken-3"> {} </p>
+          <v-btn color="blue" class="text-uppercase" dark to="/../"> Trở về </v-btn>
         </div>
       </div>
     </transition-group>
-    <v-snackbar v-model="snackbar" multi-line class="snackbar" absolute>
-      Bạn làm sai rồi
-      <template v-slot:action="{ attrs }">
-        <v-btn color="red" text v-bind="attrs">
-          Xin hãy làm lại
-        </v-btn>
-      </template>
-    </v-snackbar>
+    <div class="d-flex h-100 p-relative justify-space-between align-center" v-else>
+      <div class="text-center mx-auto">
+        <v-progress-circular :size="50" color="blue" indeterminate />
+        <p> Đang tải dữ liệu... </p>
+      </div>
+    </div>
+    </div>
   </v-card>
 </template>
 <script>
@@ -72,6 +73,36 @@
   import Playground__dragdropSort from "@/components/Playground__DragDrop-Sort"
   import Playground__input from "@/components/Playground__Input"
   import Playground__select from "@/components/Playground__Select"
+
+  function isEqualVal(value1, value2) {
+
+    if (typeof value1 == "object" && typeof value2 == "object") {
+      if (value1 == value2) {
+        return true
+      } else {
+        if (Array.isArray(value1) && Array.isArray(value2)) {
+          if (value1.length != value2.length) {
+            return false
+          } else {
+            return value1.every((item, index) => item == value2[index])
+          }
+        } else {
+          for (const keyword in value1) {
+            if (Object.keys(value1).length != Object.keys(value2).length) {
+              return false
+            } else {
+              if (value1[keyword] != value2[keyword]) {
+                return false
+              }
+              return true
+            }
+          }
+        }
+      }
+    } else {
+      return value1 == value2
+    }
+  }
 
   export default {
     components: {
@@ -83,65 +114,9 @@
     data: () => ({
       snackbar: false,
       dialog: false,
-      answer: undefined,
-      questionIndex: 4,
-      questions: [
-        {
-          type: "dragdrop-sort",
-          question: `
-p.grey--text.text--darken-2 Sắp xếp các ngày trong tuần bắt đầu từ Chủ Nhật`,
-          items: [
-            { id: 0, text: "Thứ 2" },
-            { id: 1, text: "Thứ 3" },
-            { id: 2, text: "Thứ 4" },
-            { id: 3, text: "Thứ 5" },
-            { id: 4, text: "Thứ 6" },
-            { id: 5, text: "Thứ 7" },
-            { id: 6, text: "Chủ nhật" }
-          ],
-          defaultAnswer: []
-        },
-        {
-          type: "dragdrop-group",
-          question: `
-p.grey--text.text--darken-2 Tìm tất cả banh màu xanh nước biển
-          `,
-          items: [
-            { id: 0, color: "blue" },
-            { id: 1, color: "red" },
-            { id: 2, color: "blue-grey" },
-            { id: 3, color: "diango" },
-            { id: 4, color: "violet" }
-          ],
-          defaultAnswer: []
-        },
-        {
-          type: "input",
-          question: `
-p.grey--text.text--darken-2
-  | Đặt tính theo hảng dọc rồi tính:
-  br
-  | 3961 + 4061
-div.text-right.px-15
-  div.flex.flex-column.p-relative
-    p.text-h5.font-weight-regular 9766
-    span.text-h5.font-weight-regular.p-absolute.left.top-center +
-    p.text-h5.font-weight-regular 7884
-  p.text-h5.font-weight-regular.blue--text %text
-          `,
-          defaultAnswer: ""
-        },
-        {
-          type: "select",
-          question: `
-p.grey--text.text--darken-2 Tính 50 : 5 =
-  div.display-1.text-center 50 : 5 =
-    span.blue--text.text-indent-1 %text`,
-          items: [10, 5, 50, 20],
-          defaultAnswer: -1,
-          placeholder: "_"
-        }
-      ]
+      answers: [],
+      questionIndex: 0,
+      questions: null //require("../../server/data/Class-1_T1.js").default
     }),
     computed: {
       question() {
@@ -169,39 +144,49 @@ p.grey--text.text--darken-2 Tính 50 : 5 =
         }
       },
       notAnswer() {
-        const { answer, defaultAnswer } = this
-        if (typeof defaultAnswer == "object" && typeof answer == "object") {
-          if (defaultAnswer == answer) {
-            return true
-          } else {
-            if (Array.isArray(defaultAnswer) && Array.isArray(answer)) {
-              if (answer.length != defaultAnswer.length) {
-                return false
-              } else {
-                return answer.every((item, index) => item == defaultAnswer[index])
-              }
-            } else {
-              for (const keyword in defaultAnswer) {
-                if (Object.keys(defaultAnswer).length != Object.keys(answer).length) {
-                  return false
-                } else {
-                  if (defaultAnswer[keyword] != answer[keyword]) {
-                    return false
-                  }
-                  return true
-                }
-              }
-            }
-          }
+        return isEqualVal(this.answers[this.questionIndex], this.defaultAnswer)
+      },
+      result() {
+        if (this.questionIndex < this.questions.length) {
+          return null
         } else {
-          return defaultAnswer == answer
+          const point = this.questions.reduce((point, { answer }, indexQuestion) => {
+            if (typeof answer == "object") {
+              // this is a object
+              const yourAnswer = this.answers[indexQuestion].map(item => item.id).sort()
+              return point + (isEqualVal(answer.sort(), yourAnswer) ? 1 : 0)
+            } else {
+              return point + (isEqualVal(answer, this.answers[indexQuestion]) ? 1 : 0)
+            }
+          }, 0)
+
+          let message
+          if (point == 10) {
+            message = "Thật tuyệt vời"
+          } else if (point == 9 || point == 8) {
+            message = "Làm tốt lắm"
+          } else {
+            message = "Cố lên em nhé"
+          }
+
+          return { point, message }
         }
       }
     },
     watch: {
-      question: {
+      "result.point"(newVal) {
+        this.$store.commit("newScoreInLesson", {
+          point: newVal,
+          id: this.$route.params.name
+        })
+      },
+      "$route": {
         handler() {
-          this.answer = this.defaultAnswer
+          this.questions = null
+          fetch(`${process.env.baseURL}/api/get-subject/${this.$route.params.name}`)
+            .then(res => res.json())
+            .then(e => this.questions = e)
+            .catch(() => {})
         },
         immediate: true
       }
@@ -218,6 +203,7 @@ p.grey--text.text--darken-2 Tính 50 : 5 =
       align-items: center;
       justify-content: space-between;
       position: relative;
+      z-index: 9998;
 
       .process {
         border-radius: 0 0 30px 30px;
@@ -228,6 +214,10 @@ p.grey--text.text--darken-2 Tính 50 : 5 =
         left: 50%;
         transform: translatex(-50%);
       }
+    }
+
+    .z-index-9999 {
+      z-index: 9999;
     }
 
     .fixed-center {
@@ -245,16 +235,16 @@ p.grey--text.text--darken-2 Tính 50 : 5 =
     .playground__play--group {
 
       &>>>.slide-fade-enter-active {
-        animation: slide-fade-in .3s ease;
+        animation: slide-fade-in .5s ease;
       }
 
       &>>>.slide-fade-leave-active {
-        animation: slide-fade-out .3s ease;
+        animation: slide-fade-out .5s ease;
       }
 
       @keyframes slide-fade-in {
         from {
-          transform: translateY(-30px);
+          transform: translateY(-50px);
           opacity: 0;
         }
 
@@ -271,7 +261,7 @@ p.grey--text.text--darken-2 Tính 50 : 5 =
         }
 
         to {
-          transform: translateY(30px);
+          transform: translateY(50px);
           opacity: 0;
         }
       }

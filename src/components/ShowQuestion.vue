@@ -1,5 +1,5 @@
 <template>
-  <div v-html="html"></div>
+  <div v-html="html" class="show-question"></div>
 </template>
 <script>
   import pug from "pug"
@@ -16,3 +16,19 @@
     }
   }
 </script>
+<style lang="scss" scoped>
+  .show-question {
+    width: 100%;
+
+    &>>>.d-flex {
+      position: relative;
+      width: 100%;
+      flex-wrap: wrap;
+    }
+
+    &>>>img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+</style>
