@@ -5,7 +5,9 @@ const path = require("path")
 const Module = require("module")
 const pug = require("pug")
 const lessonAbout = require("./lesson-about/index.js")
+const serveStatic = require('serve-static');
 
+app.use(serveStatic(__dirname + "/../dist"));
 require("dotenv").config()
 app.use(require("cors")())
 
