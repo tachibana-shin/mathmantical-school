@@ -121,7 +121,7 @@
       }
     },
     async beforeCreate() {
-      this.data = (await fetch(`http://localhost:3000/api/get-subject/`)
+      this.data = (await fetch(`/api/get-subject/`)
         .then(res => res.json())).data
     }
   }

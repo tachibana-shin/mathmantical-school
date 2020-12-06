@@ -186,7 +186,7 @@
       "$route": {
         handler() {
           this.data = null
-          fetch(`http://localhost:3000/api/get-subject/class-${this.$route.params.class}/week-${this.$route.params.week}`)
+          fetch(`/api/get-subject/class-${this.$route.params.class}/week-${this.$route.params.week}`)
             .then(res => res.json())
             .then(e => this.data = e.data)
             .catch(() => {})
