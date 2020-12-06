@@ -6,6 +6,7 @@ const Module = require("module")
 const pug = require("pug")
 const lessonAbout = require("./lesson-about/index.js")
 const serveStatic = require('serve-static');
+const port = process.env.PORT || 3000
 
 app.use(serveStatic(__dirname + "/../dist"));
 require("dotenv").config()
@@ -89,4 +90,4 @@ app.route("/api/resources/assets/*").get((req, res) => {
   }
 })
 
-app.listen(3000, () => console.log(`App is running in port 3000`));
+app.listen(port, () => console.log(`App is running in port 3000`));
