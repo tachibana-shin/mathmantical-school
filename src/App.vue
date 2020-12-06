@@ -103,9 +103,9 @@
       drawer: false,
       drawerItems: [
         { icon: "mdi-book-multiple", text: "Khóa học Toán" },
-        { icon: "mdi-apps", text: "Thử thách toán" },
+        /*{ icon: "mdi-apps", text: "Thử thách toán" },
         { icon: "mdi-view-agenda", text: "Song đấu toán" },
-        { icon: "mdi-gamepad", text: "Trò chơi toán" }
+        { icon: "mdi-gamepad", text: "Trò chơi toán" }*/
          ]
     })
   }

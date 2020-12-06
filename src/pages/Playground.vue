@@ -4,7 +4,7 @@
       <v-btn icon @click="$router.back()">
         <v-icon>mdi-arrow-left</v-icon>
       </v-btn>
-      <v-toolbar-title> Số liền trước, liền sau </v-toolbar-title>
+      <v-toolbar-title> {{ data ? data.title : "" }} </v-toolbar-title>
     </v-app-bar>
     <transition-group name="scale" mode="in-out" v-if="questions">
       <div class="d-flex flex-column h-100" v-if="questionIndex < questions.length" key="1">
@@ -48,18 +48,18 @@
           </v-row>
         </v-container>
         <div class="text-right mb-2 mx-3 p-relative z-index-9999">
-          <v-btn color="blue" class="text-uppercase" block large :dark="!notAnswer" :disabled="notAnswer" @click="questionIndex++; questionIndex == questions.length - 1 && saveScore()"> {{ questionIndex == questions.length - 1 ? "Hoàn thành" : "Câu tiếp theo" }} </v-btn>
+          <v-btn color="blue" class="text-uppercase" block large :dark="!notAnswer" :disabled="notAnswer" @click="questionIndex == questions.length - 1 && saveScore();questionIndex++; "> {{ questionIndex == questions.length - 1 ? "Hoàn thành" : "Câu tiếp theo" }} </v-btn>
         </div>
       </div>
       <div class="h-100 text-center p-relative" v-else key="2">
         <div class="p-absolute top-center left-center">
-          <h3 class="blue--text text-h3"> {{ result }} điểm </h3>
-          <p class="text-h6 mt-3 font-weight-regular grey--text text--darken-3"> {} </p>
-          <v-btn color="blue" class="text-uppercase" dark to="/../"> Trở về </v-btn>
+          <h3 class="blue--text text-h3"> {{ result.point }} điểm </h3>
+          <p class="text-h6 mt-3 font-weight-regular grey--text text--darken-3"> {{ result.message }} </p>
+          <v-btn color="blue" class="text-uppercase" dark @click="$router.back()"> Trở về </v-btn>
         </div>
       </div>
     </transition-group>
-    <v-loading title="Đang tải dữ liệu..." v-else/>
+    <v-loading title="Đang tải dữ liệu..." v-else />
     </div>
   </v-card>
 </template>
@@ -111,9 +111,12 @@
       dialog: false,
       answers: [],
       questionIndex: 0,
-      questions: null//require("../../server/data/Class-1_T1.js").default
+      data: null,//require("../../server/data/Class-1_T1.js").default
     }),
     computed: {
+      questions() {
+        return this.data && this.data.items
+      },
       question() {
         return this.questions[this.questionIndex]
       },
@@ -142,10 +145,11 @@
         return isEqualVal(this.answers[this.questionIndex], this.defaultAnswer)
       },
       result() {
-        if (this.questionIndex < this.questions.length) {
-          return null
+        if (this.questionIndex < this.questions.length - 1) {
+          return {}
         } else {
-          const point = this.questions.reduce((point, { answer }, indexQuestion) => {
+          let queTrue = 0
+          const point = Math.round((queTrue = this.questions.reduce((point, { answer }, indexQuestion) => {
             if (typeof answer == "object") {
               // this is a object
               const yourAnswer = this.answers[indexQuestion].map(item => item.id).sort()
@@ -153,7 +157,7 @@
             } else {
               return point + (isEqualVal(answer, this.answers[indexQuestion]) ? 1 : 0)
             }
-          }, 0)
+          }, 0)) / this.questions.length * 10)
 
           let message
           if (point == 10) {
@@ -164,13 +168,16 @@
             message = "Cố lên em nhé"
           }
 
-          return { point, message }
+          return { point, message, queTrue }
         }
-      },
+      }
+    },
+    methods: {
       saveScore() {
         this.$store.commit("newScoreInLesson", {
           point: this.result.point,
           countQuestion: this.questions.length,
+          questionTrue: this.result.queTrue,
           id: `C${this.$route.params.class}W${this.$route.params.week}`
         })
       }
@@ -181,7 +188,7 @@
           this.data = null
           fetch(`http://localhost:3000/api/get-subject/class-${this.$route.params.class}/week-${this.$route.params.week}`)
             .then(res => res.json())
-            .then(e => this.questions = e.data)
+            .then(e => this.data = e.data)
             .catch(() => {})
         },
         immediate: true

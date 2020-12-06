@@ -4,6 +4,7 @@ const fs = require("fs")
 const path = require("path")
 const Module = require("module")
 const pug = require("pug")
+const lessonAbout = require("./lesson-about/index.js")
 
 require("dotenv").config()
 app.use(require("cors")())
@@ -14,12 +15,23 @@ app.route("/api/get-subject/class-:class/week-:week").get((req, res) => {
 
   try {
     if (fs.existsSync(uriDocument)) {
+      let dataLesson = lessonAbout.find(item => item.class == req.params.class)
+
+      if (dataLesson) {
+        dataLesson = dataLesson.items[req.params.week]
+      }
+
+
       data = {
         statusCode: 200,
-        data: require(uriDocument).map(item => ({
-          ...item,
-          question: item.type == "dragdrop-group" ? item.question : pug.render(item.question)
-        }))
+        data: {
+          title: dataLesson.name,
+          items: require(uriDocument).map(item => ({
+            ...item,
+            question: item.type == "dragdrop-group" ? item.question : pug.render(item.question)
+
+          }))
+        }
       }
     } else {
       data = {
@@ -37,7 +49,7 @@ app.route("/api/get-subject/class-:class/week-:week").get((req, res) => {
 
   res.status(data.statusCode).json(data)
 })
-const lessonAbout = require("./lesson-about/index.js")
+
 app.route("/api/get-about-subject/class-:class/week-:week").get((req, res) => {
 
   let dataLesson = lessonAbout.find(item => item.class == req.params.class)
@@ -67,7 +79,7 @@ app.route("/api/get-subject").get((req, res) => {
 })
 app.route("/api/resources/assets/*").get((req, res) => {
   const itPath = `${__dirname}/assets/${req.params[0].replace("..", "")}`
-  
+
   if (fs.existsSync(itPath)) {
     res.sendFile(itPath)
   } else {

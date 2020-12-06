@@ -70,7 +70,7 @@ div.d-flex.align-items-center.justify-content-between
   img(src="${(process.env.baseURL + "/api/resources/assets/t1/7/1.png")}")
     `,
     items: ["Hình tam giác", "Hình tròn"],
-    answer: 0
+    answer: 1
   },
 
   {
@@ -151,7 +151,7 @@ div.d-flex.align-items-center.justify-content-between
       { id: 0, image: (process.env.baseURL + "/api/resources/assets/t1/15/1.png") },
       { id: 1, image: (process.env.baseURL + "/api/resources/assets/t1/15/2.png") }
     ],
-    answer: 1
+    answer: [1]
   },
   {
     type: "select",
@@ -170,7 +170,7 @@ div.d-flex.align-items-center.justify-content-between
       { id: 0, image: (process.env.baseURL + "/api/resources/assets/t1/17/1.png") },
       { id: 1, image: (process.env.baseURL + "/api/resources/assets/t1/17/2.png") }
     ],
-    answer: 1
+    answer: [1]
   },
   {
     type: "select",
@@ -190,7 +190,7 @@ div.d-flex.align-items-center.justify-content-between
       { id: 1, image: (process.env.baseURL + "/api/resources/assets/t1/19/2.png") },
       { id: 2, image: (process.env.baseURL + "/api/resources/assets/t1/19/3.png") }
     ],
-    answer: 0
+    answer: [0]
   },
   {
     type: "select",

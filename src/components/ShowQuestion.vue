@@ -10,7 +10,13 @@
     },
     computed: {
       html() {
-        return this.text.replace('%text', this.resume || this.placeholder || "__")
+        let text = this.text.replace("%text", "<span class=\"blue--text\">" + this.resume || this.placeholder || "__" + "</span>")
+
+        ;
+        (this.resume || "").replace(/\s/, "").split(",").forEach((item, index) => {
+          text = text.replace(`%text${index + 1}`, "<span class=\"blue--text\">" + item + "</span>")
+        })
+        return text
       }
     }
   }

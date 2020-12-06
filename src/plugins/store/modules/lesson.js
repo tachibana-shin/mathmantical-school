@@ -12,9 +12,9 @@ export default {
     }
   },
   mutations: {
-    newScoreInLesson(state, { point, id }) {
+    newScoreInLesson(state, { point, id, countQuestion }) {
       state.score = state.score.filter(item => item.id != id)
-      state.score.unshift({ point, id })
+      state.score.unshift({ point, id, countQuestion })
     },
     pushLessonToLibrary(state, id) {
       state.library = state.library.filter(item => item != id)

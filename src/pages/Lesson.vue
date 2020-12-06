@@ -47,8 +47,8 @@
                     <v-list-item-title> Bạn làm tốt lắm </v-list-item-title>
                     <v-list-item-subtitle>
                       <div class="d-flex align-center">
-                        <v-progress-circular :rotate="-90" :size="50" :width="5" :value="60" color="primary"> 60% </v-progress-circular>
-                        <p class="mx-3"> 2 answer / {{ ID }} question </p>
+                        <v-progress-circular :rotate="-90" :size="50" :width="5" :value="infoInLocal.point * 10" color="primary"> {{ infoInLocal.point * 10 }}% </v-progress-circular>
+                        <p class="mx-3"> {{ infoInLocal.questionTrue }} answer / {{ infoInLocal.countQuestion }} question </p>
                       </div>
                     </v-list-item-subtitle>
                   </v-list-item-content>
