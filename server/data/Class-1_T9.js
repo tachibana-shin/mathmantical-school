@@ -1,4 +1,4 @@
-export default [
+module.exports = [
   {
     type: "input",
     question: `
@@ -121,7 +121,7 @@ p.text-h5.text-center 1 + 3 %text 2 - 1
     question: `
 p.grey--text.text--darken-2 Chọn số thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t9/14/1.png")}")`,
+  img(src="${(process.env.baseURL + "/api/resources/assets/t9/14/1.png")}")`,
     items: ["1, 2", "3, 4", "1, 3", "5, 7"],
     answer: 0
   },
@@ -130,7 +130,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Chọn số thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t9/15/1.png")}")`,
+  img(src="${(process.env.baseURL + "/api/resources/assets/t9/15/1.png")}")`,
     items: ["2, 5", "3, 4", "1, 3", "5, 7"],
     answer: 0
   },
@@ -139,7 +139,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Chọn số thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t9/16/1.png")}")`,
+  img(src="${(process.env.baseURL + "/api/resources/assets/t9/16/1.png")}")`,
     items: ["1, 2", "3, 0", "1, 3", "5, 7"],
     answer: 1
   },
@@ -148,7 +148,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Chọn số thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t9/17/1.png")}")`,
+  img(src="${(process.env.baseURL + "/api/resources/assets/t9/17/1.png")}")`,
     items: ["2, 1", "3, 4", "1, 3", "5, 7"],
     answer: 0
   },
@@ -158,7 +158,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Chọn số thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t9/18/1.png")}")`,
+  img(src="${(process.env.baseURL + "/api/resources/assets/t9/18/1.png")}")`,
     items: ["2, 1", "3, 4", "1, 3", "5, 7"],
     answer: 0
   },
@@ -168,7 +168,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Chọn số thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t9/19/1.png")}")`,
+  img(src="${(process.env.baseURL + "/api/resources/assets/t9/19/1.png")}")`,
     items: ["2, 3, 1", "3, 2, 1", "1, 2, 4", "5, 7, 1"],
     answer: 0
   },
@@ -177,7 +177,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Chọn số thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t9/20/1.png")}")`,
+  img(src="${(process.env.baseURL + "/api/resources/assets/t9/20/1.png")}")`,
     items: ["2, 3, 1", "3, 2, 4", "1, 2, 4", "5, 7, 1"],
     answer: 1
   }

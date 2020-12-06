@@ -2,7 +2,6 @@
   <div v-html="html" class="show-question"></div>
 </template>
 <script>
-  import pug from "pug"
   export default {
     props: {
       text: String,
@@ -11,7 +10,7 @@
     },
     computed: {
       html() {
-        return pug.render(this.text).replace('%text', this.resume || this.placeholder || "__")
+        return this.text.replace('%text', this.resume || this.placeholder || "__")
       }
     }
   }

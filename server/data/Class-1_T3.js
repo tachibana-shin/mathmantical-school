@@ -1,11 +1,11 @@
-export default [
+module.exports = [
   {
     type: "select",
     question: `
 p.grey--text.text--darken-2 Điền dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t3/1/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t3/1/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/1/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/1/2.png")})
     `,
     items: [">", "<", "="]
   },
@@ -14,8 +14,8 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Điền dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t3/2/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t3/2/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/2/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/2/2.png")})
     `,
     items: [">", "<", "="]
   },
@@ -24,8 +24,8 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Điền dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t3/3/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t3/3/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/3/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/3/2.png")})
     `,
     items: [">", "<", "="]
   },
@@ -34,8 +34,8 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Điền dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t3/4/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t3/4/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/4/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/4/2.png")})
     `,
     items: [">", "<", "="]
   },
@@ -44,8 +44,8 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Điền dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t3/5/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t3/5/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/5/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/5/2.png")})
     `,
     items: [">", "<", "="]
   },
@@ -54,8 +54,8 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Điền dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t3/6/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t3/6/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/6/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/6/2.png")})
     `,
     items: [">", "<", "="]
   },
@@ -64,8 +64,8 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Điền dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t3/7/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t3/7/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/7/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/7/2.png")})
     `,
     items: [">", "<", "="]
   },
@@ -74,8 +74,8 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Điền dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t3/8/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t3/8/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/8/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/8/2.png")})
     `,
     items: [">", "<", "="]
   },
@@ -84,8 +84,8 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Điền dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t3/9/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t3/9/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/9/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/9/2.png")})
     `,
     items: [">", "<", "="]
   },
@@ -94,8 +94,8 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Điền dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t3/10/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t3/10/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/10/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/10/2.png")})
     `,
     items: [">", "<", "="]
   },
@@ -104,8 +104,8 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Điền dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t3/11/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t3/11/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/11/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t3/11/2.png")})
     `,
     items: [">", "<", "="]
   },

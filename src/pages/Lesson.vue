@@ -4,14 +4,14 @@
       <v-btn icon @click="$router.back()">
         <v-icon>mdi-arrow-left</v-icon>
       </v-btn>
-      <v-toolbar-title> Số liền trước, liền sau </v-toolbar-title>
+      <v-toolbar-title> {{ data.name }} </v-toolbar-title>
     </v-app-bar>
     <v-container fluid>
       <v-row>
         <v-col>
           <v-card :loading="loading" class="mx-auto border-0" outlined>
-            <v-img height="250" src="https://cdn.vuetifyjs.com/images/cards/cooking.png" />
-            <v-card-title> Đếm số </v-card-title>
+            <v-img width="100%" :src="data.image" />
+            <v-card-title> {{ data.name }} </v-card-title>
             <v-card-text>
               <v-row align="center" class="mx-0">
                 <v-rating :value="4.5" color="amber" dense half-increments readonly size="14"></v-rating>
@@ -19,12 +19,12 @@
                   4.5 (413)
                 </div>
               </v-row>
-              <div> Khóa học xác định là sẽ có nhiều người yêu thích công nghệ thì phải có cái gì cũng nên có cái gì cũng nên có cái gì cũng nên có cái gì cũng nên </div>
+              <div> {{ data.description }} </div>
             </v-card-text>
             <v-card-text>
               <v-list three-line>
                 <v-divider inset></v-divider>
-                <v-list-item>
+                <v-list-item v-if="!itInLibrary">
                   <v-list-item-avatar>
                     <v-icon> mdi-cart </v-icon>
                   </v-list-item-avatar>
@@ -33,22 +33,22 @@
                     <v-list-item-subtitle> giảm quảng cáo và không giới hạn </v-list-item-subtitle>
                   </v-list-item-content>
                   <v-list-item-action>
-                    <v-btn icon>
+                    <v-btn icon @click="pushLessonToLibrary">
                       <v-icon>mdi-plus</v-icon>
                     </v-btn>
                   </v-list-item-action>
                 </v-list-item>
-                <v-divider inset />
-                <v-list-item>
+                <v-divider inset v-if="!itInLibrary" />
+                <v-list-item v-if="infoInLocal">
                   <v-list-item-avatar>
                     <v-icon> mdi-star </v-icon>
                   </v-list-item-avatar>
                   <v-list-item-content>
                     <v-list-item-title> Bạn làm tốt lắm </v-list-item-title>
                     <v-list-item-subtitle>
-                      <div class="d-flex align-items-center">
+                      <div class="d-flex align-center">
                         <v-progress-circular :rotate="-90" :size="50" :width="5" :value="60" color="primary"> 60% </v-progress-circular>
-                        <p class="mx-3"> 2 answer / 3 question </p>
+                        <p class="mx-3"> 2 answer / {{ ID }} question </p>
                       </div>
                     </v-list-item-subtitle>
                   </v-list-item-content>
@@ -56,7 +56,7 @@
               </v-list>
             </v-card-text>
           </v-card>
-          <v-btn class="mx-2" fab dark color="blue" fixed bottom right to="/lesson/1/playground">
+          <v-btn class="mx-2" fab dark color="blue" fixed bottom right :to="`${$route.path}/playground`">
             <v-icon dark>
               mdi-play
             </v-icon>
@@ -70,15 +70,30 @@
   export default {
     data: () => ({
       loading: false,
-      selection: 1,
+      data: {}
     }),
-
     methods: {
-      reserve() {
-        this.loading = true
-
-        setTimeout(() => (this.loading = false), 2000)
-      },
+      pushLessonToLibrary() {
+        this.$store.commit("pushLessonToLibrary", this.ID)
+      }
     },
+    computed: {
+      ID() {
+        return `C${this.$route.params.class}W${this.$route.params.week}`
+      },
+      itInLibrary() {
+        return this.$store.getters.itInLibrary(this.ID)
+      },
+      infoInLocal() {
+        return this.$store.getters.getInfoLessonInLibrary(this.ID)
+      }
+    },
+    mounted() {
+      this.loading = true
+      fetch(`http://localhost:3000/api/get-about-subject/class-${this.$route.params.class}/week-${this.$route.params.week}`)
+        .then(res => res.json())
+        .then(json => this.data = json.data)
+        .then(() => this.loading = false)
+    }
   }
 </script>

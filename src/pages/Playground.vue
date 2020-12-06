@@ -48,7 +48,7 @@
           </v-row>
         </v-container>
         <div class="text-right mb-2 mx-3 p-relative z-index-9999">
-          <v-btn color="blue" class="text-uppercase" block large :dark="!notAnswer" :disabled="notAnswer" @click="questionIndex++"> {{ questionIndex == questions.length - 1 ? "Hoàn thành" : "Câu tiếp theo" }} </v-btn>
+          <v-btn color="blue" class="text-uppercase" block large :dark="!notAnswer" :disabled="notAnswer" @click="questionIndex++; questionIndex == questions.length - 1 && saveScore()"> {{ questionIndex == questions.length - 1 ? "Hoàn thành" : "Câu tiếp theo" }} </v-btn>
         </div>
       </div>
       <div class="h-100 text-center p-relative" v-else key="2">
@@ -59,12 +59,7 @@
         </div>
       </div>
     </transition-group>
-    <div class="d-flex h-100 p-relative justify-space-between align-center" v-else>
-      <div class="text-center mx-auto">
-        <v-progress-circular :size="50" color="blue" indeterminate />
-        <p> Đang tải dữ liệu... </p>
-      </div>
-    </div>
+    <v-loading title="Đang tải dữ liệu..." v-else/>
     </div>
   </v-card>
 </template>
@@ -116,7 +111,7 @@
       dialog: false,
       answers: [],
       questionIndex: 0,
-      questions: null //require("../../server/data/Class-1_T1.js").default
+      questions: null//require("../../server/data/Class-1_T1.js").default
     }),
     computed: {
       question() {
@@ -171,21 +166,22 @@
 
           return { point, message }
         }
+      },
+      saveScore() {
+        this.$store.commit("newScoreInLesson", {
+          point: this.result.point,
+          countQuestion: this.questions.length,
+          id: `C${this.$route.params.class}W${this.$route.params.week}`
+        })
       }
     },
     watch: {
-      "result.point"(newVal) {
-        this.$store.commit("newScoreInLesson", {
-          point: newVal,
-          id: this.$route.params.name
-        })
-      },
       "$route": {
         handler() {
-          this.questions = null
-          fetch(`${process.env.baseURL}/api/get-subject/${this.$route.params.name}`)
+          this.data = null
+          fetch(`http://localhost:3000/api/get-subject/class-${this.$route.params.class}/week-${this.$route.params.week}`)
             .then(res => res.json())
-            .then(e => this.questions = e)
+            .then(e => this.questions = e.data)
             .catch(() => {})
         },
         immediate: true

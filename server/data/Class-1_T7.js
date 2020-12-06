@@ -1,10 +1,10 @@
-export default [
+module.exports = [
   {
     type: "input",
     question: `
 p.grey--text.text--darken-2 Điền số thích họp vào chỗ trống:
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t7/1/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t7/1/1.png")}") 
 p.text-h5.text-center 2 + 1 = %text
     `,
     answer: 3
@@ -14,7 +14,7 @@ p.text-h5.text-center 2 + 1 = %text
     question: `
 p.grey--text.text--darken-2 Điền số thích họp vào chỗ trống:
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t7/2/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t7/2/1.png")}") 
 p.text-h5.text-center 1 + 2 = %text
     `,
     answer: 3
@@ -25,7 +25,7 @@ p.text-h5.text-center 1 + 2 = %text
     question: `
 p.grey--text.text--darken-2 Điền số thích họp vào chỗ trống:
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t7/3/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t7/3/1.png")}") 
 p.text-h5.text-center 1 + 1 = %text
     `,
     answer: 2
@@ -35,7 +35,7 @@ p.text-h5.text-center 1 + 1 = %text
     question: `
 p.grey--text.text--darken-2 Điền số thích họp vào chỗ trống:
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t7/4/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t7/4/1.png")}") 
 p.text-h5.text-center 2 + 1 = %text
     `,
     answer: 1
@@ -45,7 +45,7 @@ p.text-h5.text-center 2 + 1 = %text
     question: `
 p.grey--text.text--darken-2 Điền số thích họp vào chỗ trống:
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t7/5/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t7/5/1.png")}") 
 p.text-h5.text-center 1 + 1 = %text
     `,
     answer: 2
@@ -112,7 +112,7 @@ p.text-h5.text-center 1 + 1 = %text
     question: `
 p.grey--text.text--darken-2 Điền số thích họp vào chỗ trống:
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t7/12/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t7/12/1.png")}") 
 p.text-h5.text-center 1 + 3 = %text
     `,
     answer: 4
@@ -122,7 +122,7 @@ p.text-h5.text-center 1 + 3 = %text
     question: `
 p.grey--text.text--darken-2 Điền số thích họp vào chỗ trống:
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t7/13/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t7/13/1.png")}") 
 p.text-h5.text-center 2 + 2 = %text
     `,
     answer: 4
@@ -132,7 +132,7 @@ p.text-h5.text-center 2 + 2 = %text
     question: `
 p.grey--text.text--darken-2 Điền số thích họp vào chỗ trống:
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t7/14/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t7/14/1.png")}") 
 p.text-h5.text-center 3 + 2 = %text
     `,
     answer: 5

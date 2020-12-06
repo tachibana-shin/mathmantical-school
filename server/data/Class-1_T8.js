@@ -1,10 +1,10 @@
-export default [
+module.exports = [
   {
     type: "input",
     question: `
 p.grey--text.text--darken-2 Điền số thích họp vào chỗ trống:
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t8/1/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t8/1/1.png")}") 
 p.text-h5.text-center 2 + 3 = %text
     `,
     answer: 5
@@ -14,7 +14,7 @@ p.text-h5.text-center 2 + 3 = %text
     question: `
 p.grey--text.text--darken-2 Điền số thích họp vào chỗ trống:
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t8/2/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t8/2/1.png")}") 
 p.text-h5.text-center 3 + 2 = %text
     `,
     answer: 5
@@ -73,7 +73,7 @@ p.text-h5.text-center 4 + %text = 5
     question: `
 p.grey--text.text--darken-2 Điền số thích họp vào chỗ trống:
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t8/9/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t8/9/1.png")}")
 p.text-h5.text-center 2 + 2 + 1 = %text
     `,
     answer: 5
@@ -102,7 +102,7 @@ p.text-h5.text-center 2 + 1 + %text = 5
     question: `
 p.grey--text.text--darken-2 Chọn số thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t8/11/1.png")}")`,
+  img(src="${(process.env.baseURL + "/api/resources/assets/t8/11/1.png")}")`,
     items: ["3, 5", "5, 7", "3, 6", "5, 7"],
     answer: 0
   },

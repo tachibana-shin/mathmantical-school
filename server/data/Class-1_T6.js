@@ -1,9 +1,9 @@
-export default [
+module.exports = [
   {
     type: "input",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t6/1/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t6/1/1.png")}") 
 p.text-h5.text-center Có %text tam giác
     `,
     answer: 10
@@ -12,7 +12,7 @@ p.text-h5.text-center Có %text tam giác
     type: "input",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t6/2/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t6/2/1.png")}") 
 p.text-h5.text-center Có %text bông hoa
     `,
     answer: 10
@@ -21,7 +21,7 @@ p.text-h5.text-center Có %text bông hoa
     type: "input",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t6/3/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t6/3/1.png")}") 
 p.text-h5.text-center Có %text cái thìa
     `,
     answer: 10
@@ -30,7 +30,7 @@ p.text-h5.text-center Có %text cái thìa
     type: "input",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t6/4/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t6/4/1.png")}") 
 p.text-h5.text-center Có %text bông hoa
     `,
     answer: 10
@@ -39,7 +39,7 @@ p.text-h5.text-center Có %text bông hoa
     type: "input",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t6/5/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t6/5/1.png")}") 
 p.text-h5.text-center Có %text hình tròn
     `,
     answer: 10
@@ -48,7 +48,7 @@ p.text-h5.text-center Có %text hình tròn
     type: "input",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t6/6/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t6/6/1.png")}") 
 p.text-h5.text-center Có %text quả trứng
     `,
     answer: 10
@@ -58,7 +58,7 @@ p.text-h5.text-center Có %text quả trứng
     question: `
 p.grey--text.text--darken-2 Lan nói "Cầu vồng có 10 màu" đúng hay sai?
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t6/7/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t6/7/1.png")}") 
     `,
     items: ["Đúng", "Sai"],
     answer: 1
@@ -68,7 +68,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Quỳnh nói "Có 10 cái ghế" đúng hay sai?
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t6/8/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t6/8/1.png")}") 
     `,
     items: ["Đúng", "Sai"],
     answer: 0
@@ -78,8 +78,8 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Chọn dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t5/7/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t5/7/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t5/7/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t5/7/2.png")})
 p.text-h5.text-center 10 %text 9
     `,
     items: [">", "<", "="],

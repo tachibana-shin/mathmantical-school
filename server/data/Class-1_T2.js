@@ -1,10 +1,10 @@
-export default [
+module.exports = [
   {
     type: "input",
     question: `
 p.grey--text.text--darken-2 Có bao nhiêu bông hoa?
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t2/1/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t2/1/1.png")}")
 p.text-h5.blue--text.text-center %text`,
     answer: 3
   },
@@ -13,7 +13,7 @@ p.text-h5.blue--text.text-center %text`,
     question: `
 p.grey--text.text--darken-2 Có bao nhiêu cây thông?
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t2/2/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t2/2/1.png")}")
 p.text-h5.blue--text.text-center %text `,
     answer: 2
   },
@@ -22,7 +22,7 @@ p.text-h5.blue--text.text-center %text `,
     question: `
 p.grey--text.text--darken-2 Có bao nhiêu cái ghế?
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t2/3/1.png")}")`,
+  img(src="${(process.env.baseURL + "/api/resources/assets/t2/3/1.png")}")`,
     answer: 4
   },
   {
@@ -30,7 +30,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Có con mèo?
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t2/4/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t2/4/1.png")}")
 p.text-h5.blue--text.text-center %text `,
     answer: 5
   },
@@ -39,7 +39,7 @@ p.text-h5.blue--text.text-center %text `,
     question: `
 p.grey--text.text--darken-2 Có bao nhiêu con chuột?
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t2/5/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t2/5/1.png")}")
 p.text-h5.blue--text.text-center %text `,
     answer: 1
   },
@@ -48,7 +48,7 @@ p.text-h5.blue--text.text-center %text `,
     question: `
 p.grey--text.text--darken-2 Ngôi sao có mấy cánh?
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t2/6/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t2/6/1.png")}")
 p.text-h5.blue--text.text-center %text `,
     answer: 5
   },
@@ -57,7 +57,7 @@ p.text-h5.blue--text.text-center %text `,
     question: `
 p.grey--text.text--darken-2 Có bao nhiêu cái ghế?
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t2/7/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t2/7/1.png")}")
 p.text-h5.blue--text.text-center %text `,
     answer: 4
   },
@@ -76,7 +76,7 @@ p.text-h5.text-center 1, %text, 3, 4, 5`,
     question: `
 p.grey--text.text--darken-2 Có bao nhiêu ngôi sao?
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t2/9/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t2/9/1.png")}")
 p.text-h5.blue--text.text-center %text `,
     answer: 4
   },
@@ -90,9 +90,9 @@ p.text-h5.text-center 5, 4, %text, 2, 1`,
   {
     type: "connect",
     itemsA: [
-      { id: 0, image: require(__dirname + "/../" + "assets/t2/11/1.png") },
-      { id: 1, image: require(__dirname + "/../" + "assets/t2/11/2.png") },
-      { id: 2, image: require(__dirname + "/../" + "assets/t2/11/3.png") }
+      { id: 0, image: (process.env.baseURL + "/api/resources/assets/t2/11/1.png") },
+      { id: 1, image: (process.env.baseURL + "/api/resources/assets/t2/11/2.png") },
+      { id: 2, image: (process.env.baseURL + "/api/resources/assets/t2/11/3.png") }
     ],
     itemsB: [
       { id: 0, text: 5 },
@@ -106,7 +106,7 @@ p.text-h5.text-center 5, 4, %text, 2, 1`,
     question: `
 p.grey--text.text--darken-2 Điền vào chỗ trống.
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/12/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/12/1.png")}")
     `,
     items: ["2-3", "3-2", "4-2", "3-8"],
     answer: 0
@@ -116,7 +116,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Điền vào chỗ trống.
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/13/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/13/1.png")}")
     `,
     items: ["3-1", "1-3", "4-2", "5-1"],
     answer: 0
@@ -126,7 +126,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Có bao nhiêu con cá?
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/14/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/14/1.png")}")
     `,
     items: [2, 3, 4, 5],
     answer: 2
@@ -136,7 +136,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Có bao nhiêu hình vuông
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/15/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/15/1.png")}")
     `,
     items: [1, 2, 3, 4],
     answer: 0
@@ -146,7 +146,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Có bao nhiêu hình tam giác?
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/16/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/16/1.png")}")
     `,
     items: [1, 2, 3, 4],
     answer: 2
@@ -156,7 +156,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Có bao nhiêu quả?
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/17/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/17/1.png")}")
     `,
     items: [2, 3, 4, 5],
     answer: 3
@@ -164,12 +164,12 @@ div.d-flex.align-items-center.justify-content-between
   {
     type: "connect",
     itemsA: [
-      { id: 0, image: require(__dirname + "/../" + "assets/t2/18/1.png") },
-      { id: 1, image: require(__dirname + "/../" + "assets/t2/18/2.png") },
-      { id: 2, image: require(__dirname + "/../" + "assets/t2/18/3.png") },
-      { id: 3, image: require(__dirname + "/../" + "assets/t2/18/4.png") },
-      { id: 4, image: require(__dirname + "/../" + "assets/t2/18/5.png") },
-      { id: 5, image: require(__dirname + "/../" + "assets/t2/18/6.png") }
+      { id: 0, image: (process.env.baseURL + "/api/resources/assets/t2/18/1.png") },
+      { id: 1, image: (process.env.baseURL + "/api/resources/assets/t2/18/2.png") },
+      { id: 2, image: (process.env.baseURL + "/api/resources/assets/t2/18/3.png") },
+      { id: 3, image: (process.env.baseURL + "/api/resources/assets/t2/18/4.png") },
+      { id: 4, image: (process.env.baseURL + "/api/resources/assets/t2/18/5.png") },
+      { id: 5, image: (process.env.baseURL + "/api/resources/assets/t2/18/6.png") }
     ],
     itemsB: [
       { id: 0, text: 4 },

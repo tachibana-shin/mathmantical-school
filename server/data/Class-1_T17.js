@@ -1,10 +1,10 @@
-export default [
+module.exports = [
   {
     type: "select",
     question: `
 p.grey--text.text--darken-2 Đọc:
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t17/1/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t17/1/1.png")}")
     `,
     items: ["Điểm AB", "Đoạn thẳng AB"],
     answer: 1
@@ -14,7 +14,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Đọc:
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t17/2/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t17/2/1.png")}")
     `,
     items: ["Điểm B", "Đoạn thẳng B"],
     answer: 0
@@ -24,7 +24,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Đọc:
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t17/3/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t17/3/1.png")}")
     `,
     items: ["Điểm MN", "Đoạn thẳng MN"],
     answer: 1
@@ -33,7 +33,7 @@ div.d-flex.align-items-center.justify-content-between
     type: "select",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t17/4/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t17/4/1.png")}")
 p.text-h5.text-center Có %text1 đoạn thẳng và %text2 điểm
     `,
     items: ["2, 3", "3, 2", "1, 3", "2, 3"],
@@ -43,7 +43,7 @@ p.text-h5.text-center Có %text1 đoạn thẳng và %text2 điểm
     type: "select",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t17/5/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t17/5/1.png")}")
 p.text-h5.text-center Có %text1 đoạn thẳng và %text2 điểm
     `,
     items: ["6, 4", "4, 6", "5, 6", "2, 3"],
@@ -53,7 +53,7 @@ p.text-h5.text-center Có %text1 đoạn thẳng và %text2 điểm
     type: "select",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t17/6/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t17/6/1.png")}")
 p.text-h5.text-center Có %text1 điểm và %text2 đoạn thẳng
     `,
     items: ["3, 3", "4, 6", "5, 6", "2, 3"],
@@ -63,7 +63,7 @@ p.text-h5.text-center Có %text1 điểm và %text2 đoạn thẳng
     type: "select",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t17/7/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t17/7/1.png")}")
 p.text-h5.text-center Có %text1 đoạn thẳng và %text2 điểm
     `,
     items: ["6, 4", "5, 10", "5, 6", "2, 3"],
@@ -73,7 +73,7 @@ p.text-h5.text-center Có %text1 đoạn thẳng và %text2 điểm
     type: "select",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t17/8/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t17/8/1.png")}")
 p.text-h5.text-center Có %text1 điểm và %text2 tam giác
     `,
     items: ["6, 4", "5, 10", "5, 6", "7, 5"],
@@ -83,7 +83,7 @@ p.text-h5.text-center Có %text1 điểm và %text2 tam giác
     type: "select",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t17/8/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t17/8/1.png")}")
 p.text-h5.text-center Có %text1 điểm và %text2 đoạn thẳng
     `,
     items: ["6, 4", "5, 10", "5, 7", "7, 5"],
@@ -109,7 +109,7 @@ p.grey--text.text--darken-2 Từ A, B, C và D vẽ được bao nhiêu đoạn 
     type: "select",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t17/12/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t17/12/1.png")}")
 p.text-h5.text-center Đoạn thẳng nào dài hơn
     `,
     items: ["Đoạn JK", "Đoạn LM"],
@@ -119,7 +119,7 @@ p.text-h5.text-center Đoạn thẳng nào dài hơn
     type: "select",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t17/13/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t17/13/1.png")}")
 p.text-h5.text-center
   Đoạn thẳng:
     p AB = %text1
@@ -135,7 +135,7 @@ p.text-h5.text-center
 p.grey--text.text--darken-2 Một chục là 10? 
 
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t17/14/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t17/14/1.png")}") 
     `,
     items: ["Đúng", "Sai"],
     answer: 0
@@ -146,7 +146,7 @@ div.d-flex.align-items-center.justify-content-between
 p.grey--text.text--darken-2 12 con vịt là một chục con vịt? 
 
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t17/15/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t17/15/1.png")}") 
     `,
     items: ["Đúng", "Sai"],
     answer: 1
@@ -156,7 +156,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Cần thêm bao nhiêu bông hoa để được một chục?
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t17/16/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t17/16/1.png")}") 
     `,
     items: [8, 7, 6, 5],
     answer: 3
@@ -166,7 +166,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Cần thêm bao nhiêu hình tròn để được một chục?
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t17/17/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t17/17/1.png")}") 
     `,
     items: [1, 2, 3, 4],
     answer: 2

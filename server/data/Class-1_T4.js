@@ -1,11 +1,11 @@
-export default [
+module.exports = [
   {
     type: "select",
     question: `
 p.grey--text.text--darken-2 Điền dấu thích hợp vào chỗ trống
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t4/1/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t4/1/2.png")}) 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/1/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/1/2.png")}) 
 p.text-h5.text-center 2 %text 2
     `,
     items: [">", "<", "="],
@@ -16,8 +16,8 @@ p.text-h5.text-center 2 %text 2
     question: `
 p.grey--text.text--darken-2 Điền dấu thích hợp vào chỗ trống
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t4/2/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t4/2/2.png")}) 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/2/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/2/2.png")}) 
 p.text-h5.text-center 3 %text 3`,
     items: [">", "<", "="],
     answer: 2
@@ -26,7 +26,7 @@ p.text-h5.text-center 3 %text 3`,
     type: "input",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t4/3/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/3/1.png")}") 
 p.text-h5.text-center Có %text con mèo
     `,
     answer: 6
@@ -35,7 +35,7 @@ p.text-h5.text-center Có %text con mèo
     type: "input",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t4/3/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/3/1.png")}") 
 p.text-h5.text-center Có %text con chuột
     `,
     answer: 6
@@ -44,7 +44,7 @@ p.text-h5.text-center Có %text con chuột
     type: "input",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t4/5/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/5/1.png")}")
 p.text-h5.text-center Có %text cái lý
     `,
     answer: 6
@@ -54,7 +54,7 @@ p.text-h5.text-center Có %text cái lý
     question: `
 p.grey--text.text--darken-2 Lan nói "Có 6 cái bút" đúng hay sai?
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t4/6/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/6/1.png")}") 
     `,
     items: ["Đúng", "Sai"],
     answer: 0
@@ -64,7 +64,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Hà nói "Có 6 người" đúng hay sai?
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t4/7/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/7/1.png")}") 
     `,
     items: ["Đúng", "Sai"],
     answer: 1
@@ -74,7 +74,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Tuyên nói "Có 6 mèo" đúng hay sai?
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t4/8/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/8/1.png")}") 
     `,
     items: ["Đúng", "Sai"],
     answer: 0
@@ -84,8 +84,8 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Chọn dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t4/9/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t4/9/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/9/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/9/2.png")})
 p.text-h5.text-center 4 %text 6
     `,
     items: [">", "<", "="],
@@ -101,8 +101,8 @@ p.text-h5.text-center 4 %text 6
     question: `
 p.grey--text.text--darken-2 Chọn dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t4/10/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t4/10/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/10/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/10/2.png")})
 p.text-h5.text-center 4 %text 6
     `,
     items: [">", "<", "="],
@@ -113,8 +113,8 @@ p.text-h5.text-center 4 %text 6
     question: `
 p.grey--text.text--darken-2 Chọn dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t4/11/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t4/11/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/11/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/11/2.png")})
 p.text-h5.text-center 6 %text 1
     `,
     items: [">", "<", "="],
@@ -125,8 +125,8 @@ p.text-h5.text-center 6 %text 1
     question: `
 p.grey--text.text--darken-2 Chọn dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t4/12/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t4/12/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/12/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/12/2.png")})
 p.text-h5.text-center 2 %text 6
     `,
     items: [">", "<", "="],
@@ -137,8 +137,8 @@ p.text-h5.text-center 2 %text 6
     question: `
 p.grey--text.text--darken-2 Chọn dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t4/13/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t4/13/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/13/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/13/2.png")})
 p.text-h5.text-center 6 %text 6
     `,
     items: [">", "<", "="],
@@ -149,8 +149,8 @@ p.text-h5.text-center 6 %text 6
     question: `
 p.grey--text.text--darken-2 Chọn dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t4/14/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t4/14/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/14/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/14/2.png")})
 p.text-h5.text-center 6 %text 6
     `,
     items: [">", "<", "="],
@@ -161,7 +161,7 @@ p.text-h5.text-center 6 %text 6
     type: "input",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t4/15/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/15/1.png")}") 
 p.text-h5.text-center Có %text đám mây
     `,
     answer: 6
@@ -174,8 +174,8 @@ p.text-h5.text-center Có %text đám mây
     question: `
 p.grey--text.text--darken-2 Chọn dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t4/16/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t4/16/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/16/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/16/2.png")})
 p.text-h5.text-center 3 %text 3
     `,
     items: [">", "<", "="],
@@ -186,8 +186,8 @@ p.text-h5.text-center 3 %text 3
     question: `
 p.grey--text.text--darken-2 Chọn dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t4/17/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t4/17/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/17/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t4/17/2.png")})
 p.text-h5.text-center 2 %text 2
     `,
     items: [">", "<", "="],

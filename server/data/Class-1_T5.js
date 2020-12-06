@@ -1,9 +1,9 @@
-export default [
+module.exports = [
   {
     type: "input",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t5/1/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t5/1/1.png")}") 
 p.text-h5.text-center Có %text bông hoa
     `,
     answer: 8
@@ -12,7 +12,7 @@ p.text-h5.text-center Có %text bông hoa
     type: "input",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t5/2/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t5/2/1.png")}") 
 p.text-h5.text-center Có %text đám mây
     `,
     answer: 8
@@ -21,7 +21,7 @@ p.text-h5.text-center Có %text đám mây
     type: "input",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t5/3/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t5/3/1.png")}") 
 p.text-h5.text-center Có %text ngôi sao
     `,
     answer: 9
@@ -30,7 +30,7 @@ p.text-h5.text-center Có %text ngôi sao
     type: "input",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t5/4/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t5/4/1.png")}") 
 p.text-h5.text-center Có %text quả dưa
     `,
     answer: 7
@@ -40,7 +40,7 @@ p.text-h5.text-center Có %text quả dưa
     type: "input",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t5/5/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t5/5/1.png")}") 
 p.text-h5.text-center Có %text con cá
     `,
     answer: 8
@@ -49,7 +49,7 @@ p.text-h5.text-center Có %text con cá
     type: "input",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t5/6/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t5/6/1.png")}") 
 p.text-h5.text-center Có %text cái thìa
     `,
     answer: 9
@@ -59,8 +59,8 @@ p.text-h5.text-center Có %text cái thìa
     question: `
 p.grey--text.text--darken-2 Chọn dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t5/7/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t5/7/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t5/7/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t5/7/2.png")})
 p.text-h5.text-center 6 %text 5
     `,
     items: [">", "<", "="],
@@ -71,8 +71,8 @@ p.text-h5.text-center 6 %text 5
     question: `
 p.grey--text.text--darken-2 Chọn dấu thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t5/8/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t5/8/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t5/8/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t5/8/2.png")})
 p.text-h5.text-center 8 %text 7
     `,
     items: [">", "<", "="],
@@ -84,8 +84,8 @@ p.text-h5.text-center 8 %text 7
     question: `
 p.grey--text.text--darken-2 Chọn số thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t5/9/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t5/9/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t5/9/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t5/9/2.png")})
 p.text-h5.text-center %text1 < %text2
     `,
     items: ["4-5", "5-4", "4-4", "5-5"],
@@ -96,8 +96,8 @@ p.text-h5.text-center %text1 < %text2
     question: `
 p.grey--text.text--darken-2 Chọn số thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t5/10/1.png")}")
-  img(src="${require(__dirname + "/../" + "assets/t5/10/2.png")})
+  img(src="${(process.env.baseURL + "/api/resources/assets/t5/10/1.png")}")
+  img(src="${(process.env.baseURL + "/api/resources/assets/t5/10/2.png")})
 p.text-h5.text-center %text1 > %text2
     `,
     items: ["9-3", "3-9", "3-3", "9-9"],
@@ -159,7 +159,7 @@ p.text-h5.text-center 6 %text1 5 %text2 9
     type: "input",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t5/16/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t5/16/1.png")}") 
 p.text-h5.text-center Có %text con cá trong hình tròn
     `,
     answer: 0
@@ -168,7 +168,7 @@ p.text-h5.text-center Có %text con cá trong hình tròn
     type: "input",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t5/17/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t5/17/1.png")}") 
 p.text-h5.text-center Có %text bao nhiêu hình tròn trong hình vuông
     `,
     answer: 0
@@ -177,7 +177,7 @@ p.text-h5.text-center Có %text bao nhiêu hình tròn trong hình vuông
     type: "input",
     question: `
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t5/18/1.png")}") 
+  img(src="${(process.env.baseURL + "/api/resources/assets/t5/18/1.png")}") 
 p.text-h5.text-center Có %text bao nhiêu máy bay trong hình vuông
     `,
     answer: 0

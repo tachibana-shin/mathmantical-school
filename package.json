@@ -13,6 +13,7 @@
     "@mdi/font": "^5.8.55",
     "axios": "^0.21.0",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
     "eruda": "^2.4.1",
     "express": "^4.17.1",
     "pug": "^3.0.0",
@@ -20,7 +21,8 @@
     "vue-router": "^3.0.1",
     "vuedraggable": "^2.24.3",
     "vuetify": "^2.3.19",
-    "vuex": "^3.6.0"
+    "vuex": "^3.6.0",
+    "vuex-persistedstate": "^4.0.0-beta.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

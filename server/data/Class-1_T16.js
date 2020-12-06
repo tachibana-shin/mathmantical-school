@@ -1,4 +1,4 @@
-export default [
+module.exports = [
   {
     type: "select",
     question: `
@@ -130,7 +130,7 @@ p.text-h5.text-center 10 - 3 - %text = 8 - 6`,
     question: `
 p.grey--text.text--darken-2 Chọn số thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t16/17/1.png")}")`,
+  img(src="${(process.env.baseURL + "/api/resources/assets/t16/17/1.png")}")`,
     items: ["10, 6", "10, 7", "9, 8", "5, 7"],
     answer: 0
   },
@@ -139,7 +139,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Chọn số thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t16/18/1.png")}")`,
+  img(src="${(process.env.baseURL + "/api/resources/assets/t16/18/1.png")}")`,
     items: ["10, 6", "10, 7", "9, 8", "7, 0"],
     answer: 3
   },
@@ -148,7 +148,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Chọn số thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t16/19/1.png")}")`,
+  img(src="${(process.env.baseURL + "/api/resources/assets/t16/19/1.png")}")`,
     items: ["10, 6", "10, 1", "9, 8", "7, 0"],
     answer: 1
   },
@@ -157,7 +157,7 @@ div.d-flex.align-items-center.justify-content-between
     question: `
 p.grey--text.text--darken-2 Chọn số thích hợp
 div.d-flex.align-items-center.justify-content-between
-  img(src="${require(__dirname + "/../" + "assets/t16/20/1.png")}")`,
+  img(src="${(process.env.baseURL + "/api/resources/assets/t16/20/1.png")}")`,
     items: ["10, 6", "10, 7", "4, 9", "7, 0"],
     answer: 2
   }

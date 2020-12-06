@@ -16,10 +16,9 @@
   </v-card>
 </template>
 <script>
-  import draggable from "vuedraggable"
   import ShowQuestion from "./ShowQuestion"
   export default {
-    components: { draggable, ShowQuestion },
+    components: { ShowQuestion },
     props: {
       data: Object
     },
