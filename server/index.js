@@ -4,7 +4,7 @@ const fs = require("fs")
 const path = require("path")
 const Module = require("module")
 const pug = require("pug")
-const lessonAbout = require("./lesson-about/index.js")
+const lessonAbout = require(__dirname + "/lesson-about/index.js")
 const serveStatic = require('serve-static');
 const port = process.env.PORT || 3000
 
@@ -14,7 +14,7 @@ app.use(require("cors")())
 
 app.route("/api/get-subject/class-:class/week-:week").get((req, res) => {
   let data
-  const uriDocument = `./data/Class-${req.params.class}_T${req.params.week}.js`
+  const uriDocument = __dirname + `/data/Class-${req.params.class}_T${req.params.week}.js`
 
   try {
     if (fs.existsSync(uriDocument)) {
