@@ -90,4 +90,4 @@ app.route("/api/resources/assets/*").get((req, res) => {
   }
 })
 
-app.listen(port, () => console.log(`App is running in port 3000`));
+app.listen(port, () => console.log(`App is running in port ${port}`));
