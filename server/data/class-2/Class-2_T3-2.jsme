@@ -1,0 +1,50 @@
+type: select
+question: Kết quả của phép tính:
+26 + 4 = %text
+items: [20, 30, 40, 35]
+answer: 1
+
+type: input
+question: Kết quả của phép tính:
+36 + 24 = %text 
+answer: 60
+
+type: input
+question: Kết quả của phép tính:
+%text + 24 = 60
+answer: 36
+
+type: select
+question: Nhà Hà có 24 con vịt, mẹ Hà vừa mua thêm 36 con vịt nữa. Hỏi nhà Hà có bao nhiêu con vịt?
+items: [50, 60, 70, 65]
+answer: 1
+
+type: input
+question: Cần đổ thêm bao nhiêu lít nước vào trong bình chứa 26 lít để bình thành chứa 30 lít?
+%text lít
+answer: 4lít
+
+type: select
+question: Mẹ cho Bình 30 nghìn đi mua sách. Bình mua hết 26 nghìn .Hỏi Bình phải trả lại mẹ bao nhiêu tiền?
+items: [5, 3, 4, 6]
+answer: 2
+
+type: input
+question: Có 60 quả táo, Hoa đã bán được 36 quả. Hỏi Hoa còn lại bao nhiêu quả?
+Còn %text quả
+answer: 24
+
+type: input
+question: Tính nhẩm
+24 + 36 + 4 + 26 = %text
+answer: 90
+
+type: input
+question: Tính nhanh
+10 + 16 + 4 = %text
+answer: 30
+
+type: input
+question: Tính nhanh
+26 + 10 + 24 = %text
+answer: 60

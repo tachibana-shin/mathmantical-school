@@ -1,0 +1,56 @@
+type: select
+question: Kết quả của phép tính:
+20 + 5 = %text
+items: [23, 28, 25, 22]
+answer: 2
+
+type: input
+question: Kết quả của phép tính:
+25 + 49 = %text
+answer: 74
+
+type: input
+question: Điền số thích hợp:
+%text + 49 = 74
+answer: 49
+ 
+type: input
+question: Trên bàn có 25 cái kẹo, Lan ăn mất 5 cái kẹo. Hỏi trên bàn còn lại bao nhiêu cái kẹo?
+%text cái kẹo
+answer: 20
+
+type: input
+question: Trong túi có 49 cái bánh, Tú cho thêm vào trong túi 25 cái nữa. Hỏi trong túi có tổng bao nhiêu cái kẹo?
+%text cái kẹo
+answer: 74
+
+type: input
+question: Điền số thích hợp vào chỗ chấm:
+%text + 10 + 10 = 25
+answer: 5
+
+type: select
+question: Kết quả của phép tính:
+25 - 5 = %text
+items: [10, 15, 20, 24]
+answer: 2
+
+type: input
+question: Điền số thích hợp vào chỗ chấm: 
+9 + %text + 25 = 74
+answer: 40
+
+type: input
+question: Cần thêm vào thùng đang chứa 5 lít nước bao nhiêu lít nước nữa để thùng chứa 25 lít nước?
+%text lít
+answer: 20
+
+type: input
+question: Kết quả của phép tính:
+19 + 30 + 25 = %text
+answer: 74
+
+type: input
+question: Kết quả của phép tính:
+15 + 5 + 5 = %text
+answer: 25

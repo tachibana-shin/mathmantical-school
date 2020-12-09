@@ -1,0 +1,28 @@
+type: select
+question: Kết quả của phép tính 28 + 16 là:
+items: [44, 34, 54, 64]
+answer: 0
+
+type: select
+question:  Lớp 2A có 18 học sinh nữ và 14 học sinh nam. Lớp 2A có tất cả số học sinh là:
+items: ["34 học sinh", "36 học sinh", "30 học sinh", "32 học sinh"]
+answer: 3
+
+type: select
+question: Kết quả của phép tính 19 + 38 là:
+items: [57, 27, 37, 47]
+answer: 0
+
+type: select
+question: Số thích hợp để điền vào chỗ chấm 24 + %text = 52 là:
+items: [28, 18, 38, 48]
+answer: 0
+
+type: select
+question: Tính nhẩm 38 + 16 + 8 được kết quả là:
+items: [62, 63, 65, 64]
+answer: 1
+
+type: input
+question: Tính nhẩm 38 + 17 = %text được kết quả là:
+answer: 55

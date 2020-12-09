@@ -1,0 +1,41 @@
+type: input
+question: Tính
+9 + 5 = %text
+answer: 14
+
+type: select
+question: Điền số thích hợp vào chỗ chấm:
+9 + %text = 16
+items: [7, 8, 9, 5]
+answer: 0
+
+type: input
+question: Mai có 9 cái bút chì, Mai mua thêm 3 cái. Hỏi Mai có tổng bao nhiêu cái bút chì?
+%text bút chì
+answer: 12
+
+type: select
+question: Tính nhanh:
+9 + 1 + 9 + 2 = %text
+items: [23, 22, 21, 20]
+answer: 2
+
+type: input
+question: Kết quả của phép tính:
+9 + 8 = %text
+answer: 17
+
+type: input
+question: Số hạng thứ nhất là 9, số hạng thứ 2 là 9. Tổng là?
+%text
+answer: 18
+
+type: input
+question: Trong hộp có 9 cái bánh, Lan bỏ thêm vào hộp 5 cái. Hỏi trong hộp có bao nhiêu cái bánh?
+%text
+answer: 14
+
+type: input
+question: Tính nhanh:
+5 + 4 + 6 = %text
+answer: 15

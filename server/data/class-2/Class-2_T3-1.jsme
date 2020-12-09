@@ -1,0 +1,51 @@
+type: select
+question: Kết quả của phép tính
+3 + 7 = %text
+items: [10, 12, 8, 7]
+answer: 0
+
+type: input
+question: Tính nhẩm:
+2 + 3 + 5 = %text
+answer: 10
+
+type: input
+question: Tính nhẩm:
+7 + 3 = %text
+answer: 10
+
+type: select
+question: Nhà Mai có 5 con mèo, nhà Nam có 5 con mèo. Hỏi nhà cả hai bạn có bao nhiêu con mèo?
+items: [5, 9, 11, 10]
+answer: 3
+
+type: input
+question:  Tìm số thích hợp điền vào chỗ chấm:
+4 + 6 = 8 + %text
+answer: 2
+
+type: input
+question: Tính nhanh:
+8 + 2 + 7 + 3 + 5 + 5 = %text
+answer: 30
+
+type: input
+question: Số liền sau của 9 là:
+%text
+answer: 10
+
+type: input
+question: Lan có 1 cái kẹo, Yến cho thêm Lan 9 cái kẹo. Hỏi Lan có tổng bao nhiêu cái kẹo?
+%text cái kẹo
+answer: 10
+
+type: input
+question: Số nhỏ nhất có 2 chữ số là:
+%text
+answer: 10
+
+type: select
+question: Điền số thích hợp vào chỗ chấm:
+6 + %text = 10
+items: [2, 3, 4, 6]
+answer: 2

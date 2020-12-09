@@ -1,0 +1,95 @@
+type: input
+question: Số bị trừ là 29, số trừ là 8. Vậy hiệu là bao nhiêu?
+%text
+div.d-flex
+  img(src="${process.env.baseURL}/api/resources/assets/c2/t2-1/1.png")
+answer: 21
+
+type: input
+question: Điền số thích hợp vào ô trống
+49 - 15 = %text
+answer: 34
+
+type: input
+question: Điền số thích hợp vào ô trống
+%text - 35 = 43
+answer: 78
+
+type: input
+question: Tìm x biết: x – 24 = 37
+x = %text
+answer: 61
+
+type: input
+question: Tìm x biết: x – 23 + 12 = 45
+x = %text
+answer: 5
+
+type: input
+question: Tìm x biết: x – 6 = 18 + 9
+x = %text
+answer: 33
+
+type: select
+question: Điền dấu thích hợp vào ô trống:
+56 - 35 %text 56 - 24
+items: [">", "<", "="]
+answer: 0
+
+type: select
+question: Điền dấu thích hợp vào ô trống:
+63 - 31 %text 33 - 1
+items: [">", "<", "="]
+answer: 2
+
+type: input
+question: Điền số thích hợp
+82 - %text = 82
+answer: 0
+
+type: input
+question: Điền số thích hợp
+48 - 48 = %text
+answer: 0
+ 
+type: select
+question: Khi số bị trừ %text số trừ thì hiệu của chúng bằng 0
+items: ["nhỏ hơn", "lớn hơn", "bằng"]
+answer: 2
+
+type: select
+question: Chọn dấu thích hợp
+3 %text1 3 %text2 3 = 3
+items: ["+ và -", "+ và +", "- và -"],
+answer: 0
+
+type: input
+question: Một người đem 85 quả cam đi bán, người đó đã bán được 64 quả. Hỏi người đó còn lại bao nhiêu quả? 
+%text
+div.d-flex
+  img(src="${process.env.baseURL}/api/resources/assets/c2/t2-1/15/1.png")
+answer: 21
+
+type: input
+question: Lớp 2A có 36 học sinh trong đó có 17 bạn nữ. Hỏi lớp đó có bao nhiêu bạn nam?
+%text
+answer: 19
+
+type: input
+question: Nam cho Dũng 12 viên bi, Nam còn lại 27 viên bi. Hỏi trước khi cho Dũng thì Nam có bao nhiêu viên bi?
+%text viên bi
+answer: 39
+
+type: input
+question: Một sợi dây dài 13dm cắt đi 5dm. Hỏi sợi dây còn lại dài bao nhiêu đề-xi-mét?
+%text dm
+answer: 8
+
+type: input
+question: Điền số thích hợp vào ô trống:
+35 – 4 < %text <  46 – 13
+answer: 32
+
+type: input
+question: Khi số trừ bằng %text thì hiệu bằng số bị trừ.
+answer: 0

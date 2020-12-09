@@ -1,0 +1,51 @@
+type: select
+question: Kết quả phép tính:
+8 + 5 = %text
+items: [12, 13, 16, 15]
+answer: 1
+
+type: input
+question: Điền số thích hợp vào chỗ chấm:
+%text + 28 = 33
+answer: 33
+
+type: input
+question: Tính:
+8 + 2 + 3 = %text
+answer: 13
+
+type: input
+question: Trong tủ có 8 quả trứng, mẹ mua thêm 9 quả trứng . Hỏi trong tủ có tổng bao nhiêu quả trứng?
+%text
+answer: 17
+
+type: input
+question: Tính:
+8 + 28 = %text
+answer: 36
+
+type: input
+question: Điền số thích hợp
+%text + 8 + 12 = 37
+answer: 17
+
+type: input
+question: Điền số thích hợp
+8 + 1 + 2 + %text + 5 = 30
+items: [7, 13, 14, 15]
+answer: 2
+
+type: input
+question: Trên cây có 26 quả táo, gió mạnh 8 quả táo đã rụng. Hỏi còn lại bao nhiêu quả táo trên cây?
+%text quả
+answer: 18
+
+type: input
+question: Tính nhanh:
+8 + 2 + 10 = %text
+answer: 20
+
+type: input
+question: Kết quả của phép tính:
+8 + 15 + 6 = %text
+answer: 29
