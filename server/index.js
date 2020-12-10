@@ -8,7 +8,6 @@ const serveStatic = require('serve-static')
 const port = process.env.PORT || 3000
 
 app.use(serveStatic(__dirname + "/../dist"))
-app.use(require("connect-history-api-fallback")())
 require("dotenv").config()
 app.use(require("cors")())
 
@@ -129,4 +128,5 @@ app.route("/api/resources/assets/*").get((req, res) => {
   }
 })
 
+app.use(require("connect-history-api-fallbac    k")())
 app.listen(port, () => console.log(`App is running in port ${port}`));
