@@ -16,6 +16,10 @@ if (process.env.NODE_ENV === 'production') {
   } catch (e) { console.log("App Error") }
 }
 
+Vue.prototype.$config = {
+  baseURL: process.env.NODE_ENV == "production" ? "" : "http://localhost:3000"
+}
+
 Vue.component("v-loading", Loading)
 
 new Vue({

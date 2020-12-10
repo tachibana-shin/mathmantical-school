@@ -90,7 +90,7 @@
     },
     mounted() {
       this.loading = true
-      fetch(`http://localhost:3000/api/get-basic-subject/class/${this.$route.params.classes}/week/${this.$route.params.week}/level/${this.$route.params.level}`)
+      fetch(`${this.$config.baseURL}/api/get-basic-subject/class/${this.$route.params.classes}/week/${this.$route.params.week}/level/${this.$route.params.level}`)
         .then(res => res.json())
         .then(json => this.data = json.data)
         .then(() => this.loading = false)

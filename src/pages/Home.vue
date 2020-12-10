@@ -123,7 +123,7 @@
     methods: {
       fetch({ loaded, complete }) {
         const tab = this.items[this.tab]
-        fetch(`http://localhost:3000/api/get-all-subject/page/${++tab.page}?class=${this.classSelect}&type=${tab.type}`)
+        fetch(`${this.$config.baseURL}/api/get-all-subject/page/${++tab.page}?class=${this.classSelect}&type=${tab.type}`)
           .then(res => res.json())
           .then(e => e.data)
           .then(json => {
