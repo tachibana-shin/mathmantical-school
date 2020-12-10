@@ -79,7 +79,7 @@
     },
     computed: {
       ID() {
-        return `C${this.$route.params.class}W${this.$route.params.week}`
+        return `C${this.data.classes}W${this.data.week}L${this.data.level}`
       },
       itInLibrary() {
         return this.$store.getters.itInLibrary(this.ID)
@@ -90,7 +90,7 @@
     },
     mounted() {
       this.loading = true
-      fetch(`/api/get-about-subject/class-${this.$route.params.class}/week-${this.$route.params.week}`)
+      fetch(`http://localhost:3000/api/get-basic-subject/class/${this.$route.params.classes}/week/${this.$route.params.week}/level/${this.$route.params.level}`)
         .then(res => res.json())
         .then(json => this.data = json.data)
         .then(() => this.loading = false)

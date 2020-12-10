@@ -1,3 +1,5 @@
+import eruda from "eruda"
+eruda.init()
 
 import Vue from "vue"
 import App from "./App"
@@ -6,11 +8,13 @@ import router from "@/plugins/router"
 import store from "@/plugins/store"
 import vuetify from "@/plugins/vuetify"
 
-try {
- if('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js');
-  }
-} catch(e) { console.log("App Error") }
+if (process.env.NODE_ENV === 'production') {
+  try {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js');
+    }
+  } catch (e) { console.log("App Error") }
+}
 
 Vue.component("v-loading", Loading)
 

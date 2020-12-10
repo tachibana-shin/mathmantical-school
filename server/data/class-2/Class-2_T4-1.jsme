@@ -1,3 +1,12 @@
+name: 20 + 5 và 49 + 25
+description: Đây là bài ôn tập của tuần 4.
+image: https://book.sachgiai.com/uploads/book/sach-giao-khoa-toan-2/sach-giao-khoa-toan-2-0.jpg
+type: Numerals
+week: 4
+level: 1
+classes: 2
+about: true
+
 type: select
 question: Kết quả của phép tính:
 20 + 5 = %text

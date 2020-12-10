@@ -4,7 +4,7 @@
       <v-btn icon @click="$router.back()">
         <v-icon>mdi-arrow-left</v-icon>
       </v-btn>
-      <v-toolbar-title> {{ data ? data.title : "" }} </v-toolbar-title>
+      <v-toolbar-title> {{ data ? data.name : "" }} </v-toolbar-title>
     </v-app-bar>
     <transition-group name="scale" mode="in-out" v-if="questions">
       <div class="d-flex flex-column h-100" v-if="questionIndex < questions.length" key="1">
@@ -111,11 +111,11 @@
       dialog: false,
       answers: [],
       questionIndex: 0,
-      data: null,//require("../../server/data/Class-1_T1.js").default
+      data: null, //require("../../server/data/Class-1_T1.js").default
     }),
     computed: {
       questions() {
-        return this.data && this.data.items
+        return this.data && this.data.questions
       },
       question() {
         return this.questions[this.questionIndex]
@@ -142,7 +142,7 @@
         }
       },
       notAnswer() {
-        return isEqualVal(this.answers[this.questionIndex], this.defaultAnswer)
+        return !(this.answers[this.questionIndex] + "") || isEqualVal(this.answers[this.questionIndex], this.defaultAnswer)
       },
       result() {
         if (this.questionIndex < this.questions.length - 1) {
@@ -178,7 +178,7 @@
           point: this.result.point,
           countQuestion: this.questions.length,
           questionTrue: this.result.queTrue,
-          id: `C${this.$route.params.class}W${this.$route.params.week}`
+          id: this.data && `C${this.data.classes}W${this.data.week}L${this.data.level}`
         })
       }
     },
@@ -186,7 +186,7 @@
       "$route": {
         handler() {
           this.data = null
-          fetch(`/api/get-subject/class-${this.$route.params.class}/week-${this.$route.params.week}`)
+          fetch(`http://localhost:3000/api/get-subject/class/${this.$route.params.classes}/week/${this.$route.params.week}/level/${this.$route.params.level}`)
             .then(res => res.json())
             .then(e => this.data = e.data)
             .catch(() => {})

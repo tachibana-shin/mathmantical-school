@@ -4,82 +4,120 @@ const fs = require("fs")
 const path = require("path")
 const Module = require("module")
 const pug = require("pug")
-const lessonAbout = require(__dirname + "/lesson-about/index.js")
-const serveStatic = require('serve-static');
+const serveStatic = require('serve-static')
 const port = process.env.PORT || 3000
 
 app.use(serveStatic(__dirname + "/../dist"));
 require("dotenv").config()
 app.use(require("cors")())
 
-app.route("/api/get-subject/class-:class/week-:week").get((req, res) => {
+function deleteProperty(object, attrs) {
+  const newObject = { ...object }
+  attrs.forEach(item => delete newObject[item])
+  return newObject
+}
+
+
+const data = require("./data").map(lesson => {
+  lesson.questions = lesson.questions.map(item => {
+    try {
+      item.question = item.type == "dragdrop-group" ? item.question : pug.render(item.question)
+    } catch (e) { console.log(item.question) }
+    return item
+  })
+  return lesson
+})
+const dataClasses = []
+data.forEach(item => {
+  if (item.classes in dataClasses) {
+    dataClasses[item.classes].push(item)
+  } else {
+    dataClasses[item.classes] = [item]
+  }
+})
+
+function findLesson({ classes, week, level }) {
+  return thisData = data.find(item => item.classes == classes && item.week == week && item.level == level)
+}
+
+
+
+app.route("/api/get-subject/class/:classes/week/:week/level/:level").get(({ params }, res) => {
+
+  const thisData = findLesson(params)
   let data
-  const uriDocument = __dirname + `/data/Class-${req.params.class}_T${req.params.week}.js`
 
-  try {
-    if (fs.existsSync(uriDocument)) {
-      let dataLesson = lessonAbout.find(item => item.class == req.params.class)
-
-      if (dataLesson) {
-        dataLesson = dataLesson.items[req.params.week]
-      }
-
-
-      data = {
-        statusCode: 200,
-        data: {
-          title: dataLesson.name,
-          items: require(uriDocument).map(item => ({
-            ...item,
-            question: item.type == "dragdrop-group" ? item.question : pug.render(item.question)
-
-          }))
-        }
-      }
-    } else {
-      data = {
-        statusCode: 404,
-        message: "Can't find this a document."
+  if (thisData) {
+    const { name, classes, week, level, questions } = thisData
+    data = {
+      statusCode: 200,
+      data: {
+        name,
+        classes,
+        week,
+        level,
+        questions
       }
     }
-  } catch (e) {
-    console.log(e)
+  } else {
     data = {
-      statusCode: 403,
-      message: "This document error!"
+      statusCode: 404,
+      message: "Can't find this a document."
     }
   }
 
   res.status(data.statusCode).json(data)
 })
 
-app.route("/api/get-about-subject/class-:class/week-:week").get((req, res) => {
+app.route("/api/get-basic-subject/class/:classes/week/:week/level/:level").get(({ params }, res) => {
 
-  let dataLesson = lessonAbout.find(item => item.class == req.params.class)
+  const thisData = findLesson(params)
+  let data
 
-  if (dataLesson) {
-    dataLesson = dataLesson.items[req.params.week]
-  }
-  if (!dataLesson) {
-    res.status(404).json({
-      statusCode: 404
-    })
-  } else {
-    res.json({
+  if (thisData) {
+    data = {
       statusCode: 200,
-      data: dataLesson
-    })
+      data: deleteProperty(thisData, ["questions"])
+    }
+  } else {
+    data = {
+      statusCode: 404
+    }
   }
+
+  res.status(data.statusCode).json(data)
 })
-app.route("/api/get-subject").get((req, res) => {
-  res.json({
-    statusCode: 200,
-    data: lessonAbout.map(item => ({
-      class: item.class,
-      items: item.items.map(({ path, name, image, type }) => ({ path, name, image, type }))
-    }))
+
+app.route("/api/get-all-subject(/page/:page)?").get(({ params, query }, res) => {
+  const classes = query.class || 0,
+    page = Math.max(params.page || 1) - 1
+  let thisData
+
+  if (classes > 0) {
+    thisData = {
+      statusCode: 200,
+      data: dataClasses[classes]
+    }
+
+    if (!thisData) {
+      thisData = { statusCode: 404 }
+    }
+  } else {
+    thisData = {
+      statusCode: 200,
+      data: data
+    }
+  }
+
+  res.status(thisData.statusCode).json({
+    ...thisData,
+    data: thisData.data?.filter(e => !query.type || e.type ?.toLowerCase() == query.type ?.toLowerCase())
+      .slice(page * 20, Math.min((page + 1) * 20, data.length))
+      .map(item => deleteProperty(item, ["questions"]))
   })
 })
+
+
 app.route("/api/resources/assets/*").get((req, res) => {
   const itPath = `${__dirname}/assets/${req.params[0].replace("..", "")}`
 

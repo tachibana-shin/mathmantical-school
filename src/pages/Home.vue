@@ -22,107 +22,119 @@
           </v-list-item>
         </v-list>
       </v-menu>
-      <template v-slot:extension v-if="data">
+      <template v-slot:extension>
         <v-tabs v-model="tab" align-with-title>
           <v-tabs-slider color="white"></v-tabs-slider>
           <v-tab v-for="(item, index) in items" :key="index">
             <div class="vertical-baseline">
-              <v-icon> {{ $options.iconsForTypeMath[item.type.toLowerCase()].icon }} </v-icon>
-              <span class=""> {{ $options.iconsForTypeMath[item.type.toLowerCase()].text }} </span>
+              <v-icon> {{ item.icon }} </v-icon>
+              <span class=""> {{ item.text }} </span>
             </div>
           </v-tab>
         </v-tabs>
       </template>
     </v-app-bar>
-    <v-tabs-items v-model="tab" v-if="data">
+    <v-tabs-items v-model="tab">
       <v-tab-item v-for="(item, index) in items" :key="index">
         <v-lazy v-model="item.isLoaded" :options="{ threshold: .5 }" min-height="200" transition="fade-transition">
           <v-container fluid>
-            <v-row>
-              <v-col cols="6" v-for="({ image, name, path }, index) in item.items" :key="index">
+            <v-loading title="Đang tải..." v-if="!item.isLoaded" />
+            <v-row v-else>
+              <v-col cols="6" md="4" lg="3" v-for="({ image, name, path, classes, week, level }, index) in item.items" :key="index">
                 <v-hover v-slot="{ hover }">
-                  <v-card :to="`/${path}`" hover :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
+                  <v-card :to="`/lesson/class/${classes}/week/${week}/level/${level}`" hover :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }">
                     <v-img :src="image" height="200px" />
                     <v-card-text>
-                      <p class="text-truncate"> {{ name }} </p>
+                      <p class="text-truncate">{{ name }} </p>
+                      <small class="d-block text-truncate"> Tuần {{ week }} </small>
                     </v-card-text>
                   </v-card>
                 </v-hover>
+              </v-col>
+              <v-col cols="12">
+                <vue-infinite-loading @infinite="fetch" ref="infinite" />
               </v-col>
             </v-row>
           </v-container>
         </v-lazy>
       </v-tab-item>
     </v-tabs-items>
-    <v-loading title="Đang tải..." v-else />
   </v-card>
 </template>
 <script>
+  import VueInfiniteLoading from "vue-infinite-loading"
   export default {
-
-    iconsForTypeMath: {
-      all: {
-        icon: "mdi-select-all",
-        text: "Tất cả"
-      },
-      geometry: {
-        icon: "mdi-math-compass",
-        text: "Hình học"
-      },
-      numerals: {
-        icon: "mdi-numeric-1-box",
-        text: "Số học"
-      },
-      compare: {
-        icon: "mdi-compare",
-        text: "So sánh"
-      },
-      "plus/minus": {
-        icon: "mdi-plus",
-        text: "Cộng / trừ"
-      }
-    },
+    components: { VueInfiniteLoading },
     data: () => ({
       tab: null,
       classSelect: 0,
 
-      data: null
-    }),
-    computed: {
-      classes() {
-        return this.data.filter(item => this.classSelect == 0 || item.class == this.classSelect)
-      },
-      items() {
-        const allTypes = [{
-          type: "All",
-          items: this.classes.reduce((oldItem, newItem) => [...oldItem, ...newItem.items], []),
-          isLoaded: false
-        }]
-        this.classes.forEach(({ items }) => {
-          items.forEach(ques => {
-            let items = []
-            if (!allTypes.find(item => {
-                if (item.type == ques.type) {
-                  items = item.items
-                }
-                return item.type == ques.type
-              })) {
-              allTypes.push({
-                type: ques.type,
-                items,
-                isLoaded: false
-              })
-            }
+      items: [
+        {
+          icon: "mdi-select-all",
+          text: "Tất cả",
+          isLoaded: false,
+          page: 0,
+          items: [],
+          type: ""
+        },
+        {
+          icon: "mdi-math-compass",
+          text: "Hình học",
+          isLoaded: false,
+          page: 0,
+          items: [],
+          type: "geometry"
+      }, {
+          icon: "mdi-numeric-1-box",
+          text: "Số học",
+          isLoaded: false,
+          page: 0,
+          items: [],
+          type: "numerals"
+      }, {
+          icon: "mdi-compare",
+          text: "So sánh",
+          isLoaded: false,
+          page: 0,
+          items: [],
+          type: "compare"
+      }, {
+          icon: "mdi-plus",
+          text: "Cộng / trừ",
+          isLoaded: false,
+          page: 0,
+          items: [],
+          type: "plus/minus"
+      }
 
-            items.push(ques)
-          })
-        })
-        return allTypes
+      ]
+    }),
+    watch: {
+      classSelect(newVal) {
+        this.items.forEach(item => {
+          item.items = []
+          item.page = 0
+          item.isLoaded = false
+        });
+        (Array.isArray(this.$refs.infinite) ? this.$refs.infinite : [this.$refs.infinite]).forEach(item => item.stateChanger.reset())
       }
     },
-    async beforeCreate() {
-      this.data = (await fetch(`/api/get-subject/`)
-        .then(res => res.json())).data
+    methods: {
+      fetch({ loaded, complete }) {
+        const tab = this.items[this.tab]
+        fetch(`http://localhost:3000/api/get-all-subject/page/${++tab.page}?class=${this.classSelect}&type=${tab.type}`)
+          .then(res => res.json())
+          .then(e => e.data)
+          .then(json => {
+            tab.items.push(...json)
+            if (json.length) {
+              loaded()
+            } else {
+              complete()
+            }
+          })
+      }
     }
   }
 </script>

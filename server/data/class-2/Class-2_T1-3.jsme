@@ -1,3 +1,12 @@
+name: Đề-xi-mét
+description: Đây là bài ôn tập của tuần 1.
+image: https://book.sachgiai.com/uploads/book/sach-giao-khoa-toan-2/sach-giao-khoa-toan-2-0.jpg
+type: Numerals
+week: 1
+level: 3
+classes: 2
+about: true
+
 type: select
 question: Số thích hợp để điền vào chỗ chấm 3 dm = …cm là:
 3 dm = %text cm
@@ -13,7 +22,7 @@ answer: 0
 type: select
 question: Kết quả của phép tính 20dm – 10dm là:
 %text
-items: ["2dm", "15dm", "10dm", 20dm"]
+items: ["2dm", "15dm", "10dm", "20dm"]
 answer: 2
 
 type: input
@@ -44,7 +53,7 @@ answer: 1
 type: select
 question: Cây thước thứ nhất dài 8dm, cây thước thứ hai dài 3 dm. Hỏi hai cây thước dài bao nhiêu đêximét?
 div.d-flex
-  img(src="${process.env.baseURL}/api/resources/assets/c2/t1-3/9/1.png")
+  img(src="${process.env.baseURL}/api/resources/assets/class-2/c2/t1-3/9/1.png")
 items: [8, 11, 22, 13]
 answer: 1
 
@@ -52,5 +61,5 @@ type: input
 question: Ba bạn Ếch, Cóc, Nhái thi nhảy xa, Ếch nhảy dài nhất, Cóc nhảy ngắn nhất, Nhái nhảy được 5dm. Nhái nhảy hơn Cóc 2dm nhưng kém Ếch 3dm.
 Ếch và nhái: %text1, %text2 dm
 div.d-flex
-  img(src="${process.env.baseURL}/api/resources/assets/c2/t1-3/10/1.png")
+  img(src="${process.env.baseURL}/api/resources/assets/class-2/c2/t1-3/10/1.png")
 answer: "8,3"

@@ -9,11 +9,11 @@ const routes = [
     component: () => import("@/pages/Home")
    },
   {
-    path: "/lesson/:class/week-:week",
+    path: "/lesson/class/:classes/week/:week/level/:level",
     component: () => import("@/pages/Lesson")
    },
   {
-    path: "/lesson/:class/week-:week/playground",
+    path: "/lesson/class/:classes/week/:week/level/:level/playground",
     component: () => import("@/pages/Playground")
    }
 ]
