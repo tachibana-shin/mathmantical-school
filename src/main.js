@@ -1,6 +1,4 @@
 import eruda from "eruda"
-eruda.init()
-
 import Vue from "vue"
 import App from "./App"
 import Loading from "./components/VLoading"
@@ -14,6 +12,8 @@ if (process.env.NODE_ENV === 'production') {
       navigator.serviceWorker.register('/service-worker.js');
     }
   } catch (e) { console.log("App Error") }
+} else {
+  eruda.init()
 }
 
 Vue.prototype.$config = {

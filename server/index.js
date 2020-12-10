@@ -7,7 +7,8 @@ const pug = require("pug")
 const serveStatic = require('serve-static')
 const port = process.env.PORT || 3000
 
-app.use(serveStatic(__dirname + "/../dist"));
+app.use(serveStatic(__dirname + "/../dist"))
+app.use(require("connect-history-api-fallback")())
 require("dotenv").config()
 app.use(require("cors")())
 
