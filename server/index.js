@@ -128,5 +128,5 @@ app.route("/api/resources/assets/*").get((req, res) => {
   }
 })
 
-app.use(require("connect-history-api-fallbac    k")())
+app.use(require("connect-history-api-fallback")())
 app.listen(port, () => console.log(`App is running in port ${port}`));
