@@ -13,7 +13,6 @@ module.exports = {
 p.grey--text.text--darken-2 Hình nào có nhiều ong hơn?
 div.d-flex.align-items-center.justify-content-between
   img(src="${process.env.baseURL}/api/resources/assets/class-1/t1/1/1.png")
-  img(src="${process.env.baseURL}/api/resources/assets/class-1/t1/1/2.png")
     `,
       items: ["Hình 1", "Hình 2"],
       answer: 1
@@ -44,7 +43,6 @@ div.d-flex.align-items-center.justify-content-between
 p.grey--text.text--darken-2 Hình nào có nhiều hình tròn hơn?
 div.d-flex.align-items-center.justify-content-between
   img(src="${process.env.baseURL}/api/resources/assets/class-1/t1/4/1.png")
-  img(src="${process.env.baseURL}/api/resources/assets/class-1/t1/4/2.png")
     `,
       items: ["Hình 1", "Hình 2"],
       answer: 1
