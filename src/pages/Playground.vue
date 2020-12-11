@@ -1,5 +1,5 @@
 <template>
-  <v-card outlined class="border-0 h-100 p-relative playground">
+  <v-card outlined class="border-0 h-100 p-relative playground" v-if="render">
     <v-app-bar app flat fixed color="blue" dark>
       <v-btn icon @click="$router.back()">
         <v-icon>mdi-arrow-left</v-icon>
@@ -10,7 +10,8 @@
       <div class="d-flex flex-column h-100" v-if="questionIndex < questions.length" key="1">
         <div>
           <div class="tool">
-            <div class="w-100" />
+            <v-progress-circular :rotate="-90" :size="50" width="5" :value="timeProgress" color="primary" class="ml-1 mt-1 no-transition" v-if="isChallenges"> {{ (time / 1000).toFixed(1) }}s </v-progress-circular>
+            <div class="w-100" v-else />
             <div class="process blue py-1">
               {{ questionIndex + 1 }} / {{ questions.length }}
             </div>
@@ -19,13 +20,12 @@
             </v-btn>
             <v-dialog v-model="dialog" max-width="290" scrollable>
               <v-card>
-                <v-card-title class="text-h4">
+                <v-card-title class="text-h6">
                   Gợi ý
                 </v-card-title>
                 <v-divider />
                 <v-card-text>
-                  <show-question :text="question.tips || `
-                    p.grey--text.text--darken-4 Không có gợi ý cho câu này
+                  <show-question :text="question.tips || `Không có gợi ý cho câu này
                   `" />
                 </v-card-text>
                 <v-card-actions>
@@ -48,7 +48,7 @@
           </v-row>
         </v-container>
         <div class="text-right mb-2 mx-3 p-relative z-index-9999">
-          <v-btn color="blue" class="text-uppercase" block large :dark="!notAnswer" :disabled="notAnswer" @click="questionIndex == questions.length - 1 && saveScore();questionIndex++; "> {{ questionIndex == questions.length - 1 ? "Hoàn thành" : "Câu tiếp theo" }} </v-btn>
+          <v-btn color="blue" class="text-uppercase" block large :dark="!notAnswer" :disabled="notAnswer" @click="questionIndex == questions.length - 1 && saveScore(); questionIndex++; "> {{ questionIndex == questions.length - 1 ? "Hoàn thành" : "Câu tiếp theo" }} </v-btn>
         </div>
       </div>
       <div class="h-100 text-center p-relative" v-else key="2">
@@ -61,6 +61,14 @@
     </transition-group>
     <v-loading title="Đang tải dữ liệu..." v-else />
     </div>
+    <v-snackbar :timeout="3000" :value="!!alert" @input="alert = $event ? alert : null" absolute class="snackbar">
+      {{ alert && alert.message }}
+      <template v-slot:action="{ attrs }">
+        <v-btn color="red" text v-bind="attrs" @click="alert = null">
+          Đóng
+        </v-btn>
+      </template>
+    </v-snackbar>
   </v-card>
 </template>
 <script>
@@ -68,6 +76,7 @@
   import Playground__dragdropSort from "@/components/Playground__DragDrop-Sort"
   import Playground__input from "@/components/Playground__Input"
   import Playground__select from "@/components/Playground__Select"
+  import ShowQuestion from "@/components/ShowQuestion"
 
   function isEqualVal(value1, value2) {
 
@@ -104,7 +113,8 @@
       Playground__dragdropGroup,
       Playground__dragdropSort,
       Playground__input,
-      Playground__select
+      Playground__select,
+      ShowQuestion
     },
     data: () => ({
       snackbar: false,
@@ -112,8 +122,19 @@
       answers: [],
       questionIndex: 0,
       data: null, //require("../../server/data/Class-1_T1.js").default
+
+      time: -1,
+      sumTime: -1,
+      render: true,
+      alert: null
     }),
     computed: {
+      isChallenges() {
+        return this.$route.meta.isChallenges && this.$route.params.time.toString().match(/\d/)
+      },
+      timeProgress() {
+        return this.time / (this.$route.params.time * 1000) * 100
+      },
       questions() {
         return this.data && this.data.questions
       },
@@ -174,24 +195,81 @@
     },
     methods: {
       saveScore() {
-        this.$store.commit("newScoreInLesson", {
-          point: this.result.point,
-          countQuestion: this.questions.length,
-          questionTrue: this.result.queTrue,
-          id: this.data && `C${this.data.classes}W${this.data.week}L${this.data.level}`
-        })
+        if (this.isChallenges) {
+          this.$store.commit("newScoreInLessonChallenges", {
+            point: this.result.point,
+            countQuestion: this.questions.length,
+            questionTrue: this.result.queTrue,
+            id: this.data && `C${this.data.classes}W${this.data.week}L${this.data.level}`,
+            sumTime: this.sumTime
+          })
+        } else {
+          this.$store.commit("newScoreInLesson", {
+            point: this.result.point,
+            countQuestion: this.questions.length,
+            questionTrue: this.result.queTrue,
+            id: this.data && `C${this.data.classes}W${this.data.week}L${this.data.level}`
+          })
+        }
       }
     },
     watch: {
       "$route": {
-        handler() {
+        async handler() {
           this.data = null
-          fetch(`${this.$config.baseURL}/api/get-subject/class/${this.$route.params.classes}/week/${this.$route.params.week}/level/${this.$route.params.level}`)
-            .then(res => res.json())
-            .then(e => this.data = e.data)
-            .catch(() => {})
+          this.data = (await fetch(`${this.$config.baseURL}/api/get-subject/class/${this.$route.params.classes}/week/${this.$route.params.week}/level/${this.$route.params.level}`)
+            .then(res => res.json())).data
         },
         immediate: true
+      },
+      questionIndex: {
+        handler() {
+          this.time = this.$route.params.time * 1000
+
+          this.now = Date.now()
+          clearInterval(this.interval)
+          this.interval = setInterval(() => {
+            const now = Date.now()
+            this.time -= now - this.now
+            this.now = now
+          }, 1)
+        },
+        immediate: true
+      },
+      time(newVal) {
+        if (newVal <= 0) {
+          clearInterval(this.interval)
+          this.alert = {
+            title: "Hết giờ",
+            message: "Câu này đã bị bỏ qua!"
+          }
+          this.questionIndex++
+          this.sumTime += this.$route.params.time * 1000 - newVal
+          if (this.questionIndex >= this.questions.length) {
+            this.saveScore()
+          }
+        }
+      }
+    },
+    beforeCreate() {
+      const ID = `C${this.$route.params.classes}W${this.$route.params.week}L${this.$route.params.level}`
+      const isChallenges = this.$route.meta.isChallenges && this.$route.params.time.toString().match(/\d/)
+      if (isChallenges ? (this.$store.state.task.playgroundChallenges.indexOf(ID) == -1) : (this.$store.state.task.playground.indexOf(ID) == -1)) {
+        this.render = false
+        this.$dialog = {
+          title: "Error Task",
+          message: "Task này đã xảy ra lỗi. Có thể trình duyệt đã bị đột ngột đóng hoặc tải lại làm cho task bị lỗi. Bạn sẽ được chuyển hướng về trang chủ."
+        }
+        this.$router.push("/")
+      }
+    },
+    beforeDestroy() {
+      const ID = `C${this.$route.params.classes}W${this.$route.params.week}L${this.$route.params.level}`
+       
+      if (this.isChallenges) {
+        this.$store.commit("removeTaskInPlaygroundChallenges", ID)
+      } else {
+        this.$store.commit("removeTaskInPlayground", ID)
       }
     }
   }
@@ -216,6 +294,12 @@
         text-align: center;
         left: 50%;
         transform: translatex(-50%);
+      }
+    }
+
+    .no-transition {
+      &>>>.v-progress-circular__overlay {
+        transition: none !important;
       }
     }
 

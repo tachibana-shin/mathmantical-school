@@ -9,17 +9,27 @@ const routes = [
     component: () => import("@/pages/Home")
    },
   {
-    path: "/lesson/class/:classes/week/:week/level/:level",
-    component: () => import("@/pages/Lesson")
-   },
-  {
-    path: "/lesson/class/:classes/week/:week/level/:level/playground",
-    component: () => import("@/pages/Playground")
-   },
-  {
     path: "/challenges",
     component: () => import("@/pages/Challenges")
-   }
+   },
+  {
+    path: "/lesson/class/:classes(\\d+)/week/:week(\\d+)/level/:level(\\d+)",
+    component: () => import("@/pages/Lesson"),
+  },
+  {
+    path: "/lesson/class/:classes(\\d+)/week/:week(\\d+)/level/:level(\\d+)/playground",
+    component: () => import("@/pages/Playground"),
+    meta: {
+      isChallenges: false
+    }
+  },
+  {
+    path: "/lesson/class/:classes(\\d+)/week/:week(\\d+)/level/:level(\\d+)/playground-challenges-:time(\\d+)",
+    component: () => import("@/pages/Playground"),
+    meta: {
+      isChallenges: true
+    }
+  }
 ]
 
 export default new Router({
@@ -28,4 +38,4 @@ export default new Router({
   scrollBehavior(from, to, saved) {
     return saved || { x: 0, y: 0 }
   }
-})
+});

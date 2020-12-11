@@ -19,6 +19,9 @@ if (process.env.NODE_ENV === 'production') {
 Vue.prototype.$config = {
   baseURL: process.env.NODE_ENV == "production" ? "" : "http://localhost:3000"
 }
+Vue.prototype.$dialog = null
+
+Vue.util.defineReactive(Vue.prototype, "$dialog")
 
 Vue.component("v-loading", Loading)
 

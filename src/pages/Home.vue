@@ -34,7 +34,7 @@
         </v-tabs>
       </template>
     </v-app-bar>
-    <v-tabs-items v-model="tab">
+    <v-tabs-items v-model="tab" :key="classSelect">
       <v-tab-item v-for="(item, index) in items" :key="index">
         <v-lazy v-model="item.isLoaded" :options="{ threshold: .5 }" min-height="200" transition="fade-transition">
           <v-container fluid>
@@ -52,7 +52,17 @@
                 </v-hover>
               </v-col>
               <v-col cols="12">
-                <vue-infinite-loading @infinite="fetch" ref="infinite" />
+                <vue-infinite-loading @infinite="fetch" ref="infinite">
+                  <div slot="error" slot-scope="{ trigger }" class="text-center">
+                    Đã xảy ra lỗi, <a href="javascript:;" @click="trigger">bấm</a> để thử lại
+                  </div>
+                  <div slot="no-more" class="text-center">
+                    Toàn bộ bài học đã hiển thị
+                  </div>
+                  <div slot="no-results" class="text-center">
+                    Không có gì để hiển thị
+                  </div>
+                </vue-infinite-loading>
               </v-col>
             </v-row>
           </v-container>

@@ -18,7 +18,7 @@
       </v-list-item>
       <v-divider></v-divider>
       <v-list dense>
-        <v-list-item v-for="(item, index) in drawerItems" :key="index">
+        <v-list-item v-for="(item, index) in drawerItems" :key="index" :to="item.to">
           <v-list-item-icon>
             <v-icon> {{ item.icon }} </v-icon>
           </v-list-item-icon>
@@ -31,6 +31,20 @@
     <v-main>
       <router-view v-model="drawer" />
     </v-main>
+    <v-dialog :value="!!$dialog" @input="$dialog = $event ? $dialog : null" persistent max-width="290">
+      <v-card v-if="$dialog">
+        <v-card-title class="headline">
+          {{ $dialog.title }}
+        </v-card-title>
+        <v-card-text> {{ $dialog.message }} </v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="green darken-1" text @click="$dialog = null">
+            Đóng
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </v-app>
 </template>
 <style lang="scss">
@@ -77,6 +91,10 @@
       width: 100%;
     }
 
+    .p-0 {
+      padding: 0;
+    }
+
     @for $index from 1 to 3 {
       .text-indent-#{$index} {
         padding-left: #{$index / 2}em;
@@ -90,10 +108,24 @@
 
   }
 </style>
-<style lang="scss" scoped>
+<style lang="scss">
   #app {
-    &>>>.v-application--wrap {
+    .v-application--wrap {
       min-height: calc(100vh - 56px);
+    }
+
+    .p-fixed {
+      position: fixed;
+    }
+
+    .x-center {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .y-center {
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 </style>
@@ -119,12 +151,12 @@
           icon: "mdi-book-multiple",
           text: "Khóa học Toán",
           to: "/"
-        }/*,
+        },
         {
           icon: "mdi-apps",
           text: "Thử thách toán",
           to: "/challenges"
-        }*/
+        }
         /*{ icon: "mdi-apps", text: "Thử thách toán" },
         { icon: "mdi-view-agenda", text: "Song đấu toán" },
         { icon: "mdi-gamepad", text: "Trò chơi toán" }*/

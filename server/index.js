@@ -114,7 +114,7 @@ app.route("/api/get-all-subject(/page/:page)?").get(({ params, query }, res) => 
     ...thisData,
     data: thisData.data?.filter(e => !query.type || e.type ?.toLowerCase() == query.type ?.toLowerCase())
       .slice(page * 20, Math.min((page + 1) * 20, data.length))
-      .map(item => deleteProperty(item, ["questions"]))
+      .map(item => deleteProperty(item, ["questions"])) || []
   })
 })
 
@@ -129,9 +129,10 @@ app.route("/api/resources/assets/*").get((req, res) => {
   }
 })
 app.route("/api/search-subject").get(({ query }, res) => {
+  const dataResult = data.filter(item => item.name.replace(/\s/g, "").toLowerCase().indexOf(query.query?.replace(/s/g, "").toLowerCase()) > -1)
   res.json({
     statusCode: 200,
-    data: deleteProperty(data.filter(item => item.name.replace(/\s/g, "").toLowerCase().indexOf(query.query?.replace(/s/g, "").toLowerCase()) > -1), ["questions"])
+    data: (!!query.query ? dataResult : data.slice(0, 20)).map(e => deleteProperty(e, ["questions", "description", "image"]))
   })
 })
 
