@@ -53,7 +53,6 @@ div.d-flex.align-items-center.justify-content-between
 p.grey--text.text--darken-2 Hình nào có nhiều hình tam giác hơn?
 div.d-flex.align-items-center.justify-content-between
   img(src="${process.env.baseURL}/api/resources/assets/class-1/t1/5/1.png")
-  img(src="${process.env.baseURL}/api/resources/assets/class-1/t1/5/2.png")
     `,
       items: ["Hình 1", "Hình 2"],
       answer: 1

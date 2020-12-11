@@ -41,6 +41,10 @@ const routes = [
     meta: {
       isChallenges: true
     }
+  },
+  {
+    path: "*",
+    redirect: "/"
   }
 ]
 
