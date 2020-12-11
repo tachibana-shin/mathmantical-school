@@ -18,14 +18,17 @@
       </v-list-item>
       <v-divider></v-divider>
       <v-list dense>
-        <v-list-item v-for="(item, index) in drawerItems" :key="index" :to="item.to">
-          <v-list-item-icon>
-            <v-icon> {{ item.icon }} </v-icon>
-          </v-list-item-icon>
-          <v-list-item-content>
-            <v-list-item-title> {{ item.text }} </v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
+        <template v-for="(item, index) in drawerItems">
+          <v-list-item :to="item.to" v-if="item">
+            <v-list-item-icon>
+              <v-icon> {{ item.icon }} </v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title> {{ item.text }} </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-divider v-else class="my-3" />
+        </template>
       </v-list>
     </v-navigation-drawer>
     <v-main>
@@ -156,6 +159,12 @@
           icon: "mdi-apps",
           text: "Thử thách toán",
           to: "/challenges"
+        },
+        null,
+        {
+          icon: "mdi-chart-bar",
+          text: "Kết quả học tập",
+          to: "/outcomes"
         }
         /*{ icon: "mdi-apps", text: "Thử thách toán" },
         { icon: "mdi-view-agenda", text: "Song đấu toán" },

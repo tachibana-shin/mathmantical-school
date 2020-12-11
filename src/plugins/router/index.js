@@ -11,6 +11,14 @@ const routes = [
   {
     path: "/challenges",
     component: () => import("@/pages/Challenges")
+   },/*
+   {
+     path: "/parallel",
+     component: () => import("@/pages/Parallel")
+   },*/
+   {
+     path: "/outcomes",
+     component: () => import("@/pages/Outcomes")
    },
   {
     path: "/lesson/class/:classes(\\d+)/week/:week(\\d+)/level/:level(\\d+)",

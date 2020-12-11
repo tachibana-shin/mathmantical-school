@@ -3,14 +3,15 @@ import Vuex from "vuex"
 import createPersistedstate from "vuex-persistedstate"
 import lesson from "./modules/lesson"
 import task from "./modules/task"
+import history from "./modules/history"
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  modules: { lesson, task },
+  modules: { lesson, task, history },
   plugins: [
     createPersistedstate({
-      paths: ["lesson.score", "lesson.library", "lesson.scoreChallenges"]
+      paths: ["lesson.score", "lesson.library", "lesson.scoreChallenges", "history.items"]
     }),
     createPersistedstate({
       storage: sessionStorage,

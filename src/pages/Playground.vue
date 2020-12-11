@@ -219,6 +219,14 @@
           this.data = null
           this.data = (await fetch(`${this.$config.baseURL}/api/get-subject/class/${this.$route.params.classes}/week/${this.$route.params.week}/level/${this.$route.params.level}`)
             .then(res => res.json())).data
+          if (!this.isChallenges) {
+            this.$store.commit("addLessonToHistory", {
+              name: this.data.name,
+              id: `C${this.$route.params.classes}W${this.$route.params.week}L${this.$route.params.level}`,
+              times: Date.now(),
+              icon: "mdi-math-compass"
+            })
+          }
         },
         immediate: true
       },
@@ -265,7 +273,7 @@
     },
     beforeDestroy() {
       const ID = `C${this.$route.params.classes}W${this.$route.params.week}L${this.$route.params.level}`
-       
+
       if (this.isChallenges) {
         this.$store.commit("removeTaskInPlaygroundChallenges", ID)
       } else {

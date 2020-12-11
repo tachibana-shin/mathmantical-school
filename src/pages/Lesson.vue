@@ -42,7 +42,7 @@
                       </v-btn>
                     </v-list-item-action>
                   </v-list-item>
-                  <v-divider inset v-if="!itInLibrary" />
+                  <v-divider inset v-if="!itInLibrary || !itInChallenges" />
                   <v-list-item v-if="infoInLocal">
                     <v-list-item-avatar>
                       <v-icon> mdi-star </v-icon>
@@ -54,6 +54,19 @@
                           <v-progress-circular :rotate="-90" :size="50" :width="5" :value="infoInLocal.point * 10" color="primary"> {{ infoInLocal.point * 10 }}% </v-progress-circular>
                           <p class="mx-3"> {{ infoInLocal.questionTrue }} answer / {{ infoInLocal.countQuestion }} question </p>
                         </div>
+                      </v-list-item-subtitle>
+                    </v-list-item-content>
+                  </v-list-item>
+                  <v-divider inset v-if="infoInLocal"/>
+                  <v-list-item v-if="itInChallenges">
+                    
+                    <v-list-item-avatar>
+                      <v-icon> mdi-apps </v-icon>
+                    </v-list-item-avatar>
+                    <v-list-item-content>
+                      <v-list-item-title> Bạn đã tham gia thử thách với khóa học này </v-list-item-title>
+                      <v-list-item-subtitle>
+                        Bạn mất khoảng {{ (itInChallenges.sumTime / 1000).toFixed(1) }} để đạt {{ itInChallenges.point }} điểm.
                       </v-list-item-subtitle>
                     </v-list-item-content>
                   </v-list-item>
@@ -88,6 +101,9 @@
       },
       itInLibrary() {
         return this.$store.getters.itInLibrary(this.ID)
+      },
+      itInChallenges() {
+        return this.$store.getters.getInfoLessonInChallenges(this.ID)
       },
       infoInLocal() {
         return this.$store.getters.getInfoLessonInLibrary(this.ID)
