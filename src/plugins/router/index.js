@@ -19,7 +19,11 @@ const routes = [
    {
      path: "/outcomes",
      component: () => import("@/pages/Outcomes")
-   },
+   },/*
+   {
+     path: "/tools/pain",
+     component: () => import("@/pages/Pain")
+   },*/
   {
     path: "/lesson/class/:classes(\\d+)/week/:week(\\d+)/level/:level(\\d+)",
     component: () => import("@/pages/Lesson"),
