@@ -11,7 +11,7 @@ type: input
 question: Số bị trừ là 29, số trừ là 8. Vậy hiệu là bao nhiêu?
 %text
 div.d-flex
-  img(src="${process.env.baseURL}/api/resources/assets/class-2/c2/t2-1/1.png")
+  img(src="${process.env.baseURL}/api/resources/assets/class-2/t2-1/1.png")
 answer: 21
 
 type: input
@@ -76,7 +76,7 @@ type: input
 question: Một người đem 85 quả cam đi bán, người đó đã bán được 64 quả. Hỏi người đó còn lại bao nhiêu quả? 
 %text
 div.d-flex
-  img(src="${process.env.baseURL}/api/resources/assets/class-2/c2/t2-1/15/1.png")
+  img(src="${process.env.baseURL}/api/resources/assets/class-2/t2-1/15/1.png")
 answer: 21
 
 type: input

@@ -53,7 +53,7 @@ answer: 1
 type: select
 question: Cây thước thứ nhất dài 8dm, cây thước thứ hai dài 3 dm. Hỏi hai cây thước dài bao nhiêu đêximét?
 div.d-flex
-  img(src="${process.env.baseURL}/api/resources/assets/class-2/c2/t1-3/9/1.png")
+  img(src="${process.env.baseURL}/api/resources/assets/class-2/t1-3/9/1.png")
 items: [8, 11, 22, 13]
 answer: 1
 
@@ -61,5 +61,5 @@ type: input
 question: Ba bạn Ếch, Cóc, Nhái thi nhảy xa, Ếch nhảy dài nhất, Cóc nhảy ngắn nhất, Nhái nhảy được 5dm. Nhái nhảy hơn Cóc 2dm nhưng kém Ếch 3dm.
 Ếch và nhái: %text1, %text2 dm
 div.d-flex
-  img(src="${process.env.baseURL}/api/resources/assets/class-2/c2/t1-3/10/1.png")
+  img(src="${process.env.baseURL}/api/resources/assets/class-2/t1-3/10/1.png")
 answer: "8,3"
