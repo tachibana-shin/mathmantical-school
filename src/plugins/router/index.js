@@ -15,6 +15,10 @@ const routes = [
   {
     path: "/lesson/class/:classes/week/:week/level/:level/playground",
     component: () => import("@/pages/Playground")
+   },
+  {
+    path: "/challenges",
+    component: () => import("@/pages/Challenges")
    }
 ]
 

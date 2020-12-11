@@ -94,7 +94,7 @@ p.text-h5.blue--text.text-center %text `,
 p.grey--text.text--darken-2 Điền số còn thiếu trong dãy sau: 5, 4, ?, 2, 1
 p.text-h5.text-center 5, 4, %text, 2, 1`,
       answer: 3
-  },
+  },/*
     {
       type: "connect",
       itemsA: [
@@ -108,7 +108,7 @@ p.text-h5.text-center 5, 4, %text, 2, 1`,
         { id: 2, text: 2 }
     ],
       answer: [0, 1, 2]
-  },
+  },*/
     {
       type: "select",
       question: `
@@ -168,7 +168,7 @@ div.d-flex.align-items-center.justify-content-between
     `,
       items: [2, 3, 4, 5],
       answer: 3
-  },
+  },/*
     {
       type: "connect",
       itemsA: [
@@ -188,6 +188,6 @@ div.d-flex.align-items-center.justify-content-between
         { id: 5, text: 1 }
     ],
       answer: [0, 1, 2, 3, 4, 5]
-  }
+  }*/
 ]
 }

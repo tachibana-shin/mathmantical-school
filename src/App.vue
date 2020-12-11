@@ -97,12 +97,34 @@
     }
   }
 </style>
+<style lang="scss">
+  @font-face {
+    font-family: "Chocolate";
+    src: url(~@/fonts/Paintingwithchocolate-K5mo.ttf);
+    font-weight: 400;
+  }
+
+  .v-application {
+    .font-chocolate {
+      font-family: "Chocolate" !important;
+    }
+  }
+</style>
 <script>
   export default {
     data: () => ({
       drawer: false,
       drawerItems: [
-        { icon: "mdi-book-multiple", text: "Khóa học Toán" },
+        {
+          icon: "mdi-book-multiple",
+          text: "Khóa học Toán",
+          to: "/"
+        }/*,
+        {
+          icon: "mdi-apps",
+          text: "Thử thách toán",
+          to: "/challenges"
+        }*/
         /*{ icon: "mdi-apps", text: "Thử thách toán" },
         { icon: "mdi-view-agenda", text: "Song đấu toán" },
         { icon: "mdi-gamepad", text: "Trò chơi toán" }*/

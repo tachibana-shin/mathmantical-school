@@ -7,7 +7,6 @@ const pug = require("pug")
 const serveStatic = require('serve-static')
 const port = process.env.PORT || 3000
 
-app.use(serveStatic(__dirname + "/../dist"))
 require("dotenv").config()
 app.use(require("cors")())
 
@@ -22,7 +21,9 @@ const data = require("./data").map(lesson => {
   lesson.questions = lesson.questions.map(item => {
     try {
       item.question = item.type == "dragdrop-group" ? item.question : pug.render(item.question)
-    } catch (e) { console.log(item.question) }
+    } catch (e) {
+      console.log( lesson )
+    }
     return item
   })
   return lesson
@@ -127,6 +128,14 @@ app.route("/api/resources/assets/*").get((req, res) => {
     res.status(404).send("Not Found")
   }
 })
+app.route("/api/search-subject").get(({ query }, res) => {
+  res.json({
+    statusCode: 200,
+    data: deleteProperty(data.filter(item => item.name.replace(/\s/g, "").toLowerCase().indexOf(query.query?.replace(/s/g, "").toLowerCase()) > -1), ["questions"])
+  })
+})
 
 app.use(require("connect-history-api-fallback")())
+app.use(serveStatic(__dirname + "/../dist"))
+
 app.listen(port, () => console.log(`App is running in port ${port}`));

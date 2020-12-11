@@ -1,0 +1,68 @@
+name: Ôn tập các số đếm đến 100
+description: Đây là bài ôn tập của tuần 1.
+image: https://book.sachgiai.com/uploads/book/sach-giao-khoa-toan-2/sach-giao-khoa-toan-2-0.jpg
+type: Numerals
+week: 1
+level: 1
+classes: 2
+about: true
+
+type: input
+question: Số lớn nhất có 2 chữ số là:
+%text
+answer: 99
+
+type: input
+question: Hãy cho biết
+1 dm = %text cm
+answer: 10
+
+type: select
+question: Chọn đáp án đúng cho phép toán so sánh dưới đây:
+70 + 4 %text 74
+items: [">", "<", "="]
+answer: 2
+
+type: input
+question: Số hạng thứ nhất là 20, số hạng thứ 2 là 10. Vậy tổng của hai số hạng trên là:
+%text
+answer: 30
+
+type: input
+question: Số hạng liền sau 90 là: 
+%text
+answer: 91
+
+type: input
+question: Số tròn chục liền sau của 60 là:
+%text
+answer: 70
+
+type: input
+question: Số liền trước của 42 là:
+%text
+answer: 41
+
+type: select
+question: Số còn thiếu trong ô trống là:
+23-24-25-26-%text-28
+items: [34, 24, 26, 27]
+answer: 3
+
+type: select
+question: So sánh:
+23 + 3 %text 13 + 4
+items: [">", "<", "="]
+answer: 2
+
+type: select
+question: Cho dãy 15, 17, 19, 21, 23, 25, 29. Số lớn nhất là:
+%text
+items: [19, 29, 21, 17]
+answer: 1
+
+type: select
+question: Cho dãy 15, 17, 19, 21, 23, 25, 29. Số nhỏ nhất là:
+%text
+items: [19, 29, 15, 17]
+answer: 2
