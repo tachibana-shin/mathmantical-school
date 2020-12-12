@@ -7,10 +7,10 @@
     <v-container fluid>
       <v-row>
         <v-col cols="12">
-          <v-list>
-            <template v-for="(item, date) in history">
-              <v-subheader> {{ date }} </v-subheader>
-              <v-list-item v-for="(item, index) in item" :key="index">
+          <v-list v-if="history.length">
+            <template v-for="item in history">
+              <v-subheader> {{ item.date }} </v-subheader>
+              <v-list-item v-for="(item, index) in item.items" :key="index">
                 <v-list-item-avatar>
                   <v-icon class="grey lighten-1" dark> {{ item.icon }} </v-icon>
                 </v-list-item-avatar>
@@ -21,6 +21,7 @@
               </v-list-item>
             </template>
           </v-list>
+          <p class="grey--text text--darken-2 text-center " v-else> Bạn chưa làm bài tập nào. </p>
         </v-col>
       </v-row>
     </v-container>
@@ -46,7 +47,12 @@
           }
         })
 
-        return result
+        const array = []
+
+        for (const date in result) {
+          array.push({ date, items: result[date] })
+        }
+        return array.sort((a, b) => new Date(b).getTime() - new Date(a).getTime())
       }
     }
   }
