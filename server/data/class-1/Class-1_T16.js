@@ -3,6 +3,9 @@ module.exports = {
   description: "Đây là bài ôn tập của tuần 16.",
   image: "https://book.sachgiai.com/uploads/book/sach-giao-khoa-toan-1/sach-giao-khoa-toan-1-0.jpg",
   type: "Plus/Minus",
+  classes: 1,
+  week: 1,
+  level: 1,
   questions: [
     {
       type: "select",

@@ -3,7 +3,6 @@ const app = express()
 const fs = require("fs")
 const path = require("path")
 const Module = require("module")
-const pug = require("pug")
 const serveStatic = require('serve-static')
 const port = process.env.PORT || 3000
 
@@ -17,19 +16,11 @@ function deleteProperty(object, attrs) {
 }
 
 
-const data = require("./data").map(lesson => {
-  lesson.questions = lesson.questions.map(item => {
-    try {
-      item.question = item.type == "dragdrop-group" ? item.question : pug.render(item.question)
-    } catch (e) {
-      console.log( lesson )
-    }
-    return item
-  })
-  return lesson
-})
+const data = require("./data")
+
 const dataClasses = []
 data.forEach(item => {
+  item.classes = +(item.classes + "").replace(/\s/g, "")
   if (item.classes in dataClasses) {
     dataClasses[item.classes].push(item)
   } else {
@@ -40,8 +31,6 @@ data.forEach(item => {
 function findLesson({ classes, week, level }) {
   return thisData = data.find(item => item.classes == classes && item.week == week && item.level == level)
 }
-
-
 
 app.route("/api/get-subject/class/:classes/week/:week/level/:level").get(({ params }, res) => {
 

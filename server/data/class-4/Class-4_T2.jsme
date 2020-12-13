@@ -1,0 +1,129 @@
+name: Số có sáu chữ số
+description: Đây là bài ôn tập của tuần 2.
+image: https://i1.wp.com/downloadsachmienphi.com/wp-content/uploads/2018/09/sach-giao-khoa-toan-lop-4.jpg?fit=200%2C291&ssl=1
+type: Numerals
+week: 2
+level: 1
+classes: 4
+about: true
+    
+type: select
+question: Số 914092 đọc là:
+%text
+items: ["Chín trăm mười bốn nghìn chín hai", "Chín tram mười bốn nghìn không trăm bốn mươi hai  ", "Chín mươi bốn không chín hai", "Chín một bốn không trăm chín mươi hai"]
+answer: 1
+    
+type: select
+question: Số lớn nhất có sáu chữ số là:
+%text
+items: ["999499", "999999", "999990", "988999"]
+answer: 1
+    
+type: select
+question: Số lớn nhất có sáu chữ số khác nhau là:
+%text
+items: ["976843", "999999", "897654", "987654"]
+answer: 2
+    
+type: select
+question: Số nhỏ nhất có năm chữ số khác nhau là:
+%text
+items: ["123456", "123043", "102345", "100000"]
+answer: 2
+    
+type: select
+question: Chữ số thuộc lớp chục nghìn trong số 947856 là:
+%text
+items: ["9", "7", "4", "8"]
+answer: 2
+    
+type: select
+question: Điền vào chỗ trống: 930618 … 930000 + 618
+%text
+items: ["Nhỏ hơn", "Bằng", "Lớn hơn"]
+answer: 1
+    
+type: "select"
+question: Câu khẳng định sau đúng hay sai: ‘107657 + 98227 = 215884.’
+%text
+items: ["Đúng", "Sai"]
+answer: 1
+    
+type: select
+question: Tìm câu trả lời sai:
+%text
+items: ["Số tròn chục lớn nhất có sáu chữ số là: 999990", "Số chẵn lớn nhất có sáu chữ số là: 999998", "Số bé nhất có sáu chữ số đều là số lẻ là: 100001", "Số bé nhất có 6 chữ số mà chữ số hàng nghìn là 7 là: 107000"]
+answer: 2
+    
+type: select
+question: Điền vào chỗ trống: 673894 …… 668994.
+%text
+items: ["Nhỏ hơn", "Lớn hơn", "Bằng"]
+answer: 1
+    
+type: select
+question: Có bao nhiêu số có sáu chữ số mà tổng các chữ số của nó bằng 2?
+%text
+items: ["6 số", "5 số", "4 số", "3 số"]
+answer: 0
+    
+type: select
+question: Chữ số 824031 có các chữ số thuộc lớp nghìn là:
+%text
+items: ["8; 2; 4", "0; 3; 1", "2; 4; 0", "4; 0; 3"]
+answer: 0
+    
+type: select
+question: Số bé nhất có sáu chữ số mà chữ số hàng trăm là 8 và chữ số hàng đơn vị 3 là:
+%text
+items: ["999 893", "111 813", "100 803", "100 813"]
+answer: 2
+    
+type: select
+question: Điền vào chỗ trống: 
+26643 x 5 – 15344 = %text
+items: ["117877", "117871", "117878", "117788"]
+answer: 1
+    
+type: select
+question: Tính giá trị của phép tính sau: 
+677250 – 93339 : 9 = %text
+items: ["666879", "64879", "664879", "66879"]
+answer: 0
+    
+type: select
+question: Tính giá trị của biểu thức sau: Nhân 5 với tổng của 21837 và 27368.
+%text
+items: ["246225", "246250 ", "246250 ", "246205"]
+answer: 3
+    
+type: select
+question: Nếu a = 19240 thì giá trị biểu thức 451305 – a : 5 là:
+%text
+items: ["447456", "86413", "447457", "86423"]
+answer: 2
+    
+type: select
+question: Tìm một số có bốn chữ số, biết chữ số hàng trăm gấp đôi chữ số hàng nghìn, chữ số hàng chục gấp đôi chữ số hàng trăm, chữ số hàng đơn vị lớn hơn chữ số hàng chục là 3.
+%text
+items: ["1234", "1247", "2481", "2480"]
+answer: 1
+    
+type: select
+question: Cho số 8 738 001 382. Xóa đi ba chữ số sao cho số mới tạo thành là số lớn nhất. Vậy, số lớn nhất sau khi xóa đi ba chữ số là:
+%text
+items: ["8001382", "8001382", "8730082", "8738382"]
+answer: 3
+    
+type: select
+question: Cho các số 168367, 954823, 819349, 497234, 193788, 897312, 827173. Có bao nhiêu số trong các số trên mà chữ số 3 đứng ở hàng trăm?
+%text
+items: ["2", "3", "1", "4"]
+answer: 1
+    
+type: select
+question: Tìm một số có 6 chữ số có chữ số hàng đơn vị bằng 9 và biết rằng: Chữ số hàng nghìn hơn chữ số hàng chục nghìn 1 đơn vị. Chữ số hàng chục nghìn gấp đôi chữ số hàng trăm nghìn. Chữ số hàng nghìn kém chữ số hàng trăm hai đơn vị. Chữ số hàng trăm hơn chữ số hàng chục 4 đơn vị. Chữ số hàng đơn vị gấp ba lần chữ số hàng chục.
+%text
+items: ["245726", "245739", "245626", "245639"]
+answer: 1
+    

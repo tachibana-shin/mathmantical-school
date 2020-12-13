@@ -1,0 +1,132 @@
+name: Ngày tháng
+description: Đây là bài ôn tập của tuần 5.
+image: https://i1.wp.com/downloadsachmienphi.com/wp-content/uploads/2018/09/sach-giao-khoa-toan-lop-4.jpg?fit=200%2C291&ssl=1
+type: Numerals
+week: 5
+level: 1
+classes: 4
+about: true
+
+type: select
+question: Lập luận sau đúng hay sai:’ Những tháng có 31 ngày trong năm là tháng 1; 3; 5; 7; 8; 10; 12’.
+ %text
+items: ["Đúng", "Sai"]
+answer: 0
+    
+type: select
+question: Lập luận sau đúng hay sai: ‘Những tháng có 30 ngày trong năm là tháng 2; 4; 6; 9; 11’.
+%text
+items: ["Đúng", "Sai "]
+answer: 1
+    
+type: select
+question: Năm nhuận có 366 ngày đúng hay sai?
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+    
+type: select
+question: Trung bình cộng của các số 18; 23; 28; 33; 38 là:
+%text
+items: ["27", "28", "29", "30"]
+answer: 1
+    
+type: select
+question: Trung bình cộng của các số 265; 297; 315; 425; 518 là:
+%text
+items: ["365", "364", "464", "454"]
+answer: 1
+    
+type: select
+question: Trung bình cộng của các số 3829; 32895; 8635; 39650; 83641 là:
+%text
+items: ["33730", "33770", "37370", "77330"]
+answer: 0
+    
+type: select
+question: Trung bình cộng của 10; 20; 30; 40 là 20 đúng hay sai?
+%text
+items: ["Đúng", "Sai"]
+answer: 1
+    
+type: select
+question: Xe thứ nhất chở được 45 tạ hàng, xe thứ hai chở được 53 tạ hàng, xe thứ ba chở được số hàng nhiều hơn trung bình cộng số tạ hàng của hai xe đầu là 5 tạ. Xe thứ ba chở được số hàng là:
+%text
+items: ["50 tạ", "58 tạ", "55 tạ", "54 tạ"]
+answer: 3
+    
+type: select
+question: Tổng số cây lớp 4A và 4C trồng được ít hơn tổng số cây lớp 4B và 4D trồng là:
+div.d-flex
+  img(src="${process.env.baseURL}/api/resources/assets/class-4/t5/9/1.png")
+%text
+items: ["12 cây", "13 cây", "15 cây", "17 cây"]
+answer: 3
+    
+type: select
+question: Trong 4 năm từ 2004 đến 2007, Công ty Thịnh Đạt đã xuất khẩu được số cà phê (xem biểu đồ dưới) là: 
+div.d-flex
+  img(src="${process.env.baseURL}/api/resources/assets/class-4/t5/10S/1.png")
+%text
+items: ["1700 tấn", "1800 tấn", "2000 tấn", "1920 tấn"]
+answer: 3
+    
+type: select
+question: Bốn bao gạo lần lượt cân nặng là 30kg, 40kg, 45kg và 57kg. Hỏi trung bình mỗi bao cân nặng bao nhiêu ki-lô-gam?
+%text
+items: ["40kg", "41kg", "42kg", "43kg"]
+answer: 3
+    
+type: select
+question: Một cửa hàng xăng dầu trong 5 ngày đầu tuần bán được 3000l xăng, 2 ngày còn lại trong tuần bán được 1250l xăng. Hỏi trung bình mỗi ngày trong tuần đó cửa hàng bán được bao nhiêu lít xăng?
+%text
+items: ["2500", "2000", "2400", "2600"]
+answer: 0
+    
+type: select
+question: Số thích hợp để điền vào chỗ chấm 3 tạ 16 yến = ….hg là:
+%text
+items: ["31600", "3160", "4600", "46000"]
+answer: 2
+
+type: select
+question: Quy luật của dãy số: 1, 4, 7, 10, 13, 16, 19 là:
+%text
+items: ["Số sau hơn số trước 2 đơn vị", "Số trước hơn số sau 3 đơn vị", "Số sau gấp đôi số trước", "Số sau bằng tổng hai số trước"]
+answer: 1
+    
+type: select
+question: Thực hiện phép tính: 
+(4248 : 2 + 3864) : 4 : 3 = %text
+items: ["499", "500", "489", "498"]
+answer: 0
+    
+type: select
+question: Tìm x biết: (6824 - X) : 62 = 58
+X = %text
+items: ["3228", "3822", "3282", "3882"]
+answer: 0
+    
+type: select
+question: Bố Tuấn làm việc trong nhà máy 8 giờ trong 1 ngày. Một tuần bố Tuấn được nghỉ 1 ngày. Hỏi một tuần bố Tuấn làm việc trong nhà máy bao nhiêu giờ?
+%text
+items: ["49 giờ", "48 giờ", "47 giờ", "46 giờ"]
+answer: 1
+    
+type: select
+question: Cho hai biểu thức A = 6287 + 7 x m và B = 9267 – n x 8; tính trung bình cộng của A và B khi m = 2562 và n = 728.
+%text
+items: ["13830", "13832", "13831", "13831"]
+answer: 1
+    
+type: select
+question: Có 4 xe chở hàng, 3 xe đầu trung bình mỗi xe chở được 45 tạ hàng. Xe thứ 4 chở được số hàng nhiều hơn trung bình cộng số hàng của cả 4 xe là 15 tạ và ít hơn số hàng của cả 2 xe đầu là 24 tạ. Hỏi xe thứ ba chở được bao nhiêu tạ vàng?
+%text
+items: ["47 tạ", "46 tạ", "48 tạ", "45 tạ"]
+answer: 1
+    
+type: select
+question: Trung bình cộng số ngô hai xã thu hoạch được là 118 tấn. Nếu xã thứ nhất thu hoạch thêm được 12 tấn ngô và xã thứ hai thu hoạch thêm được 20 tấn ngô thì số ngô thu hoạch được của hai xã bằng nhau. Tính số tấn ngô lúc đầu mỗi xã thu hoạch được.
+%text
+items: ["Xã thứ nhất: 122 tấn ngô; Xã thứ hai: 114 tấn ngô", "Xã thứ nhất: 114 tấn ngô; Xã thứ hai: 122 tấn ngô", "Xã thứ nhất: 118 tấn ngô; Xã thứ hai: 118 tấn ngô", "Xã thứ nhất: 119 tấn ngô; Xã thứ hai: 117 tấn ngô"]
+answer: 0

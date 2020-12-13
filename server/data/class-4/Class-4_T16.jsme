@@ -1,0 +1,128 @@
+name: Phép chia có dư số có năm chữ số
+description: Đây là bài ôn tập của tuần 16.
+image: https://i1.wp.com/downloadsachmienphi.com/wp-content/uploads/2018/09/sach-giao-khoa-toan-lop-4.jpg?fit=200%2C291&ssl=1
+type: Numerals
+week: 16
+level: 1
+classes: 4
+about: true
+
+type: select
+question: Đúng hay Sai: 44634 : 173 = 258
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+
+type: select
+question: Đúng hay Sai: 108486 : 265 = 409 (dư 1)
+%text
+items: ["Đúng", "Sai"]
+answer: 1
+
+type: select
+question: Đúng hay Sai: 72546 : 234 = 310 (dư 6)
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+
+type: select
+question: Đúng hay Sai: 92414 : 457 = 202 (dư 10)
+%text
+items: ["Đúng", "Sai"]
+answer: 1
+
+type: select
+question: Một tấm bìa hình chữ nhật có diện tích 4815cm&sub2;, chiều rộng 45cm, chiều dài của tấm bìa đó là:
+%text
+items: ["117cm", "107cm", "105cm", "115cm"]
+answer: 1
+
+type: select
+question: Giá trị của biểu thức (18000 + 1440) : 108 là:
+%text
+items: ["182", "180", "128", "108"]
+answer: 1
+
+type: select
+question: Một người thợ làm 24 ngày công trong một tháng được nhận 1 560 000 đồng tiền công. Hỏi trung bình một ngày công người thợ được nhận bao nhiêu tiền?
+%text
+items: ["65000 đồng", "60000 đồng", "70000 đồng", "80000 đồng"]
+answer: 0
+
+type: select
+question: Tìm x, biết: x × 45 = 5535
+%text
+items: ["321", "123", "132", "213"]
+answer: 1
+
+type: select
+question: Chu vi một hình chữ nhật gấp 8 lần chiều rộng . Hỏi chiều dài gấp mấy lần chiều rộng ?
+%text
+items: ["3 lần", "4 lần", "5 lần", "6 lần"]
+answer: 0
+
+type: select
+question: Số dư của phép chia 172869 : 345 là:
+%text
+items: ["31", "24", "21", "42"]
+answer: 1
+
+type: select
+question: Giá trị của biểu thức 8750 : 125 + 1250 : 125 là:
+%text
+items: ["82", "82", "81", "108"]
+answer: 1
+
+type: select
+question: Tìm x, biết: x × 120 = 1800.
+%text
+items: ["x = 15", "x = 13", "x = 12", "x = 21"]
+answer: 0
+
+type: select
+question: Một mảnh vườn hình chữ nhật có diện tích là 14124m&sub2; , chiều rộng mảnh đất là 107m. Chu vi của mảnh đất đó là:
+%text
+items: ["478m", "487m", "587m", "678m"]
+answer: 0
+
+type: select
+question: Số dư của phép chia 56100 : 456 là:
+%text
+items: ["12", "12", "456", "21"]
+answer: 0
+
+type: select
+question: Tìm số lớn nhất có ba chữ số, biết rằng số đó chia cho 135 thì dư 9.
+%text
+items: ["954", "950", "955", "940"]
+answer: 0
+
+type: select
+question: Tính giá trị của biểu thức: 1968 x 349 + 35460 : 985
+%text
+items: ["686686", "686868", "666888", "888666"]
+answer: 1
+
+type: select
+question: Tính giá trị của biểu thức: 2008 x 327 – 1308 x 502
+%text
+items: ["0", "1308", "2008", "327502"]
+answer: 0
+
+type: select
+question: Một hình chữ nhật có diện tích là 41535cm&sub2; và chiều dài 213cm. Tính chiều rộng của hình chữ nhật đó.
+%text
+items: ["129cm", "219cm", "195cm", "159cm"]
+answer: 2
+
+type: select
+question: Khối lớp Bốn có 115 học sinh, khối lớp Ba có 107 học sinh. Người ta phát cho các bạn hoc sinh lớp Bốn mỗi bạn 15 quyển vở. Hỏi nếu chia số vở đó cho các bạn học sinh của cả hai khối thì mỗi bạn được bao nhiêu quyển và còn dư bao nhiêu?
+%text
+items: ["Được 7 quyển; Dư 90 quyển", "Được 7 quyển; Dư  171 quyển", "Được 7 quyển; Dư  171 quyển", "Được 7 quyển; Dư 177 quyển"]
+answer: 1
+
+type: select
+question: Năm nay bác Hồng thu hoạch được 9 tấn 750kg cả thóc và ngô. Số thóc bác đóng được 142 bao, số ngô bác đóng được 53 bao. Hỏi bác Hồng thu hoạch được bao nhiêu ki-lô-gam ngô, bao nhiêu ki-lô-gam thóc ? ( biết rằng khối lượng mỗi bao bằng nhau)
+%text
+items: ["7100 kg thóc; 2650 kg ngô", "2650 kg thóc; 2650 kg ngô", "2650 kg thóc; 7100 kg ngô", "7100 kg thóc; 7100 kg ngô"]
+answer: 0

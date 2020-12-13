@@ -1,0 +1,128 @@
+name: Phép cộng số có sáu chữ số
+description: Đây là bài ôn tập của tuần 4.
+image: https://i1.wp.com/downloadsachmienphi.com/wp-content/uploads/2018/09/sach-giao-khoa-toan-lop-4.jpg?fit=200%2C291&ssl=1
+type: Numerals
+week: 7
+level: 1
+classes: 4
+about: true
+
+type: select
+question: Hiệu của 742356 và 356478 là:
+%text
+items: ["495 878", "486 878", "385 978", "385 878"]
+answer: 3
+
+type: select
+question: Quãng đường từ A đến C dài 1849km, quãng đường từ A đến B dài 925km, biết A B và C thẳng hang, quãng đường từ A đến C là:
+%text
+items: ["925", "924", "922", "934"]
+answer: 1
+
+type: select
+question: Phép tính sau đúng hay sai: 12345 + 67890 = 67890 + 12345
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+
+type: select
+question: Phép tính sau đúng hay sai: 43 + 15 x 6 = 43 + 6 x 15
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+
+type: select
+question: Tìm x: 168593 + x = 427157
+%text
+items: ["252564", "258564", "258664", "258864"]
+answer: 1
+
+type: select
+question: Tìm x: 976318 – x = 764280
+%text
+items: ["212038", "212212", "212003", "212008"]
+answer: 0
+
+type: select
+question: Huyện A trồng được 157630 cây lấy gỗ, huyện B trồng được ít hơn huyện A là 2917 cây. Hỏi cả hai huyện trồng được bao nhiêu cây lấy gỗ?
+%text
+items: ["312313 cây", "312312 cây", "312344 cây", "312343 cây"]
+answer: 3
+
+type: select
+question: Tổng của 1027 và 2345 nhân với 3 viết là:
+%text
+items: ["1027 + 2345 x 3", "(1027 + 2345) x 3", "1027 x 3 + 2345", "(3 x 1027) + 2345"]
+answer: 1
+
+type: select
+question: Biểu thức nào sau đây đúng:
+%text
+items: ["3126 + 2705 = 2075 + 3146", "7693 + 805 > 807 + 7693", "5071 + 1900 > 1901 + 5071", "1238 + 305 = 305 + 1238"]
+answer: 3
+
+type: select
+question: Một nhà máy ngày thứ nhất sản xuất được 1950 sản phẩm, ngày thứ hai sản xuất được ít hơn ngày thứ nhất 900 sản phẩm, ngày thứ ba sản xuất được nhiều hơn ngày thứ nhất 100 sản phẩm. Hỏi cả ba ngày nhà máy sản xuất được bao nhiêu sản phẩm?
+%text
+items: ["5050 sản phẩm", "5500 sản phẩm", "5550 sản phẩm", "5000 sản phẩm"]
+answer: 0
+
+type: select
+question: Tính 4 + 6 + 8 Cách tính nào sau đây thuận tiện nhất?
+%text
+items: ["4 + 6 + 8 = (4 + 6) + 8 = 18", "4 + 6 + 8 = 4 + (6 + 8) = 18", "4 + 6 + 8 = (4 + 8) + 6 = 18", "4 + 6 + 8 = 6 + (4 + 8) = 18"]
+answer: 0
+
+type: select
+question: Tính tổng 3452 + 2793 + 1548 thì cách tính nào thuận tiện nhất?
+%text
+items: ["A.	(3452 + 2793) + 1548", "B.	(3452 + 1548) + 2793", "C.	3452 + (1548 + 2793)", "D.	(2793 + 1548) + 3452"]
+answer: 1
+
+type: select
+question: Cho biết a,b là chiều dài và chiều rộng của hình chữ nhật ( a,b cùng đơn vị đo). Chu vi hình chữ nhật là:
+%text
+items: ["a x b x 2", "a + b x 2", "a – b x 2", "(a + b) x 2"]
+answer: 3
+
+type: select
+question: Lan nghĩ ra một số, Lan lấy số đó cộng với số bé nhất có 4 chữ số khác nhau thì được số tròn chục lớn nhất có 4 chữ số. Số Lan nghĩ là:
+%text
+items: ["8967", "8976", "7977", " 8877"]
+answer: 0
+
+type: select
+question: Tổng của 1027 và 2345 nhân với 3 viết là:
+%text
+items: ["1027 + 2345 x 3", "(1027 + 2345) x 3", "1027 x 3 + 2345", "3 x 1027 + 2345"]
+answer: 1
+
+type: select
+question: Một hình chữ nhật có chu vi là 60cm. Nếu bớt chiều dài đi 5cm và thêm vào chiều rộng 5cm thì được hình vuông. Diện tích hình chữ nhật đó bằng:
+%text
+items: ["200cm&sub2;", "150cm&sub2;", "300cm&sub2;", "225cm&sub2;"]
+answer: 0
+
+type: select
+question: Hiệu của a và b chia cho c, với a = 4895 ; b = 1025 ; c = 5
+%text
+items: ["774", "4690", "775", "4680"]
+answer: 0
+
+type: select
+question: Không thực hiện phép tính, biểu thức nào dưới đây có kết quả bằng với biểu thức: 672 + (163 + 578)?
+%text
+items: ["(163 + 578) – 672 ", "(672 + 163) + 578", "672 + 163 – 578", "(672 – 163) + 578"]
+answer: 1
+
+type: select
+question: Cho hai biểu thức: A = 627 x a - 173 x b + 274 x c và B = 383 x a + 163 x b – 247 x c. So sánh A và B với a = 8, b = 3 và c = 4. 
+%text
+items: ["A lớn hơn B", "A nhỏ hơn B", "A bằng B"]
+answer: 0
+
+type: select
+question: Số thích hợp để điền vào chỗ chấm 4 tấn 12 yến = ….kg là:
+%text
+items: ["5200", "421", "412", "4120"]
+answer: 3

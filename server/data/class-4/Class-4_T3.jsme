@@ -1,0 +1,129 @@
+name: Số có chín chữ số
+description: Đây là bài ôn tập của tuần 3.
+image: https://i1.wp.com/downloadsachmienphi.com/wp-content/uploads/2018/09/sach-giao-khoa-toan-lop-4.jpg?fit=200%2C291&ssl=1
+type: Numerals
+week: 3
+level: 1
+classes: 4
+about: true
+
+type: select
+question: Các chữ số thuộc lớp triệu trong số 198 304 576 là:
+%text
+items: [" 4; 5; 7", " 1; 9; 8", " 9; 8; 3", " 1; 9; 8; 3"]
+answer: 1
+    
+type: select
+question: “ Bảy tỉ sáu trăm triệu không trăm linh tám nghìn” là chữ số nào sau đây:
+%text
+items: ["760 000 800", "7 600 008 000", "7 600 800 000", "7 006 800 000"]
+answer: 1
+    
+type: select
+question: Viết số biết số đó bao gồm: 8 triệu, 5 trăm nghìn, 4 chục nghìn, 5 nghìn, 7 trăm và 2 đơn vị.
+%text
+items: ["8545720", "8545702 ", "8545072", "854572"]
+answer: 1
+    
+type: select
+question: Số lẻ bé nhất có tám chữ số là:
+%text
+items: [" 11 111 111", " 10 000 001", " 11 000 000", " 10 000 000"]
+answer: 1
+    
+type: select
+question: Số chẵn lớn nhất có chín chữ số khác nhau là:
+%text
+items: ["987 654 320", "987 654 312", "999 999 998", "999 999 999"]
+answer: 0
+    
+type: select
+question: Khẳng định sau đúng hay sai: ‘Số liền trước số bé nhất có tám chữ số là 9 999 999’
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+    
+type: select
+question: Khoanh vào chữ đặt trước câu trả lời sai:
+%text
+items: ["Viết chữ số 5 vào số 3027 để được số lớn nhất có thể được là 53 027", "Viết chữ số 2 vào số 5030 để được số lớn nhất có thể được là 52 030", "Viết chữ số 3 vào số 5402 để được số bé nhất có thể được là 35 402", "Viết chữ số 9 vào số 3628 để được số bé nhất có thể được là 36 298"]
+answer: 3
+    
+type: select
+question: Giá trị của chữ số 3 trong số 728 923 846 là:
+%text
+items: ["300", "3", "30", "3 000"]
+answer: 3
+    
+type: select
+question: Số 845 628 493 được viết thành tổng như sau: “800 000 000 + 40 000 000 + 5 000 000 + 600 000 + 20 000 + 8 000 + 400 + 90 + 3” đúng hay sai?
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+    
+type: select
+question: Chữ số 0 trong số 38926025 thuộc hàng:
+%text
+items: ["Trăm", "Nghìn", "Chục", "Đơn vị"]
+answer: 0
+    
+type: select
+question: Số nào dưới đây có chữ số 4 đứng ở hàng chục triệu?
+%text
+items: ["40 278 891	", "4 253 177", "8 272 417", "9 645 913"]
+answer: 0
+    
+type: select
+question: Cho các số 6 157 478, 26 483 918, 627 897 972, 8 276 792, 8 728 586, 9 276 842. Có bao nhiêu số trong các số trên mà chữ số 6 đứng ở lớp triệu?
+%text
+items: ["4", "5", "3", "6"]
+answer: 2
+
+type: select
+question: Nêu giá trị của chữ số 3, chữ số 7 và chữ số 9 trong số 95 073 200:
+%text
+items: ["3000; 70 000; 90 000 000", "3000; 700 000; 90 000 000", "300; 70 000; 90 000 000", "300; 700 000; 90 000 000"]
+answer: 0
+    
+type: select
+question: Thực hiện phép tính: 
+94203425 – 90000000 – 3000 – 200000 = %text
+items: ["4200425", "4000405", "4000425", "4000000"]
+answer: 2
+    
+type: select
+question: Thực hiện phép tính: 
+3957275 – 50000 : 5 = %text
+items: ["3947275", "781455", "781554", "3947775"]
+answer: 0
+    
+type: select
+question: Tìm số tròn chục có năm chữ số, biết chữ số hàng nghìn gấp đôi chữ số hàng chục nghìn, chữ số hàng trăm gấp đôi chữ số hàng nghìn và chữ số hàng chục gấp đôi chữ số hàng trăm.
+%text
+items: ["12460", "12480", "24680", "24860"]
+answer: 1
+    
+type: select
+question: Không thực hiện phép tính, hãy tìm X, biết: 23 + X + 1947 = 1947 + 23 + 1747.
+X = %text
+items: ["1747", "1947", "1977", "23"]
+answer: 0
+    
+type: select
+question: Tìm số có 9 chữ số trong đó lớp triệu là số bé nhất có 3 chữ số, lớp nghìn hơn lớp triệu 357 đơn vị, lớp đơn vị kém lớp nghìn 143 đơn vị.
+%text
+items: ["100 000 000", "100 457 314", "123 480 623", "100 357 143"]
+answer: 1
+    
+type: select
+question: Khi viết thêm chữ số 3 vào bên trái của một số có năm chữ số ta được số mới hơn số cũ bao nhiêu đơn vị?
+%text
+items: ["30000", "300000", "3000", "3"]
+answer: 1
+    
+type: select
+question: Khi viết thêm chữ số 0 vào bên phải của số 11111 ta được số mới hơn số cũ bao nhiêu đơn vị?
+%text
+items: ["99999", "100000", "11111", "1"]
+answer: 0
+    

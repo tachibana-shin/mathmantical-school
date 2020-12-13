@@ -1,0 +1,131 @@
+name: Số có sáu chữ số
+description: Đây là bài ôn tập của tuần 6.
+image: https://i1.wp.com/downloadsachmienphi.com/wp-content/uploads/2018/09/sach-giao-khoa-toan-lop-4.jpg?fit=200%2C291&ssl=1
+type: Numerals
+week: 6
+level: 1
+classes: 4
+about: true
+    
+type: select
+question: Điền chữ số thích hợp vào chỗ trống: 517642 > 5 …. 7642
+%text
+items: ["1", "0", "2", "3"]
+answer: 1
+
+type: select
+question: Điền chữ số thích hợp vào chỗ trống: 6 tấn 850kg < 6 tấn …. 49kg
+%text
+items: ["8", "7", "9", "0"]
+answer: 2
+    
+type: select
+question: Giá trị chữ số 4 trong số 147325 là:
+%text
+items: ["400", "4000", "40000", "4"]
+answer: 2
+    
+type: select
+question: Số thích hợp để điền vào chỗ trống là: 9 tấn 35kg = …. kg
+%text
+items: [" 9350", "9305", "9035", "9530"]
+answer: 2
+    
+type: select
+question: Năm 2000 thuộc thế kỉ 21 đúng hay sai?
+%text
+items: ["Đúng", "Sai"]
+answer: 1
+    
+type: select
+question: 1/2 phút = 30 giây đúng hay sai?
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+    
+type: select
+question: Số học sinh giỏi toán khối lớp 3 Trường Tiểu học Kim Đồng năm học 2006-2007 là:
+div.d-flex
+  img(src="${process.env.baseURL}/api/resources/assets/class-4/t6/7/1.png")
+%text
+items: ["75 học sinh", "85 học sinh", "73 học sinh", "83 học sinh"]
+answer: 3
+    
+type: select
+question: Tháng Hai của năm nhuận có số ngày là:
+%text
+items: ["27", "27", "29", "30"]
+answer: 2
+    
+type: select
+question: Giá trị của chữ số 4 trong số nhỏ nhất có 6 chữ số khác nhau là:
+%text
+items: ["4", "400", "40", "4000"]
+answer: 2
+    
+type: select
+question: Trung bình cộng của số bé nhất có 3 chữ số, số bé nhất có 4 chữ số và số bé nhất có 5 chữ số là 3700 đúng hay sai?
+%text
+items: ["Đúng ", "Sai"]
+answer: 0
+    
+type: select
+question: Hiệu của số lớn nhất có 4 chữ số đều là chẵn và số bé nhất có 4 chữ số đều là lẻ là 7777 đúng hay sai?
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+    
+type: select
+question: Tìm số nhỏ nhất có 4 chữ số, biết tổng bốn chữ số bằng 10 và chữ số hàng nghìn là chữ số chẵn nhỏ nhất.
+%text
+items: ["2013", "2017", "2008", "2000"]
+answer: 2
+    
+type: select
+question: Không thực hiện phép tính, hãy tìm m: (m + 2138) x 4 = (2076 + 2138) x 4.
+%text
+items: ["2138", "2076", "4", "4214"]
+answer: 1
+    
+type: select
+question: Cuộn vải xanh dài 150m và dài hơn cuộn vải trắng 30m. Hỏi trung bình mỗi cuộn vải dài bao nhiêu mét?
+%text
+items: ["130m", "140m", "135m", "145m"]
+answer: 2
+    
+type: select
+question: Tính giá trị của biểu thức: 127 + a x 6 với a = 8
+%text
+items: ["165", "175", "185", "180"]
+answer: 1
+    
+type: select
+question: Giá trị X thỏa mãn (X - 48) x 4 = 92 là:
+%text
+items: ["71", "72", "73", "74"]
+answer: 0
+    
+type: select
+question: Thực hiện phép tính:
+9273 x 5 + 6863 x 7 = %text
+items: ["9446", "94406", "94446", " 94006"]
+answer: 1
+    
+type: select
+question: Các chữ số thuộc lớp triệu trong số 198 304 576 là:Cho hai biểu thức A = 5278 + 138 x m và B = 7927 - 382 x n. So sánh giá trị của A với B khi m=6 và n=3.
+%text
+items: ["Nhỏ hơn", "Lớn hơn", "Lớn hơn"]
+answer: 0
+    
+type: select
+question: Trung bình cộng của các số tròn chục từ 10 đến 90 là:
+%text
+items: ["50", "55", "60", "65"]
+answer: 0
+    
+type: select
+question: Trung bình cộng của bốn số là 2280. Số thứ nhất và số thứ ba kém số thứ hai và số thứ tư 1492 đơn vị, số thứ hai kém số thứ tư 498 đơn vị. Tìm số thứ hai và số thứ tư.
+%text
+items: ["2444; 2902", "2404; 2902", "2280; 1492", "2208; 1942"]
+answer: 1
+    

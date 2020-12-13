@@ -1,0 +1,137 @@
+name: Phép nhân
+description: Đây là bài ôn tập của tuần 10.
+image: https://i1.wp.com/downloadsachmienphi.com/wp-content/uploads/2018/09/sach-giao-khoa-toan-lop-4.jpg?fit=200%2C291&ssl=1
+type: Numerals
+week: 10
+level: 1
+classes: 4
+about: true
+
+type: select
+question: Viết số thích hợp vào chỗ chấm: 115 x 7 = … x 115
+%text
+items: ["5", "6", "7", "8"]
+answer: 2
+
+
+type: select
+question: Viết số thích hợp vào chỗ chấm: 
+1968 x 4 = 4 x %text
+items: ["1967", "1968", "1969", "1970"]
+answer: 1
+
+type: select
+question: Viết số thích hợp vào chỗ chấm: 24 x 8 = … x 24
+%text
+items: ["7", "8", "9", "10"]
+answer: 1
+
+type: select
+question: Viết số thích hợp vào chỗ chấm: 2008 x 6 = … x 2008
+%text
+items: ["4", "5", "6", "7"]
+answer: 2
+
+type: select
+question: Cho hình chữ nhật ABCD có kích thước như ghi trong hình bên. Tính diện tích hình bên.
+div.d-flex
+  img(src="${process.env.baseURL}/api/resources/assets/class-4/t10/5/1.png")
+%text
+items: ["40cm&sub2;", "50cm&sub2;", "45cm&sub2;", "30cm&sub2;"]
+answer: 2
+
+type: select
+question: Thực hiện phép tính:
+145325 x 4 = %text
+items: ["581300", "582000", "581000", "583300"]
+answer: 0
+
+type: select
+question: Thực hiện phép tính: 
+76435 x 9 = %text
+items: ["687987", "687985", "687715", "687915"]
+answer: 3
+
+type: select
+question: Thực hiện phép tính: 
+231342 x 2 = %text
+items: ["462684", "464646", "462464", "482484"]
+answer: 0
+
+type: select
+question: 3 kg 7g = ? g.
+%text
+items: ["37 g", "307 g", "370 g", "3007 g"]
+answer: 3
+
+type: select
+question: Tích của hai số là 3684. Nếu gấp một thừa số lên 3 lần thì tích của hai số là:
+%text
+items: ["11052", "1128", "3687", "3681"]
+answer: 0
+
+type: select
+question: 35634 x a < 142535; a không thể là số nào sau đây.
+%text
+items: ["1", "0", "4", "3"]
+answer: 2
+
+type: select
+question: Tìm x biết: 549 + x = 976.
+x = %text
+items: ["427", "327", "437", "337"]
+answer: 0
+
+type: select
+question: Tính chu vi hình vuông cạnh a với a = 9 cm
+%text
+items: ["36cm", "81cm", "18cm", "63cm"]
+answer: 0
+
+type: select
+question: Cho các số 6 157 478, 26 483 918, 627 897 972, 8 276 792, 8 728 586, 9 276 842. Có bao nhiêu số trong các số trên mà chữ số 6 đứng ở lớp triệu?
+div.d-flex
+  img(src="${process.env.baseURL}/api/resources/assets/class-4/t10/14/1.png")
+  img(src="${process.env.baseURL}/api/resources/assets/class-4/t10/14/2.png")
+  img(src="${process.env.baseURL}/api/resources/assets/class-4/t10/14/3.png")
+%text
+items: ["Hình 1", "Hình 2", "Hình 3", "Không có hình nào."]
+answer: 2
+
+type: select
+question: Kết quả của phép nhân: 41504 x 8 là:
+%text
+items: ["332032", "333033", "333032", "3320026"]
+answer: 0
+
+type: select
+question: Một chuyến xe tải xếp được 7 kiện hàng to và 9 kiện hàng nhỏ. Mỗi kiện hàng to nặng 450 kg, mỗi kiện hàng nhỏ nặng 150kg. Hỏi tổng số hàng xếp trên xe nặng bao nhiêu ki-lô-gam?
+%text
+items: ["4000kg", "4500kg", "5100kg", "5000kg"]
+answer: 1
+
+type: select
+question: 5 giờ 20 phút = … phút
+%text
+items: ["300 phút", "520 phút", "360 phút", "320 phút"]
+answer: 3
+
+type: select
+question: Hai cạnh nào vuông góc nhau:
+div.d-flex
+  img(src="${process.env.baseURL}/api/resources/assets/class-4/t10/18/1.png")
+%text
+items: ["BC vuông góc CD", "AB vuông góc AD", "AB vuông góc BC", "BC vuông góc AD"]
+answer: 1
+
+type: select
+question: Khi nhân một số với 1236, Tâm đã viết nhầm chữ số 6 ở hàng đơn vị của số 1236 thành chữ số 9 nên tích tăng thêm 15 đơn vị. Hãy tìm kết quả đúng của phép nhân đó?
+%text
+items: ["6190", "6170", "6180", "6200"]
+answer: 2
+
+type: select
+question: Cho bốn chữ số a, b, c, d khác nhau và khác 0. Lập số lớn nhất và số bé nhất có bốn chữ số gồm các chữ số này. Tổng của hai số lập được là 7447.
+%text
+items: ["10", "11", "12", "13"]
+answer: 1

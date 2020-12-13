@@ -1,0 +1,128 @@
+name: Số có năm chữ số
+description: Đây là bài ôn tập của tuần 1.
+image: https://i1.wp.com/downloadsachmienphi.com/wp-content/uploads/2018/09/sach-giao-khoa-toan-lop-4.jpg?fit=200%2C291&ssl=1
+type: Numerals
+week: 1
+level: 1
+classes: 4
+about: true
+
+type: select
+question: Số 14092 đọc là:
+%text
+items: ["Mười bốn nghìn không trăm chín mươi hai", "Mười bốn nghìn chín hai đơn vị", "Mười bốn không chín hai", "Mười bốn nghìn và chín hai mươi"]
+answer: 0
+ 
+type: select
+question: Số lớn nhất có năm chữ số là:
+%text
+items: ["99949", "99499", "99999", "98899"]
+answer: 0
+ 
+type: select
+question: Số lớn nhất có năm chữ số khác nhau là:
+%text
+items: ["97684", "99999", "89765", "98765"]
+answer: 3
+
+type: select
+question: Số nhỏ nhất có năm chữ số khác nhau là:
+%text
+items: ["12345", "12304", "10234", "10000"]
+answer: 2
+ 
+type: select
+question: Số nhỏ nhất được tạo từ 5 chữ số: 7, 3, 1, 9, 2 là:
+%text
+items: ["13297", "23917", "97321", "12379"]
+answer: 3
+ 
+type: select
+question: Câu khẳng định sau đúng hay sai: "Số liền sau số có năm chữ số nhỏ nhất là 10001"
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+ 
+type: select
+question: Câu khẳng định sau đúng hay sai: ‘10757 + 9827 = 21584.’
+%text
+items: ["Đúng", "Sai"]
+answer: 1
+ 
+type: select
+question: Câu khẳng định sau đúng hay sai: ‘96125 nhỏ hơn 96099.’
+%text
+items: ["Đúng", "Sai"]
+answer: 1
+ 
+type: select
+question: Điền vào chỗ trống: 67384 …… 8324.
+%text
+items: ["Nhỏ hơn", "Lớn hơn", "Bằng"]
+answer: 1
+ 
+type: "select"
+question: Điền vào chỗ trống: 
+21236 + 32167 = %text
+items: ["53433" , "53403" , "54333" , "54303"]
+answer: 1
+
+type: select
+question: Điền vào chỗ trống: 
+53263 – 24124 : 2 = %text
+items: ["41139", "29139", "41201", "29739"]
+answer: 2
+
+type: select
+question: Tính giá trị của phép tính: 1947 + m với m = 17248.
+1947 + m = %text
+items: ["19195", "19876", "19753", "19686"]
+answer: 0
+ 
+type: select
+question: Điền vào chỗ trống: 
+1643 x 5 – 1534 = %text
+items: ["7348", "8215", "6681", "9215"]
+answer: 2
+
+type: select
+question: Tính giá trị của phép tính sau: 2112 : m với m = 8.
+2112 : m = %text 
+items: ["264", "276", "212", "211"]
+answer: 0
+ 
+type: select
+question: Tính giá trị của biểu thức sau: Nhân 5 với tổng của 2137 và 2368.
+%text
+items: ["22255", "55222", "22525", "52522"]
+answer: 2
+ 
+type: select
+question: Nếu a = 9240 thì giá trị biểu thức 45105 – a : 5 là:
+%text
+items: ["7173", "43257", "42357", "7183"]
+answer: 1
+ 
+type: select
+question: Tìm một số, biết rằng nếu cộng số đó với 333 rồi nhân với 3 thì được số lớn nhất có 5 chữ số.
+%text
+items: ["33300", "33000", "33333", "99999"]
+answer: 1
+ 
+type: select
+question: Tính giá trị của biểu thức: 10236 trừ đi tích của 1028 và 6.
+%text
+items: ["4068", "4860", "55248", "55482"]
+answer: 0
+ 
+type: select
+question: Cho biểu thức A = 682 x m – 371 và B = 898 : m + 389. Với m = 2 hãy tính:
+A + B = %text
+items: ["838", "993", "1831", "1875"]
+answer: 2
+ 
+type: select
+question: Chu vi của hình chữ nhật là 96 cm. Nếu thêm vào chiều rộng 3 cm và bớt ở chiều dài đi 3 cm thì hình chữ nhật đó trở thành hình vuông. 
+Diện tích hình chữ nhật đó là: %text
+items: ["567 (cm&sub2;)", "872 (cm&sub2;)", "576 (cm&sub2;)", "827 (cm&sub2;)"]
+answer: 0

@@ -1,0 +1,128 @@
+name: Phép chia
+description: Đây là bài ôn tập của tuần 1.
+image: https://i1.wp.com/downloadsachmienphi.com/wp-content/uploads/2018/09/sach-giao-khoa-toan-lop-4.jpg?fit=200%2C291&ssl=1
+type: Numerals
+week: 11
+level: 1
+classes: 4
+about: true
+
+type: select
+question: Điền dấu thích hợp: 10dm&sub2; … 1000cm&sub2;
+%text
+items: ["Lớn hơn", "Nhỏ hơn", "Bằng"]
+answer: 2
+
+type: select
+question: Điền dấu thích hợp: 450000cm&sub2; … 45m&sub2;
+%text
+items: ["Lớn hơn", "Nhỏ hơn", "Bằng"]
+answer: 2
+
+type: select
+question: Điền dấu thích hợp: 400dm&sub2; … 4m&sub2;
+%text
+items: ["Lớn hơn", "Nhỏ hơn", "Bằng"]
+answer: 2
+
+type: select
+question: Điền dấu thích hợp: 120cm&sub2; … 12dm&sub2;
+%text
+items: ["Lớn hơn", "Nhỏ hơn", "Bằng"]
+answer: 1
+
+type: select
+question: Thực hiện phép tính 
+2008000 : 1000 = %text
+items: ["2008", "20080", "200800", "208"]
+answer: 0
+
+type: select
+question: Thực hiện phép tính 
+15300 : 100 = %text
+items: ["153", "1530", "1530000", "15300"]
+answer: 0
+
+type: select
+question: Thực hiện phép tính 
+9013000 : 100 =%text
+items: ["9013", "90130", "901300", "91300"]
+answer: 1
+
+type: select
+question: Tính:
+5150 x 1000 : 100 = %text
+items: ["51500", "515", "5150", "515000"]
+answer: 0
+
+type: select
+question: Số thích hợp điền vào chỗ trống là: 3m&sub2; 2dm&sub2; = …. dm&sub2;
+%text
+items: ["32", "302", "320", "3200"]
+answer: 1
+
+type: select
+question: Để lát nền một phòng họp người ta phải dùng hết 500 viên gạch lát nền hình vuông có cạnh 4dm. Hỏi diện tích phòng họp đó rộng bao nhiêu mét vuông? (Biết diện tích phần mạch vữa không đáng kể)
+%text
+items: ["8000m&sub2;", "800m&sub2;", "80m&sub2;", "8m&sub2;"]
+answer: 2
+
+type: select
+question: Tìm m là số tròn chục để 136 x m < 2710
+%text
+items: ["20", "30", "40", "10"]
+answer: 3
+
+type: select
+question: Tìm số x thỏa mãn x : 20 = 215 ?
+%text
+items: ["430", "340", "340", "4300"]
+answer: 3
+
+type: select
+question: 7m&sub2; 8dm&sub2; = ….
+%text
+items: ["708dm&sub2;", "7008dm&sub2;", "7080cm&sub2;", "7080dm&sub2;"]
+answer: 0
+
+type: select
+question: Tích của hai số là 4850. Nếu gấp thừa số thứ nhất lên 5 lần và gấp thừa số thứ hai lên 2 lần thì tích mới gấp lên số lần là:
+%text
+items: ["7 lần", "3 lần", "10 lần", "5 lần"]
+answer: 2
+
+type: select
+question: Khi nhân một số có 5 chữ số với 1000, Hồng cho kết quả là số có 9 chữ số còn Hà cho kết quả là số có chữ số hàng trăm là 6. Hỏi kết quả của ai đúng?
+%text
+items: ["Hà đúng", "Hồng đúng", "Cả 2 đều đúng", "Cả 2 đều sai"]
+answer: 3
+
+type: select
+question: Một tổ gồm 8 xe, mỗi xe chở 7 thùng hàng, mỗi thùng hàng có 5 hộp kẹo. Hỏi tổ đó chở bao nhiêu hộp kẹo?
+%text
+items: ["280 hộp", "208 hộp", "288 hộp", "300 hộp"]
+answer: 0
+
+type: select
+question: Một hình chữ nhật có chu vi là 26m, chiều dài hơn chiều rộng 3m. Tính diện tích của hình chữ nhật đó.
+%text
+items: ["30&sub2;", "40&sub2;", "50&sub2;", "60m&sub2;"]
+answer: 1
+
+type: select
+question: Trung bình cộng của hai số là 38. Số thứ nhất hơn số thứ hai 10 đơn vị. Số thứ nhất là:
+%text
+items: ["24", "76", "33", "43"]
+answer: 3
+
+type: select
+question: Một mảnh đất hình chữ nhật có chiều dài gấp 3 lần chiều rộng. Khi giảm chiều dài đi 4m đồng thời tăng chiều rộng thêm 4m thì diện tích tăng thêm 160m2. Tính diện tích mảnh đất ban đầu.
+%text
+items: ["1452m&sub2;", "152m&sub2;", "142m&sub2;", "1402m&sub2;"]
+answer: 0
+
+type: select
+question: Một thửa ruộng hình chữ nhật có chu vi bằng 400m, chiều dài hơn chiều rộng 80m. Trung bình cứ 10m2 thu hoạch được 20kg thóc. Hỏi trên cả thửa ruộng đó, người ta thu hoạch được bao nhiêu tạ thóc?
+%text
+items: ["168 tạ", "186 tạ", "180 tạ", "176 tạ"]
+answer: 0

@@ -1,0 +1,128 @@
+name: Phép nhân và phép cộng
+description: Đây là bài ôn tập của tuần 1.
+image: https://i1.wp.com/downloadsachmienphi.com/wp-content/uploads/2018/09/sach-giao-khoa-toan-lop-4.jpg?fit=200%2C291&ssl=1
+type: Numerals
+week: 12
+level: 1
+classes: 4
+about: true
+
+type: select
+question: Điền số thích hợp vào chỗ trống: 
+7 x (8 + 9) = 7 x 8 + 7 x %text
+items: ["7", "8", "9", "10"]
+answer: 2
+
+type: select
+question: Điền số thích hợp vào chỗ trống: 
+7 x 15 = 7 x 5 + 7 x %text
+items: ["5", "10", "15", "20"]
+answer: 1
+
+type: select
+question: Điền số thích hợp vào chỗ trống: 
+18 x (20 – 5) = 18 x 20 – 18 x %text
+items: ["5", "10", "15", "20"]
+answer: 0
+
+type: select
+question: Điền số thích hợp vào chỗ trống:  
+25 x 16 = 25 x 20 – 25 x %text
+items: ["4", "5", "6", "7"]
+answer: 0
+
+type: select
+question: Cô Hoàn mua 5kg gạo tẻ và 5kg gạo nếp. Giá 1kg gạo tẻ là 9300 đồng, 1kg gạo nếp là 11200 đồng. Hỏi cô Hoàn phải trả hết bao nhiêu tiền?
+%text
+items: ["101500 đồng", "102500 đồng", "65300 đồng", "57700 đồng"]
+answer: 1
+
+type: select
+question: Một cửa hàng vật liệu xây dựng nhập về 40 tạ sắt. Giá mỗi tạ sắt là 915000 đồng. Cửa hàng đã bán được 10 tạ sắt. Hỏi số sắt còn lại trị giá bao nhiêu tiền?
+%text
+items: ["27500000 đồng", "27400000 đồng", "27450000 đồng", "2745000 đồng"]
+answer: 2
+
+type: select
+question: 2547 x 35 = 89135 Đúng hay Sai?
+%text
+items: ["Đúng", "Sai"]
+answer: 1
+
+type: select
+question: 1869 x 47 = 87843 Đúng hay Sai?
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+
+type: select
+question: 135 x 52 = 7010 Đúng hay Sai?
+%text
+items: ["Đúng", "Sai"]
+answer: 1
+
+type: select
+question: Hai đoàn xe chở học sinh đi tham quan. Mỗi đoàn có 6 xe, mỗi xe chở được 35 người. Hỏi 2 đoàn xe chở được bao nhiêu học sinh đi tham quan?
+%text
+items: ["400", "420", "440", "460"]
+answer: 1
+
+type: select
+question: Tìm số x thỏa mãn x × 3 - x × 2 = 16 ?
+%text
+items: ["16", "15", "14", "13"]
+answer: 0
+
+type: select
+question: Số còn thiếu điền vào chỗ trống trong phép tính 18 × (20 – 5) = 18 × 20 – 18 … là:
+%text
+items: ["20", "15", "10", "5"]
+answer: 3
+
+type: select
+question: Cho y x 2 + y x 3 + y x 5 = 9600; Tìm y:
+%text
+items: ["y = 9600", "y = 950", "y = 96000", "y = 960"]
+answer: 3
+
+type: select
+question: X x 27 + X x 30 + X x 43 = 210500; Tìm X.
+%text
+items: ["2105", "2100", "2505", "2705"]
+answer: 0
+
+type: select
+question: Khi nhân một số với 43, một học sinh đã viết nhầm các tính riêng thẳng cột nên được kết quả sai là 10724. Tìm tích đúng của phép nhân đó
+%text
+items: ["65877", "65876", "65874", "65887"]
+answer: 1
+
+type: select
+question: Khi nhân một số tự nhiên với 25, bạn Hải đã đặt các tích riêng thẳng cột với nhau nên có kết quả sai là 1722. Tích đúng của phép nhân đó là:
+%text
+items: ["6150", "43050", "5950", "6250"]
+answer: 0
+
+type: select
+question: Kết quả của phép tính 37 x 36 + 28 là:
+%text
+items: ["1369", "1358", "1360", "1380"]
+answer: 2
+
+type: select
+question: Thực hiện phép tính:
+628 x 22 + 628 x 34 + 628 x 44 = %text
+items: ["62800", "62000", "68000", "62200"]
+answer: 0
+
+type: select
+question: Diện tích của hình chữ nhật có chiều rộng bằng 14cm và chiều dài gấp 3 lần chiều rộng là:
+%text
+items: ["546cm&sub2;", "588cm&sub2;", "564cm&sub2;", "592cm&sub2;"]
+answer: 1
+
+type: select
+question: Một mảnh đất hình chữ nhật có chu vi 274m, chiều rộng kém chiều dài 35m. Người ta dùng 1/2 diện tích để trồng lúa, biết cứ 1m2 thu hoạch được 2kg thóc. Hỏi trên mảnh đất đó, người ta thu hoạch được bao nhiêu ki-lô-gam thóc?
+%text
+items: ["4386kg", "4343kg", "8643kg", "8463kg"]
+answer: 0

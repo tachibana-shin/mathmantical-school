@@ -1,0 +1,127 @@
+name: Phép chia và phép cộng
+description: Đây là bài ôn tập của tuần 14.
+image: https://i1.wp.com/downloadsachmienphi.com/wp-content/uploads/2018/09/sach-giao-khoa-toan-lop-4.jpg?fit=200%2C291&ssl=1
+type: Numerals
+week: 14
+level: 1
+classes: 4
+about: true    
+type: select
+question: (41 + 22) : 3 = 41 : 3 + 22 : 3 = 13 + 7 = 20; Đúng hay sai?
+%text
+items: ["Đúng", "Đúng"]
+answer: 1
+
+type: select
+question: (55 + 35) : 5 = 55 : 5 + 35 : 5 = 11 + 7 = 18; đúng hay sai?
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+
+type: select
+question: (55 + 35) : 5 = 90 : 5 = 18; Đúng hay sai?
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+
+type: select
+question: (41 + 22) : 3 = 63 : 3 = 21; Đúng hay sai?
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+
+type: select
+question: 269517 : 3 = 89839; Đúng hay sai?
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+
+type: select
+question: Một cửa hàng có 12 cuộn dây điện, mỗi cuộn dài 150m. Cửa hàng đã bán được 1/3 số dây điện. Hỏi cửa hàng còn lại bao nhiêu mét dây điện?
+%text
+items: ["1250m", "1200m", "600m", "1300m"]
+answer: 1
+
+type: select
+question: Kết quả của phép tính: 
+(114 + 112) : 2 = %text
+items: ["113", "123", "115", "125"]
+answer: 0
+
+type: select
+question: Giá trị của biểu thức: 738 + 8652 : 6 là:
+%text
+items: ["3180", "2180", "2170", "3170"]
+answer: 1
+
+type: select
+question: Kết quả của phép tính:
+216 : (2 × 3) = %text
+items: ["32", "33", "35", "36"]
+answer: 3
+
+type: select
+question: Một người làm việc trong 5 ngày được trả số tiền công là 748000 đồng. Hỏi trung bình một ngày làm việc người đó nhận được bao nhiêu tiền?
+%text
+items: ["159600 đồng", "148600 đồng", "158600 đồng", "149600 đồng"]
+answer: 3
+
+type: select
+question: Thương của phép chia bằng 1980. Nếu số bị chia giảm đi 4 lần và giữ nguyên số chia thì được thương mới là bao nhiêu?
+%text
+items: ["465", "465", "485", "495"]
+answer: 3
+
+type: select
+question: Một phép chia hết có thương là 204. Nếu số bị chia giảm đi 6 lần và giữ nguyên số chia thì được thương mới bằng bao nhiêu?
+%text
+items: ["34", "35", "36", "37"]
+answer: 0
+
+type: select
+question: Người ta xếp 4235 cái cốc vào các hộp, mỗi hộp 6 cái cốc. Hỏi có thể xếp được nhiều nhất bao nhiêu hộp và còn thừa mấy cái cốc ?
+%text
+items: ["75 hộp thừa 5 cốc", "704 hộp thừa 11 cốc", "705 hộp thừa 5 cốc", "703 hộp thừa 17 cốc"]
+answer: 2
+
+type: select
+question: Thương của hai số là 2145. Nếu gấp số bị chia lên 5 lần thì thương của hai số khi đó là:
+%text
+items: ["429", "2140", "2150", "10725"]
+answer: 3
+
+type: select
+question: Tìm x; 246 : x + 34 : x = 5;
+%text
+items: ["55", "66", "56", "57"]
+answer: 2
+
+type: select
+question: Kết quả của phép tính: 
+(396 - 264) : 4 = %text
+items: ["30", "31", "32", "33"]
+answer: 3
+
+type: select
+question: Người ta xếp 4235 cái cốc vào các hộp, mỗi hộp 6 cái cốc. Hỏi có thể xếp được nhiều nhất bao nhiêu hộp và còn thừa mấy cái cốc ?
+%text
+items: ["75 hộp thừa 5 cốc", "704 hộp thừa 11 cốc", "705 hộp thừa 5 cốc", "703 hộp thừa 17 cốc"]
+answer: 2
+
+type: select
+question: Xe thứ nhất chở 2350kg hàng, xe thứ hai chở 2500kg hàng. Hỏi trung bình mỗi xe chở bao nhiêu ki-lô-gam hàng?
+%text
+items: ["2425", "2424", "2525", "2524"]
+answer: 0
+
+type: select
+question: Mỗi bao gạo cân nặng 50kg. Người ta dự định chuyển 240 bao gạo bằng 6 thuyền. Hỏi trung bình mỗi thuyền chở mấy tấn gạo?
+%text
+items: ["2 tấn", "3 tấn", "4 tấn", "5 tấn"]
+answer: 0
+
+type: select
+question: Thực hiện phép tính
+aaaaaa : (a x 37) – 4866 : (2 x 3) = %text
+items: ["2192", "2119", "2191", "2120"]
+answer: 0

@@ -1,0 +1,128 @@
+name: Phép nhân và phép chia
+description: Đây là bài ôn tập của tuần 13.
+image: https://i1.wp.com/downloadsachmienphi.com/wp-content/uploads/2018/09/sach-giao-khoa-toan-lop-4.jpg?fit=200%2C291&ssl=1
+type: Numerals
+week: 13
+level: 1
+classes: 4
+about: true
+
+type: select
+question: Phép tính sau đúng hay sai: 25 x 11 = 275
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+
+type: select
+question: Phép tính sau đúng hay sai: 37 x 11 = 307
+%text
+items: ["Đúng", "Sai"]
+answer: 1
+
+type: select
+question: Phép tính sau đúng hay sai: 56 x 11 = 516
+%text
+items: ["Đúng", "Sai"]
+answer: 1
+
+type: select
+question: Phép tính sau đúng hay sai: 73 x 11 = 803
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+
+type: select
+question: Một mảnh đất hình vuông có cạnh dài 215m. Diện tích của mảnh đất đó là:
+%text
+items: ["45125m&sub2;", "45225m&sub2;", "46225m&sub2;", "46235m&sub2;"]
+answer: 2
+
+type: select
+question: Điền vào chỗ trống: 
+30kg = %text yến
+items: ["3", "30", "300", "3000"]
+answer: 0
+
+type: select
+question: Điền vào chỗ trống: 
+100cm&sub2; = %text dm&sub2;
+items: ["1", "10", "100", "1000"]
+answer: 0
+
+type: select
+question: Điền vào chỗ trống:
+7500 dm&sub2; = %text m&sub2;
+items: ["75", "750", "7500", "750000"]
+answer: 0
+
+type: select
+question: Điền vào chỗ trống: 
+400 kg = %text tạ
+items: ["4", "40", "400", "4000"]
+answer: 0
+
+type: select
+question: Khoanh vào chữ đặt trước câu trả lời đúng: Một hình chữ nhật có chiều dài 327cm, chiều rộng bằng 1/3 chiều dài. Diện tích của hình chữ nhật đó là:
+%text
+items: ["35543cm&sub2;", "35643cm&sub2;", "34643cm&sub2;", "6213cm&sub2;"]
+answer: 1
+
+type: select
+question: x : 204 = 136; Tìm x:
+x = %text
+items: ["27744", "3264", "26724", "26744"]
+answer: 0
+
+type: select
+question: ‘Trong một tích, nếu thêm vào một thừa số bao nhiêu đơn vị thì tích tăng lên bấy nhiêu đơn vị’. Nhận định trên đúng hay sai?
+%text
+items: ["Đúng", "Sai"]
+answer: 1
+
+type: select
+question: Một xe tải chở hàng, cần phải chở 105 tấn 6 tạ gạo từ kho A sang kho B. Xe tải đó đã chở được 11 chuyến, mỗi chuyến 75 tạ. Hỏi xe tải còn phải chở bao nhiêu tạ gạo nữa .
+%text
+items: ["825 tạ", "225 tạ", "231 tạ", "36 tạ"]
+answer: 2
+
+type: select
+question: Kết quả của phép tính: 
+347 × 131 = %text
+items: ["44 447", "45 447", "44 457", "45 457"]
+answer: 3
+
+type: select
+question: Tìm số x thỏa mãn x : 23 = 11 ?
+%text
+items: ["253", "263", "532", "533"]
+answer: 0
+
+type: select
+question: Phép tính có cùng kết quả với phép tính: 216 × 125 là:
+%text
+items: ["106 × 215", "270 × 100", "306 × 105", "215 × 126"]
+answer: 1
+
+type: select
+question: So sánh 123123 × 456 và 456456 × 123
+%text
+items: ["Bằng nhau", "123123 x 456 lớn hơn", "123123 x 456 bé hơn"]
+answer: 0
+
+type: select
+question: Khi nhân một số với 205, do vô ý Tâm đã quên viết chữ số 0 của số 205 nên tích giảm đi 42120 đơn vị. Tìm tích đúng của phép nhân đó
+%text
+items: ["47979", "47970", "49977", "49770"]
+answer: 1
+
+type: select
+question: Một thửa đất hình chữ nhật có chu vi là 648m. Chiều rộng kém chiều dài 72m. Một thửa đấy hình vuông có chu vi bằng chu vi thửa đất hình chữ nhật. Tính diện tích thửa đấy hình vuông.
+%text
+items: ["26444", "26244", "26224", "26222"]
+answer: 1
+
+type: select
+question: Khu vườn phía trước nhà bác Thành trồng 15 hàng nhãn, mỗi hàng có 11 cây. Khu vườn phía sau nhà bác Thành trồng 19 hàng nhãn mỗi hàng cũng có 11 cây. Hỏi vườn nhà bác Thành trồng được tất cả bao nhiêu cây nhãn ?
+%text
+items: ["374", "375", "376", "377"]
+answer: 0

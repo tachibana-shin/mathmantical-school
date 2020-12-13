@@ -1,0 +1,128 @@
+name: Phép chia có dư
+description: Đây là bài ôn tập của tuần 15.
+image: https://i1.wp.com/downloadsachmienphi.com/wp-content/uploads/2018/09/sach-giao-khoa-toan-lop-4.jpg?fit=200%2C291&ssl=1
+type: Numerals
+week: 15
+level: 1
+classes: 4
+about: true    
+
+type: select
+question: Phép tính sau đúng hay sai: 665 : 19 = 35
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+
+type: select
+question: Phép tính sau đúng hay sai: 2444 : 47 = 53
+%text
+items: ["Đúng", "Sai"]
+answer: 1
+
+type: select
+question: Phép tính sau đúng hay sai: 1668 : 45 = 37 (dư 3)
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+
+type: select
+question: Phép tính sau đúng hay sai: 1499 : 65 = 23 (dư 3)
+%text
+items: ["Đúng", "Sai"]
+answer: 1
+
+type: select
+question: Xe ô tô con chạy được quãng đường 12km thì hết 1l xăng. Nếu phải chạy hết quãng đường dài 180km thì hết bao nhiêu lít xăng?
+%text
+items: ["30 l", "14 l", "15 l", "16 l"]
+answer: 2
+
+type: select
+question: Một cửa hàng trong một tháng đã bán hết 17400 bút bi. Hỏi trong tháng đó cửa hàng đã bán được bao nhiêu tá bút bi? (mỗi tá gồm 12 cái )
+%text
+items: ["1350 tá", "1400 tá", "1450 tá", "1440 tá"]
+answer: 2
+
+type: select
+question: Tìm x biết: x × 43 = 10105
+%text
+items: ["x = 234", "x = 235", "x = 236", "x = 237"]
+answer: 1
+
+type: select
+question: Giá trị của biểu thức (133528 – 123040) : 23 là:
+%text
+items: ["456", "546", "654", "454"]
+answer: 0
+
+type: select
+question: Một người đi xe máy từ A đến B hết 1 giờ 30 phút. Quãng đường từ A đến B là 27km 900m. Hỏi trung bình mỗi phút người đó đi được bao nhiêu mét?
+%text
+items: ["389", "290", "310", "700"]
+answer: 2
+
+type: select
+question: Số dư của phép chia 12345 : 67 là:
+%text
+items: ["17", "18", "184", "67"]
+answer: 0
+
+type: select
+question: Mỗi bao xi măng chứa 50kg xi-măng. Một ca sản xuất của nhà máy xi-măng làm được 600 tấn xi-măng thì đóng vào được bao nhiêu bao xi-măng ?
+%text
+items: ["12000", "13000", "14000", "15000"]
+answer: 0
+
+type: select
+question: Thực hiện phép tính. 
+7740 : 36 = %text
+items: ["214 (dư 36)", "215", "2141", "213 (dư 72)"]
+answer: 1
+
+type: select
+question: Thực hiện phép tính. 
+15880 : 63 = %text
+items: ["2511 (dư 4)", "251 (dư 67)", "252 (dư 4)", "252 (dư 3)"]
+answer: 2
+
+type: select
+question: Một tổ sản xuất trong 15 ngày đầu, mỗi ngày làm được 130 sản phẩm, trong 10 ngày sau, mỗi ngày làm được 150 sản phẩm. Hỏi trung bình mỗi ngày tổ đó làm được bao nhiêu sản phẩm?
+%text
+items: ["138 sản phẩm", "135 sản phẩm", "140 sản phẩm", "139 sản phẩm"]
+answer: 0
+
+type: select
+question: Thực hiện phép tính sau: 
+(150 x 35 x 10) : 25 = %text
+items: ["2000", "2100", "2200", "2300"]
+answer: 1
+
+type: select
+question: Tìm X:  X x 15 + X x 13 = 560 x 45
+x = %text
+items: ["1000", "800", "900", "700"]
+answer: 2
+
+type: select
+question: Bác Vinh mua 1425 viên gạch bông để lát nền nhà. Bác dự tính sẽ thừa ra 125 viên đủ để lát 5m2 khu vệ sinh. Hỏi diện tích nền nhà cần lát gạch bông của bác Vinh là bao nhiêu mét vuông ?
+%text
+items: ["50m&sub2;", "51m&sub2;", "52m&sub2;", "53m&sub2;"]
+answer: 2
+
+type: select
+question: Thực hiện phép tính: 
+( 450 x 480 x 44) : (15 x 12 x 11) = %text
+items: ["4800", "4900", "5000", "5800"]
+answer: 0
+
+type: select
+question: Tìm số có hai chữ số, biết rằng nếu viết thêm chữ số 3 vào bên trái số đó ta được số mới mà tổng của số mới và số phải tìm là 416
+%text
+items: ["58", "59", "60", "61"]
+answer: 0
+
+type: select
+question: Tìm số bị chia bé nhất để thương bằng 945 và số dư là 17.
+%text
+items: ["17027", "27017", "27017", "28027"]
+answer: 0

@@ -1,0 +1,128 @@
+name: Phép chia hết cho các số đặc biệt
+description: Đây là bài ôn tập của tuần 17.
+image: https://i1.wp.com/downloadsachmienphi.com/wp-content/uploads/2018/09/sach-giao-khoa-toan-lop-4.jpg?fit=200%2C291&ssl=1
+type: Numerals
+week: 17
+level: 1
+classes: 4
+about: true    
+
+type: select
+question: Những số nào sau đây không chia hết cho 2:
+%text
+items: ["257; 1372", "257; 475; 380", "257; 475", "1372; 257; 475"]
+answer: 2
+
+type: select
+question: Với ba chữ số 0; 4; 6 viết được những số vừa chia hết cho 2 vừa chia hết cho 5 là:
+%text
+items: ["460", "640", "406", "460; 640"]
+answer: 3
+
+type: select
+question: Những số chia hết cho 5 có chữ số tận cùng là:
+%text
+items: ["1; 3; 5; 7", "0; 5", "5", "0; 2; 4; 6; 8"]
+answer: 1
+
+type: select
+question: Số bé nhất khi chia cho 2 và chia cho 5 đều dư 1 là:
+%text
+items: ["1", "11", "6", "0"]
+answer: 0
+
+type: select
+question: Thương của phép chia 11070 : 90 là số có mấy chữ số:
+%text
+items: ["1", "2", "3", "4"]
+answer: 2
+
+type: select
+question: Nhận định sau đúng hay sai: các số chẵn đều chia hết cho 2: 
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+
+type: select
+question: Nhận định sau đúng hay sai: các số lẻ đều chia hết cho 5:
+%text
+items: ["Đúng", "Sai"]
+answer: 1
+
+type: select
+question: Một thửa đất hình chữ nhật có diện tích 8625m&sub2;, chiều dài 115m. Chu vi của thửa đất hình chữ nhật đó là:
+%text
+items: ["190m", "380m", "200m", "400m"]
+answer: 1
+
+type: select
+question: Các phép tính sau đúng hay sai: Tổng của 25750 và 19075 là 34725
+%text
+items: ["Đúng", "Sai"]
+answer: 1
+
+type: select
+question: Các phép tính sau đúng hay sai: Hiệu của 93752 và 91744 là 2008
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+
+type: select
+question: Các phép tính sau đúng hay sai: Tích của 4700 và 1000 là 470000
+%text
+items: ["Đúng", "Sai"]
+answer: 1
+
+type: select
+question: Các phép tính sau đúng hay sai: Thương của 50625 và 225 là 225
+%text
+items: ["Đúng", "Sai"]
+answer: 0
+
+type: select
+question: Một khu đất hình chữ nhật có trung bình cộng của chiều dài và chiều rộng là 85m, chiều dài hơn chiều rộng 18m. Tính diện tích của khu đất đó.
+%text
+items: ["7144m&sub2;", "7114m&sub2;", "7444m&sub2;", "7111m&sub2;"]
+answer: 0
+
+type: select
+question: Những số nào sau đây chia hết cho 5: 2467; 370; 184; 205
+%text
+items: ["2467; 184", "370, 205", "370; 205; 184", "2467; 370; 205"]
+answer: 1
+
+type: select
+question: Những số chia hết cho 5 và 2 có chữ số tận cùng là:
+%text
+items: ["1; 3; 5; 7", "0; 5", "0", "0; 2; 4; 6; 8"]
+answer: 2
+
+type: select
+question: Số lớn nhất có hai chữ số mà khi chia cho 5 dư 2 là:
+%text
+items: ["99", "98", "97", "92"]
+answer: 2
+
+type: select
+question: Biết số chia là số lớn nhất có hai chữ số, vậy số dư lớn nhất trong phép chia đó là:
+%text
+items: ["11", "55", "99", "98"]
+answer: 3
+
+type: select
+question: 3456m2 là diện tích hình chữ nhật có:
+%text
+items: ["Chiều dài 72m, chiều rộng 48m", "Chiều dài 96m, chiều rộng 36m", "Chiều dài 182m, chiều rộng 18m", "Chiều dài 144m, chiều rộng 24m"]
+answer: 2
+
+type: select
+question: Tổng của số lớn nhất có 4 chữ số và số lớn nhất có 3 chữ số lớn hơn hiệu của chúng là:
+%text
+items: ["10998", "9000", "1998", "19998"]
+answer: 2
+
+type: select
+question: Một hình chữ nhật có chu vi gấp 6 lần chiều rộng, chiều dài hơn chiều rộng 18cm. Tính diện tích hình chữ nhật đó.
+%text
+items: ["648cm&sub2;", "644cm&sub2;", "688cm&sub2;", "684cm&sub2;"]
+answer: 0

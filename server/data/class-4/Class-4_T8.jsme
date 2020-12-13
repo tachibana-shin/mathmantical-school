@@ -1,0 +1,134 @@
+name: Góc
+description: Đây là bài ôn tập của tuần 8.
+image: https://i1.wp.com/downloadsachmienphi.com/wp-content/uploads/2018/09/sach-giao-khoa-toan-lop-4.jpg?fit=200%2C291&ssl=1
+type: Geometry
+week: 8
+level: 1
+classes: 4
+about: true
+
+type: select
+question: Tổng của hai số là 82. Hiệu của hai số đó là 14. Hai số đó là:
+%text
+items: ["33 và 49", "32 và 50", "34 và 48", "45 và 37"]
+answer: 2
+
+type: select
+question: Hình sau là góc gì? 
+div.d-flex
+  img(src="${process.env.baseURL}/api/resources/assets/class-4/t8/2/1.png")
+%text
+items: ["Góc nhọn", "Góc tù", "Góc bẹt", "Góc vuông"]
+answer: 0
+
+type: select
+question: Hình sau có:
+div.d-flex
+  img(src="${process.env.baseURL}/api/resources/assets/class-4/t8/3/1.png")
+%text
+items: ["1 góc vuông và 4 góc nhọn", "4 góc vuông và 3 góc nhọn", "4 góc vuông và 10 góc nhọn", "2 góc vuông và 12 góc nhọn"]
+answer: 2
+
+type: select
+question: Tổng của hai số là số lớn nhất có 4 chữ số, hiệu của hai số là số lẻ bé nhất có 3 chữ số. Hai số đó là:
+%text
+items: ["4949 và 5050", "4444 và 5555", "4944 và 5055", "4945 và 5045"]
+answer: 0
+
+type: select
+question: Có 150 lít sữa được chia đều vào các hộp 2 lít. Đóng 5 hộp vào 1 thùng. Hỏi 150 lít sữa đó đóng được bao nhiêu thùng sữa?
+%text
+items: ["5 thùng", "10 thùng", "15 thùng", "20 thùng"]
+answer: 2
+
+type: select
+question: Hai thùng có tất cả 156l dầu. Nếu rót 8l dầu từ thùng thứ nhất sang thùng thứ hai thì thùng thứ hai nhiều hơn thùng thứ nhất 12l dầu. Hỏi lúc đầu mỗi thùng có bao nhiêu lít dầu?
+%text
+items: ["80l và 70l", "80l và 76l", "86l và 70l", "86l và 82l"]
+answer: 1
+
+type: select
+question: Tổng của hai số chẵn là 2420. Tìm hai số đó, biết rằng giữa chúng còn có 5 số chẵn liên tiếp nữa.
+%text
+items: ["1204 và 1206", "1204 và 1212", "1204 và 1216", "1206 và 1218"]
+answer: 2
+
+type: select
+question: Góc vuông là góc có số đo là:
+%text 
+items: ["180˚", "90˚", "0˚", "360˚"]
+answer: 1
+
+type: select
+question: 1 tạ 12 yến = … kg
+%text 
+items: ["112kg", "120kg", "1120kg", "220kg"]
+answer: 3
+
+type: select
+question: Có bao nhiêu số tự nhiên x thỏa mãn: 23 ≤ x ≤ 27
+%text
+items: ["3", "4", "5", "6"]
+answer: 2
+
+type: select
+question: Nếu x = 1230 thì giá trị của biểu thức 4598 – x : 5 là:
+%text
+items: ["26637", "2460", "41478", "4352"]
+answer: 3
+
+type: select
+question: Một tổ thợ may 6 người trong 1 ngày may được 24 cái áo. Hỏi 1 người trong tổ 1 tuần may được bao nhiêu cái áo, biết năng suất của mỗi người như nhau và 1 tuần làm việc 6 ngày?
+%text
+items: ["12 cái", "24 cái", "36 cái", "48 cái"]
+answer: 1
+
+type: select
+question: Thực hiện phép tính: 
+(1378 + 3629) : 3 + 6724 = %text
+items: ["8393", "8392", "8333", "8382"]
+answer: 0
+
+type: select
+question: Một khu vườn hình chữ nhật có nửa chu vi là 46m. Chiều dài hơn chiều rộng 28m. Tính diện tích của khu vườn hình chữ nhật đó.
+%text
+items: ["333m&sub2; ", "335m&sub2; ", "334m&sub2; ", "332m&sub2; "]
+answer: 0
+
+type: select
+question: Giá trị của X thỏa mãn 3729 + X : 2 = 8283 là:
+X = %text 
+items: ["9156", "9614", "9260", "9108"]
+answer: 3
+
+type: select
+question: Một đội đào đường ngày thứ nhất đào được 382m đường. Ngày thứ hai đội đó đào được gấp đôi ngày thứ nhất. Ngày thứ ba đội đó đào được bằng 1/5 tổng số đường ngày thứ nhất và ngày thứ hai đào. Hỏi trung bình mỗi ngày đội đó đào được bao nhiêu mét đường?
+%text
+items: ["455m", "456m", "457m", "458m"]
+answer: 3
+
+type: select
+question: Nhà An có một khu vườn hình chữ nhật chiều rộng là 3m, biết chiều dài gấp đôi chiều rộng. Bố An làm hàng rào xung quanh vườn, biết cổng vào rộng 1m. Hỏi tổng chiều dài hàng rào là bao nhiêu?
+%text
+items: ["16m", "17m", "18m", "20m"]
+answer: 1
+
+type: select
+question: Một ngày, đội công nhân số 1 đào được 3km đường. Đội công nhân số 2 đào được ít hơn đội 1 là 500m. Hỏi cả 2 đội trong một tuần đào được bao nhiêu mét đường?
+%text
+items: ["38500m", "42000m", "38000m", "39000m"]
+answer: 0
+
+type: select
+question: Năm nay mẹ 27 tuổi, con 3 tuổi. Hỏi bao nhiêu năm nữa tuổi mẹ gấp đôi tuổi con?
+%text
+items: ["20 năm", "21 năm", "22 năm", "23 năm"]
+answer: 1
+
+type: select
+question: Hình dưới đấy có bao nhiêu góc vuông, bao nhiêu góc nhọn?
+div.d-flex
+  img(src="${process.env.baseURL}/api/resources/assets/class-4/t8/20/1.png")
+%text
+items: ["4 góc vuông, 6 góc nhọn", "6 góc vuông, 4 góc nhọn", "4 góc vuông, 4 góc nhọn", "6 góc vuông, 6 góc nhọn"]
+answer: 3

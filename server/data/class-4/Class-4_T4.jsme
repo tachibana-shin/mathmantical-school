@@ -1,0 +1,129 @@
+name: Số có năm chữ số
+description: Đây là bài ôn tập của tuần 4.
+image: https://i1.wp.com/downloadsachmienphi.com/wp-content/uploads/2018/09/sach-giao-khoa-toan-lop-4.jpg?fit=200%2C291&ssl=1
+type: Numerals
+week: 4
+level: 1
+classes: 4
+about: true
+
+type: select
+question: Điền vào chỗ trống: 99899 … 101899.
+%text
+items: ["Lớn hơn", "Nhỏ hơn", "Bằng"]
+answer: 1
+    
+type: select
+question: Điền vào chỗ trống: 87 560 … 87000 + 560
+%text
+items: ["Lớn hơn", "Nhỏ hơn", "Bằng"]
+answer: 2
+    
+type: select
+question: Điền vào chỗ trống: 50327 … 50000 + 326
+%text
+items: ["Lớn hơn", "Nhỏ hơn", "Bằng"]
+answer: 0
+
+type: select
+question: Các số 789563; 879653; 798365; 769853, xếp theo thứ tự từ bé đến lớn là:
+%text
+items: ["879653; 798365; 789563; 769853", "798365; 879653; 789563; 769853", "769853; 789563; 798365; 879653", "769853; 798365; 789563; 879653"]
+answer: 2
+    
+type: select
+question: Có bao nhiêu số có 4 chữ số
+%text
+items: ["10 000 số", "9000 số", "9999 số", "900 số"]
+answer: 1
+    
+type: select
+question: Cho biết 2 tấn 17 kg = … kg. Số thích hợp viết vào chỗ chấm là:
+%text
+items: ["217 kg", "2170 kg", "2017 kg", "2107 kg"]
+answer: 2
+    
+type: select
+question: “1 thế kỉ bằng 1000 năm” khẳng định này đúng hay sai?
+%text
+items: ["Đúng", "Sai "]
+answer: 1
+    
+type: select
+question: Một phút bằng bao nhiêu giây?
+%text
+items: ["60", "30", "50", "12"]
+answer: 0
+    
+type: select
+question: Điền vào chỗ trống: 5100kg … 52 tạ
+%text
+items: ["Bằng", "Lớn hơn", "Nhỏ hơn"]
+answer: 2
+    
+type: select
+question: Chiến thắng Điện Biên Phủ vào năm 1954, năm đó thuộc thế kỉ:
+%text
+items: ["XX", "XVIII", "XXI", "XIX"]
+answer: 0
+    
+type: select
+question: Tính
+12 tấn 7 tạ = %text
+items: ["12700 kg", "12070 kg", "127 yến", "120700 kg"]
+answer: 0
+    
+type: select
+question: Từ 8 giờ đến 16 giờ kim giờ và kim phút gặp nhau số lần là:
+%text
+items: ["8 lần", "7 lần", "6 lần", "9 lần"]
+answer: 1
+    
+type: select
+question: Ba ô tô chở hàng. Ô tô thứ nhất chở được 4 tạ 25 kg, ô tô thứ hai chở nhiều hơn ô tô thứ nhất 45 kg nhưng ít hơn ô tô thứ ba 3 yến 7 kg. Hỏi cả ba ô tô chở được bao nhiêu ki-lô-gam hàng?
+%text
+items: ["1420 kg", "1402 kg", "1042 kg", "1457 kg"]
+answer: 1
+    
+type: select
+question: Cho: 15450 < x < 15710 ; Biết x là số tròn trăm, x không thể là số nào sau đây:
+%text
+items: ["15500", "15400", "15600", "15700"]
+answer: 1
+    
+type: select
+question: Năm 2010 kỉ niệm 1000 Thăng Long – Hà Nội. 1000 năm trước, vua Lý Công Uẩn dời đô về Thăng Long, năm đó thuộc thế kỉ mấy?
+%text
+items: ["X", "XI", "XII", "XIII"]
+answer: 1
+    
+type: select
+question: Cho các năm 1792, 1890, 1996, 2011. Năm nào thuộc thế kỉ XIX?
+%text
+items: ["1792", "1890", "1996", "2011"]
+answer: 1
+    
+type: "select"
+question: Tính 3 tấn 2 tạ + 3 tạ 30 kg = … kg. Kết quả viết vào chỗ chấm là:
+%text
+items: ["632", "332", "3530", "6230"]
+answer: 2
+    
+type: select
+question: Tính tổng của tất cả các số có ba chữ số khác nhau được lập từ các chữ số 6, 8, 1.
+%text
+items: ["3333", "3330", "3300", "3000"]
+answer: 1
+    
+type: select
+question: Đơn vị thích hợp để điền vào chỗ chấm 3 tạ 56kg = 3560 …. là:
+%text
+items: ["Kg", "Hg", "Dag", "g"]
+answer: 1
+    
+type: select
+question: Một cửa hàng bán gạo ngày thứ nhất bán được 47 yến gạo, ngày thứ hai bán được gấp đôi ngày thứ nhất, ngày thứ ba bán được ít hơn tổng của ngày thứ hai và ngày thứ ba 120kg gạo. Hỏi sau ba ngày cửa hàng bán được bao nhiêu tạ gạo?
+%text
+items: ["27 tạ", "28 tạ", "26 tạ", "29 tạ"]
+answer: 0
+    

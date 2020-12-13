@@ -4,7 +4,8 @@ module.exports = {
   image: "https://book.sachgiai.com/uploads/book/sach-giao-khoa-toan-1/sach-giao-khoa-toan-1-0.jpg",
   type: "Plus/Minus",
   week: 8,
-  level: 1, classes: 1,
+  level: 1,
+  classes: 1,
   questions: [
     {
       type: "input",
